@@ -4,7 +4,7 @@ import { Banner } from '../components/Banner';
 import { Header } from '../components/Header';
 import { Highlight } from '../components/Highlight';
 import { Menu } from '../components/Menu';
-import { Orders } from '../components/Orders';
+import { Footer } from '../components/Footer';
 import { Products } from '../components/Products';
 
 export default function SignIn() {
@@ -22,7 +22,7 @@ export default function SignIn() {
         <Products />
         <Highlight />
         <Menu />
-        <Orders />
+        <Footer />
 
       </Box>
 

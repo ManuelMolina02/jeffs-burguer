@@ -1,9 +1,9 @@
-import { Flex, Grid, Text } from "@chakra-ui/react";
+import { Flex, Grid, Image, Text } from "@chakra-ui/react";
 import { CardItem } from "./CardItem";
 
 export function Menu() {
   return (
-    <Flex >
+    <Flex>
       <Flex
         flexDirection={'column'}
         justify={'center'}
@@ -11,9 +11,8 @@ export function Menu() {
         m='60px auto'
         gap={12}
       >
-
-        <Text color='black' fontSize={28} maxW='780px' textAlign={'center'} mb='40px'>
-          Faça já seu pedido e experimente nossos deliciosos lanches e hamburgueres artesanais. Você vai se surpreender!
+        <Text color='black' fontSize={28} w='620px' textAlign={'center'} mb='40px'>
+          Veja as opções do nosso cardápio completo com deliciosos lanches e hamburgueres artesanais. Você vai se surpreender!
         </Text>
 
         <Grid templateColumns={['repeat(3, 1fr)']} gap={16} >
@@ -31,8 +30,8 @@ export function Menu() {
           <CardItem title='hamburguer teste1' image='' />
         </Grid>
 
-
       </Flex>
     </Flex>
+
   )
 }

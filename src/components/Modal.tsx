@@ -29,6 +29,5 @@ export function Modal({ handleModal, closeModal, title }) {
         </ModalFooter>
       </ModalContent>
     </ModalChakra>
-
   )
 }
