@@ -16,7 +16,7 @@ export function Menu() {
           Faça já seu pedido e experimente nossos deliciosos lanches e hamburgueres artesanais. Você vai se surpreender!
         </Text>
 
-        <Grid templateColumns='repeat(3, 1fr)' gap={16} >
+        <Grid templateColumns={['repeat(3, 1fr)']} gap={16} >
           <CardItem title='lanche frango' image='' />
           <CardItem title='lanche de costela' image='' />
           <CardItem title='hamburguer teste' image='' />
@@ -31,9 +31,7 @@ export function Menu() {
           <CardItem title='hamburguer teste1' image='' />
         </Grid>
 
-        <Text color='black' fontSize={22} maxW='620px' textAlign={'center'} mb='40px'>
-          Faça já seu pedido e experimente nossos deliciosos lanches e hamburgueres artesanais. Você vai se surpreender!
-        </Text>
+
       </Flex>
     </Flex>
   )

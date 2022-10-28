@@ -4,7 +4,7 @@ import { CardSection } from "./CardSection";
 export function Products() {
   return (
 
-    <Box h={'496px'}>
+    <Box h={'496px'} bg='#F6F2E9'>
 
       <Flex align={'center'}>
 

@@ -11,7 +11,7 @@ export function Modal({ handleModal, closeModal, title }) {
           <Image src="/images/lanche_2.png" borderRadius={'4px 4px 0 0 '} alt='' />
 
           <Box px='40px'>
-            <Text mt={4} fontWeight='bold' fontSize='2xl'>{title}</Text>
+            <Text mt={4} fontWeight='bold' fontSize='2xl'>{title} | R$ 20,00</Text>
             <Text mt={4} fontWeight='bold' fontSize='xl'>Ingredientes:</Text>
             <UnorderedList>
               <ListItem>Lorem ipsum dolor sit amet</ListItem>
@@ -25,7 +25,7 @@ export function Modal({ handleModal, closeModal, title }) {
         </ModalBody>
 
         <ModalFooter>
-          <Button onClick={closeModal}>Close</Button>
+          <Button onClick={closeModal}>fechar</Button>
         </ModalFooter>
       </ModalContent>
     </ModalChakra>
