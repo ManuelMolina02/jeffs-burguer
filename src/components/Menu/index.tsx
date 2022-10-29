@@ -1,11 +1,20 @@
-import { Flex, Grid, Text } from "@chakra-ui/react";
+import { Flex, Grid, Image, Text } from "@chakra-ui/react";
 import { CardItem } from "../Card";
 import styles from './Menu.module.css';
 
 export function Menu({ cards }) {
 
   return (
-    <Flex bg='#F5E4E4'>
+    <Flex bg='#F5E4E4' flexDirection={'column'}>
+      <Image src='/mosaico.svg' alt='logo'
+        position={'relative'}
+
+        w={'100%'}
+        h={'52px'}
+        display={'block'}
+        objectFit={'cover'}
+      />
+
       <Flex
         flexDirection={'column'}
         justify={'center'}

@@ -11,6 +11,10 @@
   gap: 20px;
 }
 
+.footerColumn > div {
+  cursor: pointer;
+}
+
 @media (max-width: 750px) {
   .footerContent {
     padding: 0 120px;
