@@ -6,7 +6,7 @@ export function Footer() {
   return (
     <>
       <Flex bg='white' flexDirection='column' pb={12}>
-        <Image src="/images/divider_4.png" alt='' />
+        <Image src="/images/_4.png" alt='' />
 
         <Flex fontSize={20} m='20px 0' borderBottom={'solid 2px #C7C7C7'}>
           <Text pl='16px' pb='16px'>
@@ -21,8 +21,9 @@ export function Footer() {
             </Text>
 
             <Text>
-              teste teste teste asda sdsad asdas asd a asdas dasd asdas dasd asd asdas dsdas asd a asdas dasd asdas dasd asd asdas ddasd asd
+              Atendimento de Quarta-feira à Domingo das 19:00 às 23:00. Estamos fechados às segundas e terças-feiras.
             </Text>
+
           </Flex>
 
           <Flex gap={6} flexDirection='column'>

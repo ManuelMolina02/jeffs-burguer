@@ -4,7 +4,7 @@ export const theme = extendTheme({
   styles: {
     global: {
       body: {
-        backgroundColor: "#F5E4E4",
+        backgroundColor: "white",
         color: "gray.700",
         margin: "0",
       },

@@ -5,8 +5,8 @@ export function Banner() {
     <Flex
       align={"center"}
       justify={"flex-start"}
-      bgImage={"url('/banner.png')"}
-      bgPosition={"right"}
+      bgImage={"url('/images/banner3.png')"}
+      bgPosition={"center"}
       bgRepeat={"no-repeat"}
       bgSize={"cover"}
       h={"660px"}
