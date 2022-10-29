@@ -1,25 +1,26 @@
 import { Box, Flex, Image, SimpleGrid } from "@chakra-ui/react";
-import { CardSection } from "./CardSection";
+import { CardSection } from "../CardSection";
+import styles from './Products.module.css';
 
 export function Products() {
   return (
 
-    <Box h={{ sm: '980px', md: '496px', lg: '496px' }} bg='#F6F2E9'>
+    <Box className={styles.products} bg='#F6F2E9'>
 
       <Flex align={'center'}>
 
         <Image src='/background.svg' alt='logo'
+          className={styles.bgImage}
           w={'420px'}
           objectFit={'cover'}
           flexDirection={'column'}
-          display={{ sm: 'none', md: 'none', lg: 'block' }}
         />
 
-        <SimpleGrid columns={{ sm: 1, md: 3, lg: 3 }} position={'relative'}>
+        <Box className={styles.cardsProducts} >
           <CardSection title={'Hamburguers'} description={'Lorem Ipsum is simply dummy text of the typesetting industry Ipsum is simply.'} />
           <CardSection title={'Hot Dog'} description={'Lorem Ipsum is simply dummy text of the  typesetting industry Ipsum is simply. '} />
           <CardSection title={'Bebidas'} description={'Lorem Ipsum is simply dummy text of the  typesetting industry Ipsum is simply'} />
-        </SimpleGrid>
+        </Box>
 
       </Flex>
 

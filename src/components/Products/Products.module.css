@@ -1,0 +1,36 @@
+.products {
+  padding: 6rem 0;
+}
+
+.cardsProducts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  position: relative;
+}
+
+@media (max-width: 1350px) {
+  .cardsProducts {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 1000px) {
+  .products {
+  }
+
+  .bgImage {
+    display: none;
+  }
+
+  .cardsProducts {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+
+    width: 60%;
+    margin: 0 auto;
+  }
+}

@@ -1,5 +1,6 @@
 import { Flex, Grid, Text } from "@chakra-ui/react";
-import { CardItem } from "./CardItem";
+import { CardItem } from "../CardItem";
+import styles from './Menu.module.css';
 
 export function Menu({ cards }) {
 
@@ -16,7 +17,7 @@ export function Menu({ cards }) {
           Veja as opções do nosso cardápio completo com deliciosos lanches e hamburgueres artesanais. Você vai se surpreender!
         </Text>
 
-        <Grid templateColumns={{ sm: 'repeat(1, 1fr)', md: 'repeat(2, 1fr)', lg: 'repeat(3, 1fr)' }} gap={16} >
+        <Grid className={styles.gridStyles} gap={16} >
           {
             cards.map(item => (
               <CardItem key={item.id} cardData={item} />

@@ -1,0 +1,16 @@
+.gridStyles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 1080px) {
+  .gridStyles {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 750px) {
+  .gridStyles {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
