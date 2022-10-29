@@ -6,7 +6,7 @@ import { Highlight } from '../components/Highlight';
 import { Menu } from '../components/Menu';
 import { Footer } from '../components/Footer';
 import { Products } from '../components/Products';
-import { GetStaticProps } from 'next';
+import { GetServerSideProps, GetStaticProps } from 'next';
 import { api } from '../services/api';
 
 export default function Home({ dataCards }) {
@@ -31,7 +31,8 @@ export default function Home({ dataCards }) {
   )
 }
 
-export const getStaticProps: GetStaticProps = async () => {
+export const getServerSideProps: GetServerSideProps = async () => {
+
   const response = await api.get('/data').then(response => response.data)
 
   const dataCards = response.map(item => {
@@ -48,6 +49,5 @@ export const getStaticProps: GetStaticProps = async () => {
     props: {
       dataCards
     },
-    revalidate: 60 * 60 * 24, // 1 day
   }
 }
