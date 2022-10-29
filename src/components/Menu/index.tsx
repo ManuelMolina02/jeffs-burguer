@@ -1,5 +1,5 @@
 import { Flex, Grid, Text } from "@chakra-ui/react";
-import { CardItem } from "../CardItem";
+import { CardItem } from "../Card";
 import styles from './Menu.module.css';
 
 export function Menu({ cards }) {

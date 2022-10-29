@@ -1,5 +1,5 @@
 import { Box, Flex, Image, SimpleGrid } from "@chakra-ui/react";
-import { CardSection } from "../CardSection";
+import { CardSection } from "./CardSection";
 import styles from './Products.module.css';
 
 export function Products() {

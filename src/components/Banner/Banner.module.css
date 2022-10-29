@@ -1,0 +1,17 @@
+.bannerContent {
+  width: 380px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  margin-left: 100px;
+  margin-bottom: 100px;
+}
+
+@media (max-width: 650px) {
+  .bannerContent {
+    width: 60%;
+    gap: 40px;
+    text-align: center;
+  }
+}

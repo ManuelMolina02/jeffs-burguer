@@ -1,4 +1,5 @@
-import { Box, Flex, Image, Text, VStack } from "@chakra-ui/react";
+import { Box, Flex, Heading, Image, Text, VStack } from "@chakra-ui/react";
+import styles from './Banner.module.css';
 
 export function Banner() {
   return (
@@ -12,22 +13,17 @@ export function Banner() {
       h={"660px"}
     >
 
-      <VStack
-        w={'380px'}
-        align={'start'}
-        ml={'100px'}
-        color={'white'}
-      >
-        <Text fontSize={40} fontWeight={'bold'}>
+      <Box className={styles.bannerContent}>
+        <Heading>
           Teste de Título
-        </Text>
+        </Heading>
 
         <Text>
           asdasdasd adsas dasda sdasd asdasd asdas dasdas asdasd asdasdas asd asd
           asdasdasd adsas dasda sdasd asdasd asdas dasdas asdasd asdasdas asd asd
           asdasdasd adsas dasda sdasd asdasd asdas dasdas asdasd asdasdas asd asd
         </Text>
-      </VStack>
+      </Box>
 
 
     </Flex >

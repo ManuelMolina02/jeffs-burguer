@@ -1,8 +1,8 @@
 import { useState } from 'react'
-import { Box, Button, Flex, GridItem, Image, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, Text, useDisclosure } from "@chakra-ui/react";
+import { Flex, GridItem, Text } from "@chakra-ui/react";
 import { Modal } from './Modal';
-
 import { MdExpandLess } from 'react-icons/md'
+import styles from './CardItem.module.css'
 
 export function CardItem({ cardData }) {
 
@@ -22,9 +22,8 @@ export function CardItem({ cardData }) {
       display='flex'
       alignItems={'flex-end'}
       cursor='pointer'
-      onClick={
-        () => setShowModal(true)
-      }
+      onClick={() => setShowModal(true)}
+      className={styles.cardItem}
     >
       <Flex bg='gray.900' opacity={'.86'} w='100%' height={'60px'} align='center' justify={'space-between'} px='16px' >
         <Text fontSize={18} color='orange.100' onClick={() => setShowModal(true)}>

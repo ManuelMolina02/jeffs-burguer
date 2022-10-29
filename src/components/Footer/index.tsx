@@ -1,16 +1,16 @@
-import { Flex, Grid, Image, Link, Text } from "@chakra-ui/react";
+import { Box, Flex, Grid, Image, Link, Text } from "@chakra-ui/react";
 import { BsFillCreditCardFill } from 'react-icons/bs'
 import { FaMoneyBillAlt, FaMoneyCheckAlt, FaFacebookSquare } from 'react-icons/fa'
 import { AiFillInstagram } from 'react-icons/ai'
 import { IoLogoWhatsapp } from 'react-icons/io'
-
+import styles from './Footer.module.css'
 
 export function Footer() {
   const textWhats = 'Olá, gostaria de fazer um pedido! Seu pau no cu!'
 
   return (
     <>
-      <Flex bg='white' flexDirection='column' pb={12}>
+      <Flex className={styles.footer} bg='white' flexDirection='column' pb={12}>
         <Image src="/images/_4.png" alt='' />
 
         <Flex fontSize={20} m='20px 0' borderBottom={'solid 2px #C7C7C7'}>
@@ -19,8 +19,8 @@ export function Footer() {
           </Text>
         </Flex>
 
-        <Grid templateColumns={{ sm: 'repeat(1, 1fr)', md: 'repeat(4, 1fr)' }} gap={16} px='60px' >
-          <Flex gap={6} flexDirection='column' align={'start'} pb={8}>
+        <Box className={styles.footerContent} gap={16}  >
+          <Box className={styles.footerColumn}>
             <Text fontSize={20} fontWeight='bold'>
               Horário de Atendimento
             </Text>
@@ -29,9 +29,9 @@ export function Footer() {
               Atendimento de Quarta-feira à Domingo das 19:00 às 23:00. Estamos fechados às segundas e terças-feiras.
             </Text>
 
-          </Flex>
+          </Box>
 
-          <Flex gap={6} flexDirection='column'>
+          <Box className={styles.footerColumn}>
             <Text fontSize={20} fontWeight='bold'>
               Formas de Pagamento
             </Text>
@@ -53,9 +53,9 @@ export function Footer() {
 
               <Text>Dinheiro</Text>
             </Flex>
-          </Flex>
+          </Box>
 
-          <Flex gap={6} flexDirection='column'>
+          <Box className={styles.footerColumn}>
 
             <Text fontSize={20} fontWeight='bold'>
               Redes Sociais
@@ -81,9 +81,9 @@ export function Footer() {
               <Text>WhatsApp</Text>
             </Flex>
 
-          </Flex>
+          </Box>
 
-          <Flex gap={6} flexDirection='column'>
+          <Box className={styles.footerColumn}>
             <Text fontSize={20} fontWeight='bold'>
               Teste teste
             </Text>
@@ -99,8 +99,8 @@ export function Footer() {
             <Text fontSize={16} >
               teste 3
             </Text>
-          </Flex>
-        </Grid>
+          </Box>
+        </Box>
       </Flex>
 
       <Flex h='60px' bg='#EEEEEE' align={'center'} justify={'center'}>

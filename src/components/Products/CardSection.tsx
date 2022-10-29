@@ -1,4 +1,4 @@
-import { Box, Button, Image, Text, VStack } from "@chakra-ui/react";
+import { Box, Button, Heading, Image, Text, VStack } from "@chakra-ui/react";
 
 export function CardSection({ title, description }) {
   return (
@@ -15,10 +15,9 @@ export function CardSection({ title, description }) {
         flexDirection={'column'}
         alignItems={'center'}
       >
-        <Text fontSize={40}
-          fontWeight={'bold'}>
+        <Heading fontSize={40}>
           {title}
-        </Text>
+        </Heading>
 
         <Image src='/images/divider.svg' w={32} alt='logo' />
       </Box>
