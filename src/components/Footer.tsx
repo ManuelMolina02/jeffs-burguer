@@ -14,7 +14,7 @@ export function Footer() {
           </Text>
         </Flex>
 
-        <Grid templateColumns={'repeat(4, 1fr)'} gap={16} px='60px'>
+        <Grid templateColumns={{ sm: 'repeat(1, 1fr)', md: 'repeat(4, 1fr)' }} gap={16} px='60px' >
           <Flex gap={6} flexDirection='column' align={'start'} pb={8}>
             <Text fontSize={20} fontWeight='bold'>
               Horário de Atendimento

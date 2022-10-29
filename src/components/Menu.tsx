@@ -1,10 +1,10 @@
-import { Flex, Grid, Image, Text } from "@chakra-ui/react";
+import { Flex, Grid, Text } from "@chakra-ui/react";
 import { CardItem } from "./CardItem";
 
 export function Menu({ cards }) {
 
   return (
-    <Flex>
+    <Flex bg='#F5E4E4'>
       <Flex
         flexDirection={'column'}
         justify={'center'}
@@ -12,11 +12,11 @@ export function Menu({ cards }) {
         m='60px auto'
         gap={12}
       >
-        <Text color='black' fontSize={28} w='620px' textAlign={'center'} mb='40px'>
+        <Text color='black' fontSize={28} w={{ sm: '320px', md: '480px', lg: '620px' }} textAlign={'center'} mb='40px'>
           Veja as opções do nosso cardápio completo com deliciosos lanches e hamburgueres artesanais. Você vai se surpreender!
         </Text>
 
-        <Grid templateColumns={['repeat(3, 1fr)']} gap={16} >
+        <Grid templateColumns={{ sm: 'repeat(1, 1fr)', md: 'repeat(2, 1fr)', lg: 'repeat(3, 1fr)' }} gap={16} >
           {
             cards.map(item => (
               <CardItem key={item.id} cardData={item} />

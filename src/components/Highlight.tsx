@@ -2,7 +2,7 @@ import { Button, Flex, Image, Text } from "@chakra-ui/react";
 
 export function Highlight() {
   return (
-    <Flex bg='#77212E' h='480px'>
+    <Flex bg='#77212E' h={['800px', '800px', '480px']} flexDirection={{ sm: 'column', md: 'column', lg: 'row' }}>
       <Flex m='auto 0'>
         <Image src='/images/lanche_2.png' alt='logo'
           w={'440px'}
@@ -14,6 +14,8 @@ export function Highlight() {
           position={'relative'}
 
           ml='200px'
+
+          display={{ sm: 'none', md: 'none', lg: 'block' }}
         />
 
         <Image src='/images/lanche_2.png' alt='logo'
@@ -25,8 +27,11 @@ export function Highlight() {
 
           position={'relative'}
           zIndex={1}
-          ml='-410px'
-          mt='30px'
+
+
+          ml={{ sm: '0', md: '0', lg: '-410px' }}
+          mt={{ sm: '0', md: '0', lg: '30px' }}
+
         />
       </Flex>
 

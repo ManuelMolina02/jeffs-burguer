@@ -4,7 +4,7 @@ import { CardSection } from "./CardSection";
 export function Products() {
   return (
 
-    <Box h={'496px'} bg='#F6F2E9'>
+    <Box h={{ sm: '980px', md: '496px', lg: '496px' }} bg='#F6F2E9'>
 
       <Flex align={'center'}>
 
@@ -12,9 +12,10 @@ export function Products() {
           w={'420px'}
           objectFit={'cover'}
           flexDirection={'column'}
+          display={{ sm: 'none', md: 'none', lg: 'block' }}
         />
 
-        <SimpleGrid columns={3} position={'relative'}>
+        <SimpleGrid columns={{ sm: 1, md: 3, lg: 3 }} position={'relative'}>
           <CardSection title={'Hamburguers'} description={'Lorem Ipsum is simply dummy text of the typesetting industry Ipsum is simply.'} />
           <CardSection title={'Hot Dog'} description={'Lorem Ipsum is simply dummy text of the  typesetting industry Ipsum is simply. '} />
           <CardSection title={'Bebidas'} description={'Lorem Ipsum is simply dummy text of the  typesetting industry Ipsum is simply'} />

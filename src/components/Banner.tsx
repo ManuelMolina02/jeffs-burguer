@@ -1,11 +1,11 @@
-import { Flex, Image, Text, VStack } from "@chakra-ui/react";
+import { Flex, Text, VStack } from "@chakra-ui/react";
 
 export function Banner() {
   return (
     <Flex
       align={"center"}
       justify={"flex-start"}
-      bgImage={"url('/images/banner3.png')"}
+      bgImage={"url('/images/banner.png')"}
       bgPosition={"center"}
       bgRepeat={"no-repeat"}
       bgSize={"cover"}
