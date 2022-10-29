@@ -2,6 +2,8 @@ import { useState } from 'react'
 import { Box, Button, Flex, GridItem, Image, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, Text, useDisclosure } from "@chakra-ui/react";
 import { Modal } from './Modal';
 
+import { MdExpandLess } from 'react-icons/md'
+
 export function CardItem({ cardData }) {
 
   const [showModal, setShowModal] = useState(false)
@@ -24,10 +26,12 @@ export function CardItem({ cardData }) {
         () => setShowModal(true)
       }
     >
-      <Flex bg='gray.900' opacity={'.86'} position={'relative'} w='100%' height={'60px'} align='center' pl='8px'>
+      <Flex bg='gray.900' opacity={'.86'} w='100%' height={'60px'} align='center' justify={'space-between'} px='16px' >
         <Text fontSize={18} color='orange.100' onClick={() => setShowModal(true)}>
           {cardData.title}
         </Text>
+
+        <MdExpandLess size={30} color='white' />
       </Flex>
 
       <Modal handleModal={showModal} closeModal={setShowModal} data={cardData} />

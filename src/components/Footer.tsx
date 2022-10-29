@@ -1,4 +1,9 @@
-import { Flex, Grid, Image, Text } from "@chakra-ui/react";
+import { Flex, Grid, Image, Link, Text } from "@chakra-ui/react";
+import { BsFillCreditCardFill } from 'react-icons/bs'
+import { FaMoneyBillAlt, FaMoneyCheckAlt, FaFacebookSquare } from 'react-icons/fa'
+import { AiFillInstagram } from 'react-icons/ai'
+import { IoLogoWhatsapp } from 'react-icons/io'
+
 
 export function Footer() {
   const textWhats = 'Olá, gostaria de fazer um pedido! Seu pau no cu!'
@@ -31,35 +36,51 @@ export function Footer() {
               Formas de Pagamento
             </Text>
 
-            <Text fontSize={16} >
-              Cartão de Crédito/ Débito
-            </Text>
+            <Flex fontSize={16} align='center' gap={2}>
+              <BsFillCreditCardFill size={22} />
 
-            <Text fontSize={16} >
-              PIX
-            </Text>
+              <Text>Cartão de Crédito/ Débito</Text>
+            </Flex>
 
-            <Text fontSize={16} >
-              Dinheiro
-            </Text>
+            <Flex fontSize={16} align='center' gap={2}>
+              <FaMoneyCheckAlt size={22} />
+
+              <Text>PIX</Text>
+            </Flex>
+
+            <Flex fontSize={16} align='center' gap={2}>
+              <FaMoneyBillAlt size={22} />
+
+              <Text>Dinheiro</Text>
+            </Flex>
           </Flex>
 
           <Flex gap={6} flexDirection='column'>
+
             <Text fontSize={20} fontWeight='bold'>
               Redes Sociais
             </Text>
 
-            <Text fontSize={16} >
-              Instagram
-            </Text>
 
-            <Text fontSize={16} >
-              Facebook
-            </Text>
 
-            <Text fontSize={16} >
-              WhatsApp
-            </Text>
+            <Flex fontSize={16} align='center' gap={2}>
+              <AiFillInstagram size={22} />
+
+              <Text>Instagram</Text>
+            </Flex>
+
+            <Flex fontSize={16} align='center' gap={2}>
+              <FaFacebookSquare size={22} />
+
+              <Text>Facebook</Text>
+            </Flex>
+
+            <Flex fontSize={16} align='center' gap={2}>
+              <IoLogoWhatsapp size={22} />
+
+              <Text>WhatsApp</Text>
+            </Flex>
+
           </Flex>
 
           <Flex gap={6} flexDirection='column'>
@@ -84,7 +105,7 @@ export function Footer() {
 
       <Flex h='60px' bg='#EEEEEE' align={'center'} justify={'center'}>
         <Text>
-          © 2022 Developed by Manuel Molina
+          © 2022 Developed by <Link fontWeight='bold' target='_blank' href="http://www.linkedin.com/in/manuel-angel-berger-molina-ba08b3174/">Manuel Molina</Link>
         </Text>
       </Flex>
     </>
