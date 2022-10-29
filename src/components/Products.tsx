@@ -15,7 +15,7 @@ export function Products() {
         />
 
         <SimpleGrid columns={3} position={'relative'}>
-          <CardSection title={'Hamburguers'} description={'Lorem Ipsum is simply dummy text of the printing and typesetting industry. '} />
+          <CardSection title={'Hamburguers'} description={'Lorem Ipsum is simply dummy text of the typesetting industry Ipsum is simply.'} />
           <CardSection title={'Hot Dog'} description={'Lorem Ipsum is simply dummy text of the  typesetting industry Ipsum is simply. '} />
           <CardSection title={'Bebidas'} description={'Lorem Ipsum is simply dummy text of the  typesetting industry Ipsum is simply'} />
         </SimpleGrid>
