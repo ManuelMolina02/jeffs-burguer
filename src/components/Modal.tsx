@@ -1,6 +1,6 @@
 import { Box, Button, Image, ListItem, Modal as ModalChakra, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, Text, UnorderedList } from "@chakra-ui/react";
 
-export function Modal({ handleModal, closeModal, title, image }) {
+export function Modal({ handleModal, closeModal, data }) {
 
   return (
     <ModalChakra onClose={closeModal} isOpen={handleModal} motionPreset='slideInBottom' size={'xl'} isCentered>
@@ -8,18 +8,19 @@ export function Modal({ handleModal, closeModal, title, image }) {
       <ModalContent>
 
         <ModalBody pt='0' px='0'>
-          <Image src={image} borderRadius={'4px 4px 0 0 '} alt='' />
+          <Image src={data.src} borderRadius={'4px 4px 0 0 '} alt='' />
 
           <Box px='40px'>
-            <Text mt={4} fontWeight='bold' fontSize='2xl'>{title} | R$ 20,00</Text>
+            <Text mt={4} fontWeight='bold' fontSize='2xl'>{data.title} | {data.price}</Text>
             <Text mt={4} fontWeight='bold' fontSize='xl'>Ingredientes:</Text>
             <UnorderedList>
-              <ListItem>Lorem ipsum dolor sit amet</ListItem>
-              <ListItem>Consectetur adipiscing elit</ListItem>
-              <ListItem>Integer molestie lorem at massa</ListItem>
-              <ListItem>Facilisis in pretium nisl aliquet</ListItem>
-              <ListItem>Integer molestie lorem at massa</ListItem>
-              <ListItem>Facilisis in pretium nisl aliquet</ListItem>
+              {
+                data.ingredientsList.map((item, index) => {
+                  return (
+                    <ListItem key={index}>{item}</ListItem>
+                  )
+                })
+              }
             </UnorderedList>
           </Box>
         </ModalBody>

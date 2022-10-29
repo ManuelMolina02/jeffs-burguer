@@ -2,8 +2,7 @@ import { useState } from 'react'
 import { Box, Button, Flex, GridItem, Image, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, Text, useDisclosure } from "@chakra-ui/react";
 import { Modal } from './Modal';
 
-export function CardItem({ title, image }) {
-
+export function CardItem({ cardData }) {
 
   const [showModal, setShowModal] = useState(false)
   return (
@@ -13,7 +12,7 @@ export function CardItem({ title, image }) {
       bg='blue.500'
       textAlign='center'
       overflow='hidden'
-      bgImage={`url(${image})`}
+      bgImage={`url(${cardData.src})`}
       bgSize={'cover'}
       bgPosition={'center'}
       borderRadius='12px'
@@ -21,23 +20,17 @@ export function CardItem({ title, image }) {
       display='flex'
       alignItems={'flex-end'}
       cursor='pointer'
-
       onClick={
         () => setShowModal(true)
       }
     >
       <Flex bg='gray.900' opacity={'.86'} position={'relative'} w='100%' height={'60px'} align='center' pl='8px'>
         <Text fontSize={18} color='orange.100' onClick={() => setShowModal(true)}>
-          {title}
+          {cardData.title}
         </Text>
       </Flex>
 
-      <Modal handleModal={showModal} closeModal={setShowModal} title={title} image={image} />
-
-
-
-    </GridItem >
-
-
+      <Modal handleModal={showModal} closeModal={setShowModal} data={cardData} />
+    </GridItem>
   )
 }

@@ -9,20 +9,8 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       type: "Hambúrguer",
       price: 26.0,
       image: "/lanches/costela-premium.jpeg",
-      ingredients: [
-        {
-          id: 1,
-          name: "Hambúrguer Artesanal 150g",
-        },
-        {
-          id: 2,
-          name: "Bacon",
-        },
-        {
-          id: 3,
-          name: "Queijo",
-        },
-      ],
+      ingredients:
+        "Hambúrguer Artesanal 150g, Bacon, Queijo, Alface, Tomate, Cebola, Maionese",
     },
     {
       id: 2,
@@ -30,20 +18,8 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       type: "Hambúrguer",
       price: 30.0,
       image: "/lanches/nacho-burguer.jpeg",
-      ingredients: [
-        {
-          id: 1,
-          name: "Hambúrguer Artesanal 150g",
-        },
-        {
-          id: 2,
-          name: "Bacon",
-        },
-        {
-          id: 3,
-          name: "Queijo",
-        },
-      ],
+      ingredients:
+        "Hambúrguer Artesanal 150g, Bacon, Queijo, Alface, Tomate, Cebola, Maionese",
     },
     {
       id: 3,
@@ -51,20 +27,8 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       type: "Hambúrguer",
       price: 30.0,
       image: "/lanches/quatro-queijos.jpeg",
-      ingredients: [
-        {
-          id: 1,
-          name: "Hambúrguer Artesanal 150g",
-        },
-        {
-          id: 2,
-          name: "Bacon",
-        },
-        {
-          id: 3,
-          name: "Queijo",
-        },
-      ],
+      ingredients:
+        "Hambúrguer Artesanal 150g, Bacon, Queijo, Alface, Tomate, Cebola, Maionese",
     },
     {
       id: 4,
@@ -72,20 +36,8 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       type: "Hambúrguer",
       price: 28.0,
       image: "/lanches/crocante.jpeg",
-      ingredients: [
-        {
-          id: 1,
-          name: "Hambúrguer Artesanal 150g",
-        },
-        {
-          id: 2,
-          name: "Bacon",
-        },
-        {
-          id: 3,
-          name: "Queijo",
-        },
-      ],
+      ingredients:
+        "Hambúrguer Artesanal 150g, Bacon, Queijo, Alface, Tomate, Cebola, Maionese",
     },
     {
       id: 4,
@@ -93,20 +45,8 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       type: "Hambúrguer",
       image: "/lanches/provolone.jpeg",
       price: 30.0,
-      ingredients: [
-        {
-          id: 1,
-          name: "Hambúrguer Artesanal 150g",
-        },
-        {
-          id: 2,
-          name: "Bacon",
-        },
-        {
-          id: 3,
-          name: "Queijo",
-        },
-      ],
+      ingredients:
+        "Hambúrguer Artesanal 150g, Bacon, Queijo, Alface, Tomate, Cebola, Maionese",
     },
     {
       id: 5,
@@ -114,20 +54,8 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       type: "Smash",
       price: 16.0,
       image: "/lanches/smash-junior.jpeg",
-      ingredients: [
-        {
-          id: 1,
-          name: "Hambúrguer Artesanal 150g",
-        },
-        {
-          id: 2,
-          name: "Bacon",
-        },
-        {
-          id: 3,
-          name: "Queijo",
-        },
-      ],
+      ingredients:
+        "Hambúrguer Artesanal 150g, Bacon, Queijo, Alface, Tomate, Cebola, Maionese",
     },
     {
       id: 6,
@@ -135,20 +63,8 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       type: "Smash",
       price: 18.0,
       image: "/lanches/smash-salada.jpeg",
-      ingredients: [
-        {
-          id: 1,
-          name: "Hambúrguer Artesanal 150g",
-        },
-        {
-          id: 2,
-          name: "Bacon",
-        },
-        {
-          id: 3,
-          name: "Queijo",
-        },
-      ],
+      ingredients:
+        "Hambúrguer Artesanal 150g, Bacon, Queijo, Alface, Tomate, Cebola, Maionese",
     },
     {
       id: 7,
@@ -156,20 +72,8 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       type: "Hambúrguer",
       image: "/lanches/jack-bacon.jpeg",
       price: 25.0,
-      ingredients: [
-        {
-          id: 1,
-          name: "Hambúrguer Artesanal 150g",
-        },
-        {
-          id: 2,
-          name: "Bacon",
-        },
-        {
-          id: 3,
-          name: "Queijo",
-        },
-      ],
+      ingredients:
+        "Hambúrguer Artesanal 150g, Bacon, Queijo, Alface, Tomate, Cebola, Maionese",
     },
     {
       id: 8,
@@ -177,20 +81,8 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       type: "Hambúrguer",
       image: "/lanches/jack-rodeio.jpeg",
       price: 25.0,
-      ingredients: [
-        {
-          id: 1,
-          name: "Hambúrguer Artesanal 150g",
-        },
-        {
-          id: 2,
-          name: "Bacon",
-        },
-        {
-          id: 3,
-          name: "Queijo",
-        },
-      ],
+      ingredients:
+        "Hambúrguer Artesanal 150g, Bacon, Queijo, Alface, Tomate, Cebola, Maionese",
     },
     {
       id: 9,
@@ -198,20 +90,8 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       type: "Hot Dog",
       price: 18.0,
       image: "/lanches/hot-dog-um.jpeg",
-      ingredients: [
-        {
-          id: 1,
-          name: "Hambúrguer Artesanal 150g",
-        },
-        {
-          id: 2,
-          name: "Bacon",
-        },
-        {
-          id: 3,
-          name: "Queijo",
-        },
-      ],
+      ingredients:
+        "Hambúrguer Artesanal 150g, Bacon, Queijo, Alface, Tomate, Cebola, Maionese",
     },
     {
       id: 10,
@@ -219,20 +99,8 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       type: "Hot Dog",
       price: 16.0,
       image: "/lanches/hot-dog-dois.jpeg",
-      ingredients: [
-        {
-          id: 1,
-          name: "Hambúrguer Artesanal 150g",
-        },
-        {
-          id: 2,
-          name: "Bacon",
-        },
-        {
-          id: 3,
-          name: "Queijo",
-        },
-      ],
+      ingredients:
+        "Hambúrguer Artesanal 150g, Bacon, Queijo, Alface, Tomate, Cebola, Maionese",
     },
     {
       id: 11,
@@ -240,20 +108,8 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       type: "Hot Dog",
       image: "/lanches/hot-dog-tres.jpeg",
       price: 19.0,
-      ingredients: [
-        {
-          id: 1,
-          name: "Hambúrguer Artesanal 150g",
-        },
-        {
-          id: 2,
-          name: "Bacon",
-        },
-        {
-          id: 3,
-          name: "Queijo",
-        },
-      ],
+      ingredients:
+        "Hambúrguer Artesanal 150g, Bacon, Queijo, Alface, Tomate, Cebola, Maionese",
     },
   ];
 

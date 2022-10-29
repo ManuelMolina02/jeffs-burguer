@@ -1,16 +1,11 @@
-import { Box, Button, Flex, Grid, Image, Text } from "@chakra-ui/react";
-import { redirect } from "next/dist/server/api-utils";
-import { CardItem } from "./CardItem";
+import { Flex, Grid, Image, Text } from "@chakra-ui/react";
 
 export function Footer() {
-
   const textWhats = 'Olá, gostaria de fazer um pedido! Seu pau no cu!'
-
 
   return (
     <>
       <Flex bg='white' flexDirection='column' pb={12}>
-
         <Image src="/images/divider_4.png" alt='' />
 
         <Flex fontSize={20} m='20px 0' borderBottom={'solid 2px #C7C7C7'}>

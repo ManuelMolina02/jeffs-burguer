@@ -9,14 +9,10 @@ import { Products } from '../components/Products';
 import { GetStaticProps } from 'next';
 import { api } from '../services/api';
 
-export default function Home({ data }) {
-
-  console.log(data);
-
+export default function Home({ dataCards }) {
 
   return (
     <>
-
       <Head>
         <title>home | Jeffs Burguer</title>
       </Head>
@@ -26,7 +22,7 @@ export default function Home({ data }) {
         <Banner />
         <Products />
         <Highlight />
-        <Menu itensMenu={data} />
+        <Menu cards={dataCards} />
         <Footer />
 
       </Box>
@@ -35,14 +31,22 @@ export default function Home({ data }) {
   )
 }
 
-
 export const getStaticProps: GetStaticProps = async () => {
-
   const response = await api.get('/data').then(response => response.data)
+
+  const dataCards = response.map(item => {
+    return {
+      id: item.id,
+      title: item.name,
+      src: item.image,
+      price: Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(item.price),
+      ingredientsList: item.ingredients.split(','),
+    }
+  })
 
   return {
     props: {
-      data: response,
+      dataCards
     },
     revalidate: 60 * 60 * 24, // 1 day
   }

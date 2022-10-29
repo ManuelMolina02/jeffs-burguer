@@ -23,6 +23,5 @@ export function Header() {
 
       </Flex>
     </header>
-
   )
 }
