@@ -14,7 +14,7 @@ export function CardItem({ cardData }) {
       bg='blue.500'
       textAlign='center'
       overflow='hidden'
-      bgImage={`url(${cardData.src})`}
+      bgImage={`url(/lanches/${cardData.src})`}
       bgSize={'cover'}
       bgPosition={'center'}
       borderRadius='12px'

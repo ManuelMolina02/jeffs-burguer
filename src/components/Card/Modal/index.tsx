@@ -9,7 +9,7 @@ export function Modal({ handleModal, closeModal, data }) {
       <ModalContent className={styles.modal} >
 
         <ModalBody pt='0' px='0'>
-          <Image src={data.src} borderRadius={'4px 4px 0 0 '} objectFit='cover' w='100%' h='360px' alt='' />
+          <Image src={`/lanches/${data.src}`} borderRadius={'4px 4px 0 0 '} objectFit='cover' w='100%' h='360px' alt='' />
 
           <Box px='40px'>
             <Text mt={4} fontWeight='bold' fontSize='2xl'>{data.title} | {data.price}</Text>

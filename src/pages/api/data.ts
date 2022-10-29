@@ -4,12 +4,29 @@ import { NextApiRequest, NextApiResponse } from "next";
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   const data = [
     {
+      id: 7,
+      name: "Jack Bacon",
+      type: "Hambúrguer",
+      src: "jack-bacon.jpeg",
+      price: 25.0,
+      ingredients:
+        "Hambúrguer Artesanal 150g, Bacon, Queijo, Alface, Tomate, Cebola, Maionese",
+    },
+    {
+      id: 8,
+      name: "Jack Rodeio",
+      type: "Hambúrguer",
+      src: "jack-rodeio.jpeg",
+      price: 25.0,
+      ingredients:
+        "Hambúrguer Artesanal 150g, Bacon, Queijo, Alface, Tomate, Cebola, Maionese",
+    },
+    {
       id: 1,
       name: "Costela Premium",
       type: "Hambúrguer",
       price: 26.0,
-      image:
-        "https://i0.wp.com/mercadoeconsumo.com.br/wp-content/uploads/2019/04/Que-comida-saud%C3%A1vel-que-nada-brasileiro-gosta-de-fast-food.jpg?resize=1140%2C570&ssl=1",
+      src: "costela-premium.jpeg",
       ingredients:
         "Hambúrguer Artesanal 150g, Bacon, Queijo, Alface, Tomate, Cebola, Maionese",
     },
@@ -18,8 +35,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       name: "Nacho Burger",
       type: "Hambúrguer",
       price: 30.0,
-      image:
-        "https://i0.wp.com/mercadoeconsumo.com.br/wp-content/uploads/2019/04/Que-comida-saud%C3%A1vel-que-nada-brasileiro-gosta-de-fast-food.jpg?resize=1140%2C570&ssl=1",
+      src: "nacho-burguer.jpeg",
       ingredients:
         "Hambúrguer Artesanal 150g, Bacon, Queijo, Alface, Tomate, Cebola, Maionese",
     },
@@ -28,8 +44,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       name: "4 Queijos Burguer",
       type: "Hambúrguer",
       price: 30.0,
-      image:
-        "https://i0.wp.com/mercadoeconsumo.com.br/wp-content/uploads/2019/04/Que-comida-saud%C3%A1vel-que-nada-brasileiro-gosta-de-fast-food.jpg?resize=1140%2C570&ssl=1",
+      src: "quatro-queijos.jpeg",
       ingredients:
         "Hambúrguer Artesanal 150g, Bacon, Queijo, Alface, Tomate, Cebola, Maionese",
     },
@@ -38,8 +53,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       name: "Crocante",
       type: "Hambúrguer",
       price: 28.0,
-      image:
-        "https://i0.wp.com/mercadoeconsumo.com.br/wp-content/uploads/2019/04/Que-comida-saud%C3%A1vel-que-nada-brasileiro-gosta-de-fast-food.jpg?resize=1140%2C570&ssl=1",
+      src: "crocante.jpeg",
       ingredients:
         "Hambúrguer Artesanal 150g, Bacon, Queijo, Alface, Tomate, Cebola, Maionese",
     },
@@ -47,8 +61,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       id: 4,
       name: "Provolone",
       type: "Hambúrguer",
-      image:
-        "https://i0.wp.com/mercadoeconsumo.com.br/wp-content/uploads/2019/04/Que-comida-saud%C3%A1vel-que-nada-brasileiro-gosta-de-fast-food.jpg?resize=1140%2C570&ssl=1",
+      src: "provolone.jpeg",
       price: 30.0,
       ingredients:
         "Hambúrguer Artesanal 150g, Bacon, Queijo, Alface, Tomate, Cebola, Maionese",
@@ -58,8 +71,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       name: "Smash Júnior",
       type: "Smash",
       price: 16.0,
-      image:
-        "https://i0.wp.com/mercadoeconsumo.com.br/wp-content/uploads/2019/04/Que-comida-saud%C3%A1vel-que-nada-brasileiro-gosta-de-fast-food.jpg?resize=1140%2C570&ssl=1",
+      src: "smash-junior.jpeg",
       ingredients:
         "Hambúrguer Artesanal 150g, Bacon, Queijo, Alface, Tomate, Cebola, Maionese",
     },
@@ -68,38 +80,17 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       name: "Smash Salada",
       type: "Smash",
       price: 18.0,
-      image:
-        "https://i0.wp.com/mercadoeconsumo.com.br/wp-content/uploads/2019/04/Que-comida-saud%C3%A1vel-que-nada-brasileiro-gosta-de-fast-food.jpg?resize=1140%2C570&ssl=1",
+      src: "smash-salada.jpeg",
       ingredients:
         "Hambúrguer Artesanal 150g, Bacon, Queijo, Alface, Tomate, Cebola, Maionese",
     },
-    {
-      id: 7,
-      name: "Jack Bacon",
-      type: "Hambúrguer",
-      image:
-        "https://i0.wp.com/mercadoeconsumo.com.br/wp-content/uploads/2019/04/Que-comida-saud%C3%A1vel-que-nada-brasileiro-gosta-de-fast-food.jpg?resize=1140%2C570&ssl=1",
-      price: 25.0,
-      ingredients:
-        "Hambúrguer Artesanal 150g, Bacon, Queijo, Alface, Tomate, Cebola, Maionese",
-    },
-    {
-      id: 8,
-      name: "Jack Rodeio",
-      type: "Hambúrguer",
-      image:
-        "https://i0.wp.com/mercadoeconsumo.com.br/wp-content/uploads/2019/04/Que-comida-saud%C3%A1vel-que-nada-brasileiro-gosta-de-fast-food.jpg?resize=1140%2C570&ssl=1",
-      price: 25.0,
-      ingredients:
-        "Hambúrguer Artesanal 150g, Bacon, Queijo, Alface, Tomate, Cebola, Maionese",
-    },
+
     {
       id: 9,
       name: "Hot Dog 1",
       type: "Hot Dog",
       price: 18.0,
-      image:
-        "https://i0.wp.com/mercadoeconsumo.com.br/wp-content/uploads/2019/04/Que-comida-saud%C3%A1vel-que-nada-brasileiro-gosta-de-fast-food.jpg?resize=1140%2C570&ssl=1",
+      src: "hot-dog-um.jpeg",
       ingredients:
         "Hambúrguer Artesanal 150g, Bacon, Queijo, Alface, Tomate, Cebola, Maionese",
     },
@@ -108,8 +99,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       name: "Hot Dog 2",
       type: "Hot Dog",
       price: 16.0,
-      image:
-        "https://i0.wp.com/mercadoeconsumo.com.br/wp-content/uploads/2019/04/Que-comida-saud%C3%A1vel-que-nada-brasileiro-gosta-de-fast-food.jpg?resize=1140%2C570&ssl=1",
+      src: "hot-dog-dois.jpeg",
       ingredients:
         "Hambúrguer Artesanal 150g, Bacon, Queijo, Alface, Tomate, Cebola, Maionese",
     },
@@ -117,8 +107,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       id: 11,
       name: "Hot Dog 3",
       type: "Hot Dog",
-      image:
-        "https://i0.wp.com/mercadoeconsumo.com.br/wp-content/uploads/2019/04/Que-comida-saud%C3%A1vel-que-nada-brasileiro-gosta-de-fast-food.jpg?resize=1140%2C570&ssl=1",
+      src: "hot-dog-tres.jpeg",
       price: 19.0,
       ingredients:
         "Hambúrguer Artesanal 150g, Bacon, Queijo, Alface, Tomate, Cebola, Maionese",

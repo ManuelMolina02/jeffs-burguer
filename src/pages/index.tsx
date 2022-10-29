@@ -39,7 +39,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
     return {
       id: item.id,
       title: item.name,
-      src: item.image,
+      src: item.src,
       price: Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(item.price),
       ingredientsList: item.ingredients.split(','),
     }
