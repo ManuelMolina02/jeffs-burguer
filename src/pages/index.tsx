@@ -6,8 +6,13 @@ import { Highlight } from '../components/Highlight';
 import { Menu } from '../components/Menu';
 import { Footer } from '../components/Footer';
 import { Products } from '../components/Products';
+import { GetStaticProps } from 'next';
+import { api } from '../services/api';
 
-export default function SignIn() {
+export default function Home({ data }) {
+
+  console.log(data);
+
 
   return (
     <>
@@ -21,7 +26,7 @@ export default function SignIn() {
         <Banner />
         <Products />
         <Highlight />
-        <Menu />
+        <Menu itensMenu={data} />
         <Footer />
 
       </Box>
@@ -31,3 +36,14 @@ export default function SignIn() {
 }
 
 
+export const getStaticProps: GetStaticProps = async () => {
+
+  const response = await api.get('/data').then(response => response.data)
+
+  return {
+    props: {
+      data: response,
+    },
+    revalidate: 60 * 60 * 24, // 1 day
+  }
+}

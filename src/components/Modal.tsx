@@ -1,6 +1,6 @@
 import { Box, Button, Image, ListItem, Modal as ModalChakra, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, Text, UnorderedList } from "@chakra-ui/react";
 
-export function Modal({ handleModal, closeModal, title }) {
+export function Modal({ handleModal, closeModal, title, image }) {
 
   return (
     <ModalChakra onClose={closeModal} isOpen={handleModal} motionPreset='slideInBottom' size={'xl'} isCentered>
@@ -8,7 +8,7 @@ export function Modal({ handleModal, closeModal, title }) {
       <ModalContent>
 
         <ModalBody pt='0' px='0'>
-          <Image src="/images/lanche_2.png" borderRadius={'4px 4px 0 0 '} alt='' />
+          <Image src={image} borderRadius={'4px 4px 0 0 '} alt='' />
 
           <Box px='40px'>
             <Text mt={4} fontWeight='bold' fontSize='2xl'>{title} | R$ 20,00</Text>
@@ -25,8 +25,9 @@ export function Modal({ handleModal, closeModal, title }) {
         </ModalBody>
 
         <ModalFooter>
-          <Button onClick={closeModal}>fechar</Button>
+          <Button onClick={() => closeModal(false)}>fechar</Button>
         </ModalFooter>
+
       </ModalContent>
     </ModalChakra>
   )

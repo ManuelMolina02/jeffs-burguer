@@ -13,7 +13,7 @@ export function CardItem({ title, image }) {
       bg='blue.500'
       textAlign='center'
       overflow='hidden'
-      bgImage={'url(/images/lanche_1.svg)'}
+      bgImage={`url(${image})`}
       bgSize={'cover'}
       bgPosition={'center'}
       borderRadius='12px'
@@ -32,7 +32,7 @@ export function CardItem({ title, image }) {
         </Text>
       </Flex>
 
-      <Modal handleModal={showModal} closeModal={setShowModal} title={title} />
+      <Modal handleModal={showModal} closeModal={setShowModal} title={title} image={image} />
 
 
 

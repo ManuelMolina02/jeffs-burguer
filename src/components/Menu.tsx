@@ -1,7 +1,11 @@
 import { Flex, Grid, Image, Text } from "@chakra-ui/react";
 import { CardItem } from "./CardItem";
 
-export function Menu() {
+export function Menu({ itensMenu }) {
+
+
+
+
   return (
     <Flex>
       <Flex
@@ -16,18 +20,13 @@ export function Menu() {
         </Text>
 
         <Grid templateColumns={['repeat(3, 1fr)']} gap={16} >
-          <CardItem title='lanche frango' image='' />
-          <CardItem title='lanche de costela' image='' />
-          <CardItem title='hamburguer teste' image='' />
-          <CardItem title='jack bacon' image='' />
-          <CardItem title='hamburguer teste1' image='' />
-          <CardItem title='hamburguer teste23' image='' />
-          <CardItem title='hamburguer teste' image='' />
-          <CardItem title='jack bacon' image='' />
-          <CardItem title='hamburguer teste1' image='' />
-          <CardItem title='hamburguer teste' image='' />
-          <CardItem title='jack bacon' image='' />
-          <CardItem title='hamburguer teste1' image='' />
+
+          {
+            itensMenu.map(item => (
+              <CardItem key={item.id} title={item.name} image={item.image} />
+            ))
+
+          }
         </Grid>
 
       </Flex>

@@ -11,7 +11,7 @@ export function Footer() {
     <>
       <Flex bg='white' flexDirection='column' pb={12}>
 
-        <Image src="/images/divider_3.png" alt='' />
+        <Image src="/images/divider_4.png" alt='' />
 
         <Flex fontSize={20} m='20px 0' borderBottom={'solid 2px #C7C7C7'}>
           <Text pl='16px' pb='16px'>
@@ -22,53 +22,53 @@ export function Footer() {
         <Grid templateColumns={'repeat(4, 1fr)'} gap={16} px='60px'>
           <Flex gap={6} flexDirection='column' align={'start'} pb={8}>
             <Text fontSize={20} fontWeight='bold'>
-              teste teste teste
+              Horário de Atendimento
             </Text>
 
             <Text>
-              teste teste teste asda sdsad asdas asd a asdas dasd asdas dasd asd asdas d
+              teste teste teste asda sdsad asdas asd a asdas dasd asdas dasd asd asdas dsdas asd a asdas dasd asdas dasd asd asdas ddasd asd
             </Text>
           </Flex>
 
           <Flex gap={6} flexDirection='column'>
             <Text fontSize={20} fontWeight='bold'>
-              asdasdasdasd
+              Formas de Pagamento
             </Text>
 
             <Text fontSize={16} >
-              teste 1
+              Cartão de Crédito/ Débito
             </Text>
 
             <Text fontSize={16} >
-              teste 2
+              PIX
             </Text>
 
             <Text fontSize={16} >
-              teste 3
+              Dinheiro
             </Text>
           </Flex>
 
           <Flex gap={6} flexDirection='column'>
             <Text fontSize={20} fontWeight='bold'>
-              asdasdasdasd
+              Redes Sociais
             </Text>
 
             <Text fontSize={16} >
-              teste 1
+              Instagram
             </Text>
 
             <Text fontSize={16} >
-              teste 2
+              Facebook
             </Text>
 
             <Text fontSize={16} >
-              teste 3
+              WhatsApp
             </Text>
           </Flex>
 
           <Flex gap={6} flexDirection='column'>
             <Text fontSize={20} fontWeight='bold'>
-              asdasdasdasd
+              Teste teste
             </Text>
 
             <Text fontSize={16} >

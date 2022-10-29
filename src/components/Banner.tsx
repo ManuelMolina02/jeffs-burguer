@@ -5,7 +5,7 @@ export function Banner() {
     <Flex
       align={"center"}
       justify={"flex-start"}
-      bgImage={"url('/images/lanche_3.png')"}
+      bgImage={"url('/banner.png')"}
       bgPosition={"right"}
       bgRepeat={"no-repeat"}
       bgSize={"cover"}
@@ -27,6 +27,8 @@ export function Banner() {
           asdasdasd adsas dasda sdasd asdasd asdas dasdas asdasd asdasdas asd asd
         </Text>
       </VStack>
+
+
     </Flex>
   )
 }
