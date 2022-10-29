@@ -18,7 +18,7 @@ export default function Home({ dataCards }) {
       </Head>
 
       <Box maxW={'1580px'} m='0 auto'>
-        {/* <Header /> */}
+        <Header />
         <Banner />
         <Products />
         <Highlight />

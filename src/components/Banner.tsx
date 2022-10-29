@@ -1,4 +1,4 @@
-import { Flex, Text, VStack } from "@chakra-ui/react";
+import { Box, Flex, Image, Text, VStack } from "@chakra-ui/react";
 
 export function Banner() {
   return (
@@ -11,6 +11,7 @@ export function Banner() {
       bgSize={"cover"}
       h={"660px"}
     >
+
       <VStack
         w={'380px'}
         align={'start'}
@@ -29,6 +30,6 @@ export function Banner() {
       </VStack>
 
 
-    </Flex>
+    </Flex >
   )
 }
