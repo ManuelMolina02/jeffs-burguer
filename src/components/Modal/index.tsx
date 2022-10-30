@@ -55,12 +55,8 @@ export function Modal({ location, handleModal, closeModal, data, conditional }) 
 
         </ModalContent>
       </ModalChakra>
-
-
-
     )
   }
-
 
   const modalBodyHighlight = (data: DataTypes) => {
     return (

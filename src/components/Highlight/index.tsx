@@ -27,7 +27,7 @@ export function Highlight() {
         </Button>
       </Flex>
 
-      <Modal handleModal={showModal} closeModal={setShowModal} data={data} location='highlight' />
+      <Modal handleModal={showModal} closeModal={setShowModal} data={data} location='highlight' conditional={''} />
 
     </Flex>
   )
