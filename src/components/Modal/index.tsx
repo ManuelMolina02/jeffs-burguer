@@ -114,7 +114,7 @@ export function Modal({ location, handleModal, closeModal, data }) {
       <ModalChakra onClose={closeModal} isOpen={handleModal} motionPreset='slideInBottom' size={'3xl'} isCentered  >
         <ModalOverlay />
 
-        <ModalContent h='480px'>
+        <ModalContent h='480px' overflow={'scroll'}>
 
           <ModalCloseButton />
 
@@ -129,7 +129,7 @@ export function Modal({ location, handleModal, closeModal, data }) {
             <Accordion allowToggle>
               <AccordionItem>
                 <h2>
-                  <AccordionButton>
+                  <AccordionButton _expanded={{ bg: 'tomato', color: 'white' }}>
                     <Box flex='1' textAlign='left'>
                       Section 1 title
                     </Box>
@@ -163,7 +163,7 @@ export function Modal({ location, handleModal, closeModal, data }) {
 
               <AccordionItem>
                 <h2>
-                  <AccordionButton>
+                  <AccordionButton _expanded={{ bg: 'tomato', color: 'white' }}>
                     <Box flex='1' textAlign='left'>
                       Section 2 title
                     </Box>
@@ -180,7 +180,7 @@ export function Modal({ location, handleModal, closeModal, data }) {
 
               <AccordionItem>
                 <h2>
-                  <AccordionButton>
+                  <AccordionButton _expanded={{ bg: 'tomato', color: 'white' }}>
                     <Box flex='1' textAlign='left'>
                       Section 2 title
                     </Box>
@@ -197,7 +197,7 @@ export function Modal({ location, handleModal, closeModal, data }) {
 
               <AccordionItem>
                 <h2>
-                  <AccordionButton>
+                  <AccordionButton _expanded={{ bg: 'tomato', color: 'white' }}>
                     <Box flex='1' textAlign='left'>
                       Section 2 title
                     </Box>
@@ -214,7 +214,7 @@ export function Modal({ location, handleModal, closeModal, data }) {
 
               <AccordionItem>
                 <h2>
-                  <AccordionButton>
+                  <AccordionButton _expanded={{ bg: 'tomato', color: 'white' }}>
                     <Box flex='1' textAlign='left'>
                       Section 2 title
                     </Box>
