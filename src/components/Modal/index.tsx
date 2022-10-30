@@ -1,23 +1,16 @@
-import { Box, Button, Flex, Heading, Image, ListItem, Modal as ModalChakra, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, Text, UnorderedList, Accordion, AccordionButton, AccordionIcon, AccordionItem, AccordionPanel } from "@chakra-ui/react";
+import { Box, Button, Flex, Heading, Image, ListItem, Modal as ModalChakra, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalOverlay, Text, UnorderedList, Accordion, AccordionButton, AccordionIcon, AccordionItem, AccordionPanel } from "@chakra-ui/react";
 import styles from './Modal.module.css';
 
 export function Modal({ location, handleModal, closeModal, data, conditional }) {
-
-  interface ModalProps {
-    location: string;
-    handleModal: boolean;
-    closeModal: any;
-    data: any;
-  }
 
   type DataTypes = {
     title: string;
     price: string;
     src: string;
     ingredientsList: string[];
+    conditional?: string
 
   }
-
 
   type DataTypesProducts = {
     id: number;
@@ -29,7 +22,6 @@ export function Modal({ location, handleModal, closeModal, data, conditional }) 
     conditional?: string
 
   }
-
 
   const modalBodyMenu = (data: DataTypes) => {
     return (
@@ -121,13 +113,9 @@ export function Modal({ location, handleModal, closeModal, data, conditional }) 
   }
 
   const modalBodyProducts = (data: DataTypesProducts[]) => {
-
-
     const itemsList = data.filter(item => item.type === conditional)
-    console.log(itemsList);
 
     return (
-
       <ModalChakra onClose={closeModal} isOpen={handleModal} motionPreset='slideInBottom' size={'3xl'} isCentered  >
         <ModalOverlay />
 
