@@ -19,7 +19,7 @@ export function Highlight() {
         <Image src={`/images/${data.src}`} alt='logo' />
       </Flex>
 
-      <Flex w='420px' color={'white'} flexDirection={'column'} justify='center' gap={8}>
+      <Flex className={styles.contentHighlight} w='420px' color={'white'} flexDirection={'column'} justify='center' gap={8}>
         <Heading fontSize={'32px'}>Sugestão do Chef</Heading>
         <Text fontSize={'22px'}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley.</Text>
         <Button onClick={() => setShowModal(true)} variant={'outline'} size='lg' _hover={{ color: '#77212E', bg: 'white' }}>

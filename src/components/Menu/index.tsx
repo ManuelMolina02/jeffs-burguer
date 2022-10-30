@@ -20,6 +20,8 @@ export function Menu({ cards }) {
         align={'center'}
         m='60px auto'
         gap={12}
+
+        className={styles.menuContent}
       >
         <Text color='black' fontSize={28} w={{ sm: '320px', md: '480px', lg: '620px' }} textAlign={'center'} mb='40px'>
           Veja as opções do nosso cardápio completo com deliciosos lanches e hamburgueres artesanais. Você vai se surpreender!
