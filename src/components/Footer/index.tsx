@@ -115,7 +115,7 @@ export function Footer() {
         </Box>
       </Flex>
 
-      <Modal handleModal={showModal} closeModal={setShowModal} data={{}} />
+      <Modal handleModal={showModal} closeModal={setShowModal} data={{}} location='footer' />
 
 
       <Flex h='60px' bg='#EEEEEE' align={'center'} justify={'center'}>
