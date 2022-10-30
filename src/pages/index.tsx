@@ -12,12 +12,12 @@ import { api } from '../services/api';
 export default function Home({ dataCards }) {
 
   return (
-    <>
+    <Box maxW={'1580px'} m='0 auto'>
       <Head>
         <title>home | Jeffs Burguer</title>
       </Head>
 
-      <Box maxW={'1580px'} m='0 auto'>
+      <>
         <Header />
         <Banner />
         <Products />
@@ -25,9 +25,8 @@ export default function Home({ dataCards }) {
         <Menu cards={dataCards} />
         <Footer />
 
-      </Box>
-
-    </>
+      </>
+    </Box>
   )
 }
 

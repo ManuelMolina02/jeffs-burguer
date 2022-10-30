@@ -34,6 +34,8 @@ export function CardItem({ cardData }) {
       </Flex>
 
       <Modal handleModal={showModal} closeModal={setShowModal} data={cardData} />
+
+
     </GridItem>
   )
 }

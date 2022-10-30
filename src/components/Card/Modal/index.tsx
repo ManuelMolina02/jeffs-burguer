@@ -4,9 +4,9 @@ import styles from './Modal.module.css';
 export function Modal({ handleModal, closeModal, data }) {
 
   return (
-    <ModalChakra onClose={closeModal} isOpen={handleModal} motionPreset='slideInBottom' size={'xl'} isCentered >
+    <ModalChakra onClose={closeModal} isOpen={handleModal} motionPreset='slideInBottom' size={'xl'} isCentered  >
       <ModalOverlay />
-      <ModalContent className={styles.modal} >
+      <ModalContent className={styles.modal}  >
 
         <ModalBody pt='0' px='0'>
           <Image src={`/lanches/${data.src}`} borderRadius={'4px 4px 0 0 '} objectFit='cover' w='100%' h='360px' alt='' />

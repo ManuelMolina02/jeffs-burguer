@@ -1,4 +1,4 @@
-import { Flex, Grid, Image, Text } from "@chakra-ui/react";
+import { Button, Flex, Grid, Image, Modal, ModalBody, ModalCloseButton, ModalContent, ModalHeader, ModalOverlay, Text } from "@chakra-ui/react";
 import { CardItem } from "../Card";
 import styles from './Menu.module.css';
 

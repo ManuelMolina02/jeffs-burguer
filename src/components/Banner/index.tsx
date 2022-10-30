@@ -1,5 +1,6 @@
 import { Box, Flex, Heading, Image, Text, VStack } from "@chakra-ui/react";
 import styles from './Banner.module.css';
+import { Drawer } from "./Drawer";
 
 export function Banner() {
   return (
@@ -24,6 +25,8 @@ export function Banner() {
           asdasdasd adsas dasda sdasd asdasd asdas dasdas asdasd asdasdas asd asd
         </Text>
       </Box>
+
+      <Drawer />
 
 
     </Flex >
