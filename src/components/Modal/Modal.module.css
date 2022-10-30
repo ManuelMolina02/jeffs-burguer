@@ -1,3 +1,22 @@
+@media (max-width: 810px) {
+  .modalHighlight {
+    margin: 60px;
+  }
+
+  .modalContentHighlight {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .modalContentHighlight img {
+    width: 90%;
+    height: 380px;
+
+    margin: 48px auto 0 auto;
+    border-radius: 8px;
+  }
+}
+
 @media (max-width: 650px) {
   .modal {
     margin: auto 26px;

@@ -64,13 +64,13 @@ export function Modal({ location, handleModal, closeModal, data }) {
       <ModalChakra onClose={closeModal} isOpen={handleModal} motionPreset='slideInBottom' size={'3xl'} isCentered  >
         <ModalOverlay />
 
-        <ModalContent className={styles.modal}>
+        <ModalContent className={`${styles.modal} ${styles.modalHighlight}`}>
 
           <ModalCloseButton />
 
           <ModalBody py='0' px='0'>
-            <Flex>
-              <Image src={`/images/${data.src}`} borderRadius={'4px 4px 0 0 '} objectFit='cover' w='60%' h='60vh' alt='' />
+            <Flex className={styles.modalContentHighlight}>
+              <Image src={`/images/${data.src}`} borderRadius={'4px 0 0 4px '} objectFit='cover' w='60%' h='60vh' alt='' />
 
               <Box py='40px' px='40px'>
                 <Heading mt={4} fontSize='2xl'> Provolone | R$ 30,00 </Heading>
@@ -81,7 +81,7 @@ export function Modal({ location, handleModal, closeModal, data }) {
                   </Text>
 
                   <Text>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley.
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the.
                   </Text>
 
                 </Box>
@@ -95,7 +95,6 @@ export function Modal({ location, handleModal, closeModal, data }) {
                   <ListItem >Ceblo Roxa</ListItem>
                   <ListItem >Alface</ListItem>
                   <ListItem >Tomate</ListItem>
-
                 </UnorderedList>
 
               </Box>
@@ -103,7 +102,7 @@ export function Modal({ location, handleModal, closeModal, data }) {
           </ModalBody>
 
         </ModalContent>
-      </ModalChakra>
+      </ModalChakra >
 
 
     )
