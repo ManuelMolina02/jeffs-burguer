@@ -8,7 +8,6 @@ export function Menu({ cards }) {
     <Flex bg='#F5E4E4' flexDirection={'column'}>
       <Image src='/mosaico.svg' alt='logo'
         position={'relative'}
-
         w={'100%'}
         h={'52px'}
         display={'block'}

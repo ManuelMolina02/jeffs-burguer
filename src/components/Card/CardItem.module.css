@@ -1,11 +1,7 @@
-.modalOverlay {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  background-color: black;
+.cardItem {
+  transition: transform 0.3s ease-in-out;
+}
 
-  z-index: 1000;
-
-  right: 0;
-  top: 0;
+.cardItem:hover {
+  transform: scale(1.1);
 }

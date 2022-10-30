@@ -1,12 +1,19 @@
+import { useState } from 'react'
 import { Box, Flex, Grid, Icon, Image, Link, Text } from "@chakra-ui/react";
 import { BsFillCreditCardFill } from 'react-icons/bs'
 import { FaMoneyBillAlt, FaMoneyCheckAlt, FaFacebookSquare } from 'react-icons/fa'
 import { AiFillInstagram } from 'react-icons/ai'
 import { IoLogoWhatsapp } from 'react-icons/io'
 import styles from './Footer.module.css'
+import { Modal } from "../Modal";
 
 export function Footer() {
+  const numberWhats = '5542999945476'
   const textWhats = 'Olá, gostaria de fazer um pedido! Seu pau no cu!'
+
+
+  const [showModal, setShowModal] = useState(false)
+
 
   return (
     <>
@@ -36,19 +43,19 @@ export function Footer() {
               Formas de Pagamento
             </Text>
 
-            <Flex fontSize={16} align='center' gap={2}>
+            <Flex fontSize={16} align='center' gap={2} onClick={() => setShowModal(true)}>
               <BsFillCreditCardFill size={22} />
 
               <Text>Cartão de Crédito/ Débito</Text>
             </Flex>
 
-            <Flex fontSize={16} align='center' gap={2}>
+            <Flex fontSize={16} align='center' gap={2} onClick={() => setShowModal(true)}>
               <FaMoneyCheckAlt size={22} />
 
               <Text>PIX</Text>
             </Flex>
 
-            <Flex fontSize={16} align='center' gap={2}>
+            <Flex fontSize={16} align='center' gap={2} onClick={() => setShowModal(true)}>
               <FaMoneyBillAlt size={22} />
 
               <Text>Dinheiro</Text>
@@ -61,25 +68,30 @@ export function Footer() {
               Redes Sociais
             </Text>
 
-            <Flex fontSize={16} align='center' gap={2}>
-              <IoLogoWhatsapp size={22} />
+            <Link href={` https://api.whatsapp.com/send?phone=${numberWhats}&text=${textWhats}`} target='_blank' _focus={{ border: 'none' }}>
+              <Flex fontSize={16} align='center' gap={2}>
+                <IoLogoWhatsapp size={22} />
 
-              <Text>WhatsApp</Text>
-            </Flex>
+                <Text>WhatsApp</Text>
+              </Flex>
 
+            </Link>
 
-            <Flex fontSize={16} align='center' gap={2}>
-              <AiFillInstagram size={22} />
+            <Link href={`#`} target='_blank' _focus={{ border: 'none' }}>
+              <Flex fontSize={16} align='center' gap={2}>
+                <AiFillInstagram size={22} />
 
-              <Text>Instagram</Text>
-            </Flex>
+                <Text>Instagram</Text>
+              </Flex>
+            </Link>
 
-            <Flex fontSize={16} align='center' gap={2}>
-              <Image src="/aiboo.png" boxSize={22} alt='' />
+            <Link href={`#`} target='_blank' _focus={{ border: 'none' }} >
+              <Flex fontSize={16} align='center' gap={2}>
+                <Image src="/aiboo1.png" boxSize={18} alt='' ml='2px' />
 
-              <Text>Aiboo</Text>
-            </Flex>
-
+                <Text>Aiboo</Text>
+              </Flex>
+            </Link>
 
           </Box>
 
@@ -102,6 +114,9 @@ export function Footer() {
           </Box>
         </Box>
       </Flex>
+
+      <Modal handleModal={showModal} closeModal={setShowModal} data={{}} />
+
 
       <Flex h='60px' bg='#EEEEEE' align={'center'} justify={'center'}>
         <Text>

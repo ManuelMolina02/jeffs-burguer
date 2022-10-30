@@ -1,12 +1,13 @@
 import { Box, Button, Heading, Image, Text, VStack } from "@chakra-ui/react";
 
-export function CardSection({ title, description }) {
+export function CardSection({ title, description, handleModal }) {
   return (
     <VStack
       spacing={8} p={8}
       textAlign='center'
       align='center'
       justify={'center'}
+      onClick={() => handleModal(true)}
     >
 
       <Box
