@@ -20,7 +20,7 @@ export default function Home({ dataCards }) {
       <>
         <Header />
         <Banner />
-        <Products />
+        <Products data={dataCards} />
         <Highlight />
         <Menu cards={dataCards} />
         <Footer />
@@ -38,6 +38,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
     return {
       id: item.id,
       title: item.name,
+      type: item.type,
       src: item.src,
       price: Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(item.price),
       ingredientsList: item.ingredients.split(','),

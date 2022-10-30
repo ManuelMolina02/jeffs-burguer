@@ -1,7 +1,7 @@
 import { Box, Button, Flex, Heading, Image, ListItem, Modal as ModalChakra, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, Text, UnorderedList, Accordion, AccordionButton, AccordionIcon, AccordionItem, AccordionPanel } from "@chakra-ui/react";
 import styles from './Modal.module.css';
 
-export function Modal({ location, handleModal, closeModal, data }) {
+export function Modal({ location, handleModal, closeModal, data, conditional }) {
 
   interface ModalProps {
     location: string;
@@ -15,6 +15,18 @@ export function Modal({ location, handleModal, closeModal, data }) {
     price: string;
     src: string;
     ingredientsList: string[];
+
+  }
+
+
+  type DataTypesProducts = {
+    id: number;
+    title: string;
+    price: string;
+    type: string;
+    src: string;
+    ingredientsList: string[];
+    conditional?: string
 
   }
 
@@ -108,7 +120,12 @@ export function Modal({ location, handleModal, closeModal, data }) {
     )
   }
 
-  const modalBodyProducts = (data: DataTypes) => {
+  const modalBodyProducts = (data: DataTypesProducts[]) => {
+
+
+    const itemsList = data.filter(item => item.type === conditional)
+    console.log(itemsList);
+
     return (
 
       <ModalChakra onClose={closeModal} isOpen={handleModal} motionPreset='slideInBottom' size={'3xl'} isCentered  >
@@ -122,112 +139,31 @@ export function Modal({ location, handleModal, closeModal, data }) {
 
             <Box mt='20px' mb='60px'>
               <Heading>
-                Hambúrguers
+                {conditional}
               </Heading>
             </Box>
 
             <Accordion allowToggle>
-              <AccordionItem>
-                <h2>
-                  <AccordionButton _expanded={{ bg: 'tomato', color: 'white' }}>
-                    <Box flex='1' textAlign='left'>
-                      Section 1 title
-                    </Box>
-                    <AccordionIcon />
-                  </AccordionButton>
-                </h2>
-                <AccordionPanel pb={4}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                  veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                  commodo consequat.
-                </AccordionPanel>
-              </AccordionItem>
-
-              <AccordionItem>
-                <h2>
-                  <AccordionButton>
-                    <Box flex='1' textAlign='left'>
-                      Section 2 title
-                    </Box>
-                    <AccordionIcon />
-                  </AccordionButton>
-                </h2>
-                <AccordionPanel pb={4}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                  veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                  commodo consequat.
-                </AccordionPanel>
-              </AccordionItem>
-
-              <AccordionItem>
-                <h2>
-                  <AccordionButton _expanded={{ bg: 'tomato', color: 'white' }}>
-                    <Box flex='1' textAlign='left'>
-                      Section 2 title
-                    </Box>
-                    <AccordionIcon />
-                  </AccordionButton>
-                </h2>
-                <AccordionPanel pb={4}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                  veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                  commodo consequat.
-                </AccordionPanel>
-              </AccordionItem>
-
-              <AccordionItem>
-                <h2>
-                  <AccordionButton _expanded={{ bg: 'tomato', color: 'white' }}>
-                    <Box flex='1' textAlign='left'>
-                      Section 2 title
-                    </Box>
-                    <AccordionIcon />
-                  </AccordionButton>
-                </h2>
-                <AccordionPanel pb={4}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                  veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                  commodo consequat.
-                </AccordionPanel>
-              </AccordionItem>
-
-              <AccordionItem>
-                <h2>
-                  <AccordionButton _expanded={{ bg: 'tomato', color: 'white' }}>
-                    <Box flex='1' textAlign='left'>
-                      Section 2 title
-                    </Box>
-                    <AccordionIcon />
-                  </AccordionButton>
-                </h2>
-                <AccordionPanel pb={4}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                  veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                  commodo consequat.
-                </AccordionPanel>
-              </AccordionItem>
-
-              <AccordionItem>
-                <h2>
-                  <AccordionButton _expanded={{ bg: 'tomato', color: 'white' }}>
-                    <Box flex='1' textAlign='left'>
-                      Section 2 title
-                    </Box>
-                    <AccordionIcon />
-                  </AccordionButton>
-                </h2>
-                <AccordionPanel pb={4}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                  veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                  commodo consequat.
-                </AccordionPanel>
-              </AccordionItem>
+              {
+                itemsList.map(item => (
+                  <AccordionItem key={item.id}>
+                    <h2>
+                      <AccordionButton _expanded={{ bg: 'tomato', color: 'white' }}>
+                        <Box flex='1' textAlign='left'>
+                          <strong>{item.title}</strong> | {item.price}
+                        </Box>
+                        <AccordionIcon />
+                      </AccordionButton>
+                    </h2>
+                    <AccordionPanel pb={4}>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                      commodo consequat.
+                    </AccordionPanel>
+                  </AccordionItem>
+                ))
+              }
             </Accordion>
 
           </ModalBody>
