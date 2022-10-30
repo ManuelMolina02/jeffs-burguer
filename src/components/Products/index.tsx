@@ -27,7 +27,7 @@ export function Products() {
         </Box>
       </Flex>
 
-      <Modal handleModal={showModal} closeModal={setShowModal} data={{}} />
+      <Modal handleModal={showModal} closeModal={setShowModal} data={{}} location='products' />
 
 
       <Image src='/mosaico.svg' alt='logo'

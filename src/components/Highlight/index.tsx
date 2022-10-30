@@ -7,12 +7,16 @@ import styles from './Highlight.module.css';
 
 export function Highlight() {
 
+  const data = {
+    src: 'lanche_2.png'
+  }
+
   const [showModal, setShowModal] = useState(false)
 
   return (
     <Flex className={styles.highlight} bg='#77212E'>
       <Flex className={styles.boxImages}>
-        <Image src='/images/lanche_2.png' alt='logo' />
+        <Image src={`/images/${data.src}`} alt='logo' />
       </Flex>
 
       <Flex w='420px' color={'white'} flexDirection={'column'} justify='center' gap={8}>
@@ -23,7 +27,7 @@ export function Highlight() {
         </Button>
       </Flex>
 
-      <Modal handleModal={showModal} closeModal={setShowModal} data={{}} />
+      <Modal handleModal={showModal} closeModal={setShowModal} data={data} location='highlight' />
 
     </Flex>
   )

@@ -33,7 +33,7 @@ export function CardItem({ cardData }) {
         <MdExpandLess size={30} color='white' />
       </Flex>
 
-      <Modal handleModal={showModal} closeModal={setShowModal} data={cardData} />
+      <Modal handleModal={showModal} closeModal={setShowModal} data={cardData} location='menu' />
 
 
     </GridItem>
