@@ -15,6 +15,10 @@
   cursor: pointer;
 }
 
+.footerColumn > div:hover {
+  text-decoration: underline;
+}
+
 @media (max-width: 750px) {
   .footerContent {
     padding: 0 120px;

@@ -1,4 +1,4 @@
-import { Box, Flex, Grid, Image, Link, Text } from "@chakra-ui/react";
+import { Box, Flex, Grid, Icon, Image, Link, Text } from "@chakra-ui/react";
 import { BsFillCreditCardFill } from 'react-icons/bs'
 import { FaMoneyBillAlt, FaMoneyCheckAlt, FaFacebookSquare } from 'react-icons/fa'
 import { AiFillInstagram } from 'react-icons/ai'
@@ -61,6 +61,11 @@ export function Footer() {
               Redes Sociais
             </Text>
 
+            <Flex fontSize={16} align='center' gap={2}>
+              <IoLogoWhatsapp size={22} />
+
+              <Text>WhatsApp</Text>
+            </Flex>
 
 
             <Flex fontSize={16} align='center' gap={2}>
@@ -70,16 +75,11 @@ export function Footer() {
             </Flex>
 
             <Flex fontSize={16} align='center' gap={2}>
-              <FaFacebookSquare size={22} />
+              <Image src="/aiboo.png" boxSize={22} alt='' />
 
-              <Text>Facebook</Text>
+              <Text>Aiboo</Text>
             </Flex>
 
-            <Flex fontSize={16} align='center' gap={2}>
-              <IoLogoWhatsapp size={22} />
-
-              <Text>WhatsApp</Text>
-            </Flex>
 
           </Box>
 
