@@ -15,7 +15,9 @@ export function Footer() {
   return (
     <>
       <Flex className={styles.footer} bg='white' flexDirection='column' pb={12}>
-        <Image src="/images/_4.png" alt='' />
+        {/*
+          <Image src="/images/_4.png" alt='' />
+        */}
 
         <Flex fontSize={20} m='20px 0' borderBottom={'solid 2px #C7C7C7'}>
           <Text pl='16px' pb='16px'>
