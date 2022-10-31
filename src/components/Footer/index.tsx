@@ -11,10 +11,7 @@ export function Footer() {
   const numberWhats = '5542999945476'
   const textWhats = 'Olá, gostaria de fazer um pedido! Seu pau no cu!'
 
-
   const [showModal, setShowModal] = useState(false)
-
-
   return (
     <>
       <Flex className={styles.footer} bg='white' flexDirection='column' pb={12}>
@@ -35,7 +32,6 @@ export function Footer() {
             <Text>
               Atendimento de Quarta-feira à Domingo das 19:00 às 23:00. Estamos fechados às segundas e terças-feiras.
             </Text>
-
           </Box>
 
           <Box className={styles.footerColumn}>
@@ -45,19 +41,16 @@ export function Footer() {
 
             <Flex fontSize={16} align='center' gap={2} onClick={() => setShowModal(true)}>
               <BsFillCreditCardFill size={22} />
-
               <Text>Cartão de Crédito/ Débito</Text>
             </Flex>
 
             <Flex fontSize={16} align='center' gap={2} onClick={() => setShowModal(true)}>
               <FaMoneyCheckAlt size={22} />
-
               <Text>PIX</Text>
             </Flex>
 
             <Flex fontSize={16} align='center' gap={2} onClick={() => setShowModal(true)}>
               <FaMoneyBillAlt size={22} />
-
               <Text>Dinheiro</Text>
             </Flex>
           </Box>
@@ -71,24 +64,20 @@ export function Footer() {
             <Link href={` https://api.whatsapp.com/send?phone=${numberWhats}&text=${textWhats}`} target='_blank' _focus={{ border: 'none' }}>
               <Flex fontSize={16} align='center' gap={2}>
                 <IoLogoWhatsapp size={22} />
-
                 <Text>WhatsApp</Text>
               </Flex>
-
             </Link>
 
             <Link href={`#`} target='_blank' _focus={{ border: 'none' }}>
               <Flex fontSize={16} align='center' gap={2}>
                 <AiFillInstagram size={22} />
-
                 <Text>Instagram</Text>
               </Flex>
             </Link>
 
-            <Link href={`#`} target='_blank' _focus={{ border: 'none' }} >
+            <Link href={`#`} _focus={{ border: 'none' }} >
               <Flex fontSize={16} align='center' gap={2}>
                 <Image src="/aiboo1.png" boxSize={18} alt='' ml='2px' />
-
                 <Text>Aiboo</Text>
               </Flex>
             </Link>

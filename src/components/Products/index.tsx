@@ -7,7 +7,7 @@ export function Products({ data }) {
 
 
   return (
-    <Box className={styles.products} bg='#F6F2E9'>
+    <Box id='products' className={styles.products} bg='#F6F2E9'>
 
       <Flex align={'center'}>
         <Image src='/background.svg' alt='logo'

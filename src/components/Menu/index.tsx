@@ -5,7 +5,7 @@ import styles from './Menu.module.css';
 export function Menu({ cards }) {
 
   return (
-    <Flex bg='#F5E4E4' flexDirection={'column'}>
+    <Flex id='menu' bg='#F5E4E4' flexDirection={'column'}>
       <Image src='/mosaico.svg' alt='logo'
         position={'relative'}
         w={'100%'}

@@ -13,7 +13,7 @@ export function Highlight() {
   const [showModal, setShowModal] = useState(false)
 
   return (
-    <Flex className={styles.highlight} bg='#77212E'>
+    <Flex id='highlight' className={styles.highlight} bg='#77212E'>
       <Flex className={styles.boxImages}>
         <Image src={`/images/${data.src}`} alt='logo' />
       </Flex>
