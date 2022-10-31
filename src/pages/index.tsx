@@ -34,6 +34,8 @@ export const getServerSideProps: GetServerSideProps = async () => {
 
   const response = await api.get('/data').then(response => response.data)
 
+
+
   const dataCards = response.map(item => {
     return {
       id: item.id,

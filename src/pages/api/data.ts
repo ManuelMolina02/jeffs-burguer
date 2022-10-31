@@ -58,7 +58,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
         "Hambúrguer Artesanal 150g, Bacon, Queijo, Alface, Tomate, Cebola, Maionese",
     },
     {
-      id: 4,
+      id: 12,
       name: "Provolone",
       type: "Hambúrguer",
       src: "provolone.webp",
