@@ -14,7 +14,7 @@ export function Drawer() {
 
   return (
     <>
-      <Button name='menu' onClick={onOpen} position='fixed' top={'20px'} right={'20px'} bg={'white'} zIndex='100' border={' 1px solid #C2C2C2'} px='10px' >
+      <Button title='access menu' onClick={onOpen} position='fixed' top={'20px'} right={'20px'} bg={'white'} zIndex='100' border={' 1px solid #C2C2C2'} px='10px' >
         <GiHamburgerMenu color="#808080" size={'22px'} />
       </Button>
 
