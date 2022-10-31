@@ -7,7 +7,7 @@ import styles from './Highlight.module.css';
 export function Highlight() {
 
   const data = {
-    src: 'lanche_2.png'
+    src: 'lanche_2.webp'
   }
 
   const [showModal, setShowModal] = useState(false)

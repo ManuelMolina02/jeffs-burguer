@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Box, Flex, Grid, Icon, Image, Link, Text } from "@chakra-ui/react";
 import { BsFillCreditCardFill } from 'react-icons/bs'
-import { FaMoneyBillAlt, FaMoneyCheckAlt, FaFacebookSquare } from 'react-icons/fa'
+import { FaMoneyBillAlt, FaMoneyCheckAlt } from 'react-icons/fa'
 import { AiFillInstagram } from 'react-icons/ai'
 import { IoLogoWhatsapp } from 'react-icons/io'
 import styles from './Footer.module.css'
