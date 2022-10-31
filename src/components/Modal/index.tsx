@@ -115,7 +115,7 @@ export function Modal({ location, handleModal, closeModal, data, conditional }) 
       <ModalChakra onClose={closeModal} isOpen={handleModal} motionPreset='slideInBottom' size={'3xl'} isCentered  >
         <ModalOverlay />
 
-        <ModalContent h='480px' overflow={'scroll'}>
+        <ModalContent className={styles.modalProducts} h='480px' overflow={'scroll'}>
 
           <ModalCloseButton />
 
@@ -140,10 +140,7 @@ export function Modal({ location, handleModal, closeModal, data, conditional }) 
                       </AccordionButton>
                     </h2>
                     <AccordionPanel pb={4}>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                      commodo consequat.
+                      {item.ingredientsList.join(',')}
                     </AccordionPanel>
                   </AccordionItem>
                 ))

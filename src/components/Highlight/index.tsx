@@ -1,6 +1,5 @@
 import { useState } from 'react'
 
-
 import { Button, Flex, Heading, Image, Text } from "@chakra-ui/react";
 import { Modal } from "../Modal";
 import styles from './Highlight.module.css';
@@ -28,7 +27,6 @@ export function Highlight() {
       </Flex>
 
       <Modal handleModal={showModal} closeModal={setShowModal} data={data} location='highlight' conditional={''} />
-
     </Flex>
   )
 }
