@@ -1,13 +1,9 @@
-import { Box } from '@chakra-ui/react'
 import Head from 'next/head';
-import { Banner } from '../components/Banner';
-import { Header } from '../components/Header';
-import { Highlight } from '../components/Highlight';
-import { Menu } from '../components/Menu';
-import { Footer } from '../components/Footer';
-import { Products } from '../components/Products';
 import { GetServerSideProps } from 'next';
+
+import { Box } from '@chakra-ui/react'
 import { api } from '../services/api';
+import { Header, Banner, Products, Highlight, Menu, Footer } from '../components';
 
 export default function Home({ dataCards }) {
 
@@ -24,17 +20,13 @@ export default function Home({ dataCards }) {
         <Highlight />
         <Menu cards={dataCards} />
         <Footer />
-
       </>
     </Box>
   )
 }
 
 export const getServerSideProps: GetServerSideProps = async () => {
-
   const response = await api.get('/data').then(response => response.data)
-
-
 
   const dataCards = response.map(item => {
     return {

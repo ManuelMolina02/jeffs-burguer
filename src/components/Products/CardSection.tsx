@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
 
-import { Box, Button, Heading, Image, Text, VStack } from "@chakra-ui/react";
+import { border, Box, Button, Heading, Image, Text, VStack } from "@chakra-ui/react";
 import { Modal } from '../Modal';
 
 export function CardSection({ title, description, data }) {
@@ -36,18 +36,19 @@ export function CardSection({ title, description, data }) {
         </Box>
 
         <Text
-          color={'#777777'}
+          color={'#616161'}
           fontSize={22}>
           {description}
         </Text>
 
         <Button
-          color={'#E95B2D'}
-          borderColor={'#E95B2D'}
+          color={'#616161'}
+          borderColor={'#616161'}
           variant='outline'
           _hover={{
             bg: '#E95B2D',
-            color: '#fff'
+            color: '#fff',
+            border: '#fff'
           }}
 
           onClick={
@@ -56,8 +57,6 @@ export function CardSection({ title, description, data }) {
         >
           ver mais
         </Button>
-
-
       </VStack>
 
       <Modal handleModal={showModal} closeModal={setShowModal} data={data} location='products' conditional={title} />
