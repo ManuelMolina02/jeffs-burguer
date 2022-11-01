@@ -1,13 +1,12 @@
 import { useState } from 'react'
 
 
-import { border, Box, Button, Heading, Image, Text, VStack } from "@chakra-ui/react";
+import { Box, Button, Heading, Image, Text, VStack } from "@chakra-ui/react";
 import { Modal } from '../Modal';
 
 export function CardSection({ title, description, data }) {
 
   const [showModal, setShowModal] = useState(false)
-  const [optionsSelected, setOptionsSelected] = useState('')
 
   return (
 

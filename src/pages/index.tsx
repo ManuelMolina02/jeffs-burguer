@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import { GetServerSideProps } from 'next';
-
 import { Box } from '@chakra-ui/react'
 import { api } from '../services/api';
 import { Header, Banner, Products, Highlight, Menu, Footer } from '../components';

@@ -1,4 +1,4 @@
-import { Box, Flex, Heading, Image, Text, VStack } from "@chakra-ui/react";
+import { Box, Flex, Heading, Text } from "@chakra-ui/react";
 import styles from './Banner.module.css';
 import { Drawer } from "./Drawer";
 
@@ -15,14 +15,12 @@ export function Banner() {
     >
 
       <Box className={styles.bannerContent}>
-        <Heading>
+        <Heading fontSize={'46px'}>
           Teste de Título
         </Heading>
 
-        <Text>
-          asdasdasd adsas dasda sdasd asdasd asdas dasdas asdasd asdasdas asd asd
-          asdasdasd adsas dasda sdasd asdasd asdas dasdas asdasd asdasdas asd asd
-          asdasdasd adsas dasda sdasd asdasd asdas dasdas asdasd asdasdas asd asd
+        <Text fontSize={'xl'}>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley.
         </Text>
       </Box>
 

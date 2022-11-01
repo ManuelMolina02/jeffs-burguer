@@ -1,10 +1,5 @@
-import { Box, Button, Drawer as DrawerChakra, DrawerBody, DrawerCloseButton, DrawerContent, DrawerHeader, DrawerOverlay, Flex, Image, Link, RadioGroup, Stack, Text, useDisclosure } from "@chakra-ui/react"
-import { useState } from "react"
+import { Button, Drawer as DrawerChakra, DrawerBody, DrawerCloseButton, DrawerContent, DrawerHeader, DrawerOverlay, Flex, Link, Text, useDisclosure } from "@chakra-ui/react"
 import { GiHamburgerMenu } from 'react-icons/gi'
-import { BsFillCreditCardFill } from 'react-icons/bs'
-import { FaMoneyBillAlt, FaMoneyCheckAlt, FaFacebookSquare } from 'react-icons/fa'
-import { AiFillInstagram } from 'react-icons/ai'
-import { IoLogoWhatsapp } from 'react-icons/io'
 
 export function Drawer() {
   const numberWhats = '5542999945476'
@@ -26,25 +21,25 @@ export function Drawer() {
 
           <DrawerBody display={'flex'} flexDirection='column' gap='26px' mt='30px'>
 
-            <Link href={`#`} _focus={{ border: 'none' }} >
+            <Link href={`#`} _focus={{ border: 'none' }} onClick={onClose}>
               <Flex fontSize={16} align='center' gap={2}>
                 <Text>Quem Somos</Text>
               </Flex>
             </Link>
 
-            <Link href={`#products`} _focus={{ border: 'none' }} >
+            <Link href={`#products`} _focus={{ border: 'none' }} onClick={onClose}>
               <Flex fontSize={16} align='center' gap={2}>
                 <Text>Produtos</Text>
               </Flex>
             </Link>
 
-            <Link href={`#highlight`} _focus={{ border: 'none' }} >
+            <Link href={`#highlight`} _focus={{ border: 'none' }} onClick={onClose}>
               <Flex fontSize={16} align='center' gap={2}>
                 <Text>Sugestão do Chef</Text>
               </Flex>
             </Link>
 
-            <Link href={`#menu`} _focus={{ border: 'none' }} >
+            <Link href={`#menu`} _focus={{ border: 'none' }} onClick={onClose}>
               <Flex fontSize={16} align='center' gap={2}>
                 <Text>Cardápio Completo</Text>
               </Flex>
