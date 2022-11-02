@@ -146,9 +146,7 @@ export function Modal({ location, handleModal, closeModal, data, conditional }) 
                 ))
               }
             </Accordion>
-
           </ModalBody>
-
         </ModalContent>
       </ModalChakra >
 

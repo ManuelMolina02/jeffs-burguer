@@ -5,7 +5,6 @@ import { api } from '../services/api';
 import { Header, Banner, Products, Highlight, Menu, Footer } from '../components';
 
 export default function Home({ dataCards }) {
-
   return (
     <Box maxW={'1580px'} m='0 auto'>
       <Head>
@@ -13,8 +12,8 @@ export default function Home({ dataCards }) {
       </Head>
 
       <>
-        <Header />
-        <Banner />
+        <Header data={dataCards} />
+        <Banner data={dataCards} />
         <Products data={dataCards} />
         <Highlight />
         <Menu cards={dataCards} />

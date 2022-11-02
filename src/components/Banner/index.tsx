@@ -1,8 +1,8 @@
-import { Box, Flex, Heading, Text } from "@chakra-ui/react";
+import { Box, Flex, Heading, Image, Text } from "@chakra-ui/react";
 import styles from './Banner.module.css';
-import { Drawer } from "./Drawer";
 
-export function Banner() {
+
+export function Banner({ data }) {
   return (
     <Flex
       align={"center"}
@@ -22,10 +22,7 @@ export function Banner() {
         <Text fontSize={'xl'}>
           Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley.
         </Text>
-      </Box>
-
-      <Drawer />
-
+      </Box >
 
     </Flex >
   )

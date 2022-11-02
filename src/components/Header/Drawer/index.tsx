@@ -1,15 +1,15 @@
 import { Button, Drawer as DrawerChakra, DrawerBody, DrawerCloseButton, DrawerContent, DrawerHeader, DrawerOverlay, Flex, Link, Text, useDisclosure } from "@chakra-ui/react"
 import { GiHamburgerMenu } from 'react-icons/gi'
+import styles from './Drawer.module.css'
 
 export function Drawer() {
   const numberWhats = '5542999945476'
   const textWhats = 'Olá, gostaria de fazer um pedido!'
-
   const { isOpen, onOpen, onClose } = useDisclosure()
 
   return (
     <>
-      <Button title='access menu' onClick={onOpen} position='fixed' top={'20px'} right={'20px'} bg={'white'} zIndex='100' border={' 1px solid #C2C2C2'} px='10px' >
+      <Button title='access menu' className={styles.btnDrawer} onClick={onOpen}>
         <GiHamburgerMenu color="#808080" size={'22px'} />
       </Button>
 

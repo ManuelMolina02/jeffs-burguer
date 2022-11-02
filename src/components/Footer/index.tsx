@@ -9,7 +9,10 @@ import { Modal } from "../Modal";
 
 export function Footer() {
   const numberWhats = '5542999945476'
-  const textWhats = 'Olá, gostaria de fazer um pedido!'
+  const text = `Olá time, por gentileza me ve ai:\n\nJack Bacon | 1\nJack Rodeio | 2\n\nValor total do pedido R$ 75,00`
+
+  const textWhats = () => { !window ? '' : window.encodeURIComponent(text) };
+
 
   const [showModal, setShowModal] = useState(false)
   return (
