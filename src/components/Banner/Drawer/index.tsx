@@ -3,7 +3,7 @@ import { GiHamburgerMenu } from 'react-icons/gi'
 
 export function Drawer() {
   const numberWhats = '5542999945476'
-  const textWhats = 'Olá, gostaria de fazer um pedido! Seu pau no cu!'
+  const textWhats = 'Olá, gostaria de fazer um pedido!'
 
   const { isOpen, onOpen, onClose } = useDisclosure()
 
