@@ -4,7 +4,7 @@ import { BsFillCreditCardFill } from 'react-icons/bs'
 import { FaMoneyBillAlt, FaMoneyCheckAlt } from 'react-icons/fa'
 import { AiFillInstagram } from 'react-icons/ai'
 import { IoLogoWhatsapp } from 'react-icons/io'
-import styles from './Footer.module.css'
+import styles from './Footer.module.scss'
 import { Modal } from "../Modal";
 
 export function Footer() {

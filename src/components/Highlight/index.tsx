@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Button, Flex, Heading, Image, Text } from "@chakra-ui/react";
 import { Modal } from "../Modal";
-import styles from './Highlight.module.css';
+import styles from './Highlight.module.scss';
 
 export function Highlight() {
 

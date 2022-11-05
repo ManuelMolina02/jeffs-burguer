@@ -1,7 +1,7 @@
 
 import { Box, Flex, Image } from "@chakra-ui/react";
 import { CardSection } from "./CardSection";
-import styles from './Products.module.css';
+import styles from './Products.module.scss';
 
 export function Products({ data }) {
 

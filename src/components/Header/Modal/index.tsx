@@ -3,7 +3,7 @@ import { Box, Button, Flex, Modal as ModalChakra, ModalBody, ModalCloseButton, M
 import { useEffect, useState } from "react";
 import { IoMdCart } from 'react-icons/io'
 import { ItemList } from "./ItemList";
-import styles from './Modal.module.css'
+import styles from './Modal.module.scss'
 
 export function Modal({ dataApi }) {
 

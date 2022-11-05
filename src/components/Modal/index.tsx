@@ -1,5 +1,5 @@
 import { Box, Button, Flex, Heading, Image, ListItem, Modal as ModalChakra, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalOverlay, Text, UnorderedList, Accordion, AccordionButton, AccordionIcon, AccordionItem, AccordionPanel } from "@chakra-ui/react";
-import styles from './Modal.module.css';
+import styles from './Modal.module.scss';
 
 export function Modal({ location, handleModal, closeModal, data, conditional }) {
 

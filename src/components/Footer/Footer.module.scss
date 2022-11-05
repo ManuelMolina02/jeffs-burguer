@@ -9,14 +9,14 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-}
 
-.footerColumn > div {
-  cursor: pointer;
-}
-
-.footerColumn > div:hover {
-  text-decoration: underline;
+  > div {
+    cursor: pointer;
+    
+    :hover {
+      text-decoration: underline;
+    }
+  }
 }
 
 @media (max-width: 750px) {

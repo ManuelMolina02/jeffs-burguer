@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Flex, GridItem, Text } from "@chakra-ui/react";
 import { Modal } from '../Modal';
 import { MdExpandLess } from 'react-icons/md'
-import styles from './CardItem.module.css'
+import styles from './CardItem.module.scss'
 
 export function CardItem({ cardData }) {
 

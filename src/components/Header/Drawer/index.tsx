@@ -1,6 +1,6 @@
 import { Button, Drawer as DrawerChakra, DrawerBody, DrawerCloseButton, DrawerContent, DrawerHeader, DrawerOverlay, Flex, Link, Text, useDisclosure } from "@chakra-ui/react"
 import { GiHamburgerMenu } from 'react-icons/gi'
-import styles from './Drawer.module.css'
+import styles from './Drawer.module.scss'
 
 export function Drawer() {
   const numberWhats = '5542999945476'

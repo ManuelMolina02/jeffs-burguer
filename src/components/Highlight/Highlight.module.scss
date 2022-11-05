@@ -10,31 +10,31 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  img {
+    width: 440px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: -6px -6px 6px 4px rgba(0, 0, 0, 0.25);
+  
+    position: relative;
+    z-index: 0;
+  
+    transition: transform 0.3s ease-in-out;
+  
+    &:hover{
+      transform: scale(1.1);
+    }
+  }
 }
 
-.boxImages img {
-  width: 440px;
-  height: 280px;
-  object-fit: cover;
-  border-radius: 12px;
-  box-shadow: -6px -6px 6px 4px rgba(0, 0, 0, 0.25);
-
-  position: relative;
-  z-index: 0;
-
-  transition: transform 0.3s ease-in-out;
-}
-
-.boxImages:hover img {
-  transform: scale(1.1);
-}
-
+ 
 @media (max-width: 1000px) {
   .highlight {
     display: flex;
     flex-direction: column;
     gap: 2.6rem;
-
     align-items: center;
     text-align: center;
   }

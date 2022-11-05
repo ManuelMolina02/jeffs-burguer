@@ -1,5 +1,5 @@
 import { Box, Flex, Heading, Image, Text } from "@chakra-ui/react";
-import styles from './Banner.module.css';
+import styles from './Banner.module.scss';
 
 
 export function Banner({ data }) {
