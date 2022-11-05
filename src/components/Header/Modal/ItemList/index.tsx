@@ -3,19 +3,20 @@ import { Button, Flex, ListItem, Text } from "@chakra-ui/react";
 import { IoIosAddCircleOutline } from 'react-icons/io'
 import { AiOutlineMinusCircle } from 'react-icons/ai'
 
-export function ItemList({ item, addProduct }) {
+export function ItemList({ item, updateProduct }) {
   const [countItem, setCountItem] = useState(0)
 
   function addItem(id: number) {
     if (countItem < 10) {
       setCountItem(countItem + 1)
-      addProduct(id, countItem + 1)
+      updateProduct(id, countItem + 1)
     }
   }
 
   function rmItem(id: number) {
     if (countItem > 0) {
       setCountItem(countItem - 1)
+      updateProduct(id, countItem - 1)
     }
   }
 

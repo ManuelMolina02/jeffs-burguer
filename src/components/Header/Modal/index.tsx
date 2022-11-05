@@ -9,13 +9,13 @@ export function Modal({ dataApi }) {
 
   const { isOpen, onOpen, onClose } = useDisclosure()
 
-  const [dataProducts, setDataProducts] = useState<any[]>([])
+  const [dataCart, setDataCart] = useState<any[]>([])
 
-  const addProduct = async (productId: number, qtd: number) => {
+  const updateCartProduct = async (productId: number, qtd: number) => {
 
     try {
       //criando novo array
-      const dataArray = [...dataProducts]
+      const dataArray = [...dataCart]
 
       //selecionando produto com o mesmo id
       const findItemSelected = dataArray.find(item => item.id === productId)
@@ -31,7 +31,7 @@ export function Modal({ dataApi }) {
         }
         dataArray.push(newProduct)
       }
-      setDataProducts(dataArray)
+      setDataCart(dataArray)
 
     } catch (e) {
       console.log('Erro ao adicionar produto: ', e);
@@ -43,35 +43,33 @@ export function Modal({ dataApi }) {
   const typeProducts = new Set(productsType)
 
   //Criando totais da sacola
-  const test = dataProducts.map(item => {
+  const totalValues = dataCart.map(item => {
     return {
       qtdItems: item.qtd,
       valueItems: item.qtd * Number(item.price.replace('R$', '').replace(',', '.'))
     }
   })
 
-
-  const totalItensCount = test.reduce((acc, value) => acc + value.qtdItems, 0)
-  const totalItensSum = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(test.reduce((acc, value) => acc + value.valueItems, 0))
+  const totalItensCount = totalValues.reduce((acc, value) => acc + value.qtdItems, 0)
+  const totalItensSum = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(totalValues.reduce((acc, value) => acc + value.valueItems, 0))
 
 
   //formatar e enviar pedido
-
-  function enviarMensagem() {
-
+  function sendMessage() {
     if (!window) {
       return
     } else {
       const numberWhats = '5542999945476'
 
-      const listaPedidos = dataProducts.map((item, index) => {
+      const selectItensCart = dataCart.filter(item => item.qtd > 0)
+
+      const listaPedidos = selectItensCart.map((item, index) => {
         return `${item.title} | ${item.qtd}\n`
       }).join('')
 
       const text = `Olá time, por gentileza me ve ai:\n\n${listaPedidos}\n\nValor total do pedido ${totalItensSum}`
       window.open(`https://api.whatsapp.com/send?phone=${numberWhats}&text=${window.encodeURIComponent(text)}`)
     }
-
   }
 
 
@@ -111,7 +109,7 @@ export function Modal({ dataApi }) {
                       <UnorderedList>
                         {
                           dataApi.filter(item => item.type === data).map(item => (
-                            <ItemList key={item.id} item={item} addProduct={addProduct} />
+                            <ItemList key={item.id} item={item} updateProduct={updateCartProduct} />
                           ))
                         }
                       </UnorderedList>
@@ -137,7 +135,7 @@ export function Modal({ dataApi }) {
           </ModalBody>
           <ModalFooter display={'flex'} gap='16px'>
             <Button onClick={onClose}>Fechar</Button>
-            <Button onClick={enviarMensagem} colorScheme={'green'}>Enviar pedido por WhatsApp</Button>
+            <Button onClick={sendMessage} colorScheme={'green'}>Enviar pedido por WhatsApp</Button>
 
           </ModalFooter>
         </ModalContent>
