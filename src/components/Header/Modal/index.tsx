@@ -57,15 +57,23 @@ export function Modal({ dataApi }) {
 
   //formatar e enviar pedido
 
-  const numberWhats = '5542999945476'
+  function enviarMensagem() {
 
-  const listaPedidos = dataProducts.map((item, index) => {
-    return `${item.title} | ${item.qtd}\n`
-  }).join('')
+    if (!window) {
+      return
+    } else {
+      const numberWhats = '5542999945476'
 
-  const text = `Olá time, por gentileza me ve ai:\n\n${listaPedidos}\n\nValor total do pedido ${totalItensSum}`
+      const listaPedidos = dataProducts.map((item, index) => {
+        return `${item.title} | ${item.qtd}\n`
+      }).join('')
 
-  const textWhats = () => { !window ? '' : window.encodeURIComponent(text) };
+      const text = `Olá time, por gentileza me ve ai:\n\n${listaPedidos}\n\nValor total do pedido ${totalItensSum}`
+      window.open(`https://api.whatsapp.com/send?phone=${numberWhats}&text=${window.encodeURIComponent(text)}`)
+    }
+
+  }
+
 
   return (
     <>
@@ -129,10 +137,8 @@ export function Modal({ dataApi }) {
           </ModalBody>
           <ModalFooter display={'flex'} gap='16px'>
             <Button onClick={onClose}>Fechar</Button>
-            <Link href={` https://api.whatsapp.com/send?phone=${numberWhats}&text=${!window ? '' : window.encodeURIComponent(text)}`} target='_blank' _focus={{ border: 'none' }} _hover={{ textDecor: 'none' }} >
-              <Button colorScheme={'green'}>Enviar pedido por WhatsApp</Button>
+            <Button onClick={enviarMensagem} colorScheme={'green'}>Enviar pedido por WhatsApp</Button>
 
-            </Link>
           </ModalFooter>
         </ModalContent>
       </ModalChakra>
