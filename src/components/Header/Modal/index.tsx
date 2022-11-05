@@ -7,17 +7,6 @@ import styles from './Modal.module.scss'
 
 export function Modal({ dataApi }) {
 
-
-  const testData = dataApi.map(data => {
-    return {
-      id: data.id,
-      title: data.title,
-      price: data.price,
-      type: data.type,
-      qtd: 0
-    }
-  })
-
   const { isOpen, onOpen, onClose } = useDisclosure()
 
   const [dataProducts, setDataProducts] = useState<any[]>([])
@@ -40,19 +29,14 @@ export function Modal({ dataApi }) {
           ...product,
           qtd
         }
-
         dataArray.push(newProduct)
       }
-
       setDataProducts(dataArray)
 
     } catch (e) {
       console.log('Erro ao adicionar produto: ', e);
     }
   }
-
-  console.log('dataProducts: ', dataProducts);
-
 
   //criar array de dados  
   const productsType = dataApi.map(item => item.type)
@@ -81,7 +65,7 @@ export function Modal({ dataApi }) {
 
   const text = `Olá time, por gentileza me ve ai:\n\n${listaPedidos}\n\nValor total do pedido ${totalItensSum}`
 
-  const textWhats = !window ? '' : window.encodeURIComponent(text);
+  //const textWhats = !window ? '' : window.encodeURIComponent(text);
 
   return (
     <>
@@ -145,7 +129,7 @@ export function Modal({ dataApi }) {
           </ModalBody>
           <ModalFooter display={'flex'} gap='16px'>
             <Button onClick={onClose}>Fechar</Button>
-            <Link href={` https://api.whatsapp.com/send?phone=${numberWhats}&text=${textWhats}`} target='_blank' _focus={{ border: 'none' }}>
+            <Link href={` https://api.whatsapp.com/send?phone=${numberWhats}&text=${'textWhats'}`} target='_blank' _focus={{ border: 'none' }}>
               <Flex fontSize={16} align='center' gap={2}>
                 <Text>Enviar pedido por WhatsApp</Text>
               </Flex>
