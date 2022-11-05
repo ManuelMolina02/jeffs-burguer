@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { Box, Button, Flex, Modal as ModalChakra, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalOverlay, Text, UnorderedList, Accordion, AccordionButton, AccordionIcon, AccordionItem, AccordionPanel, ModalHeader, useDisclosure, Divider } from "@chakra-ui/react";
+import { Box, Button, Flex, Modal as ModalChakra, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalOverlay, Text, UnorderedList, Accordion, AccordionButton, AccordionIcon, AccordionItem, AccordionPanel, ModalHeader, useDisclosure, Divider, Link } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import { IoMdCart } from 'react-icons/io'
 import { ItemList } from "./ItemList";
@@ -7,12 +7,6 @@ import styles from './Modal.module.scss'
 
 export function Modal({ dataApi }) {
 
-  const { isOpen, onOpen, onClose } = useDisclosure()
-  const [handleItem, setHandleItem] = useState<any>()
-
-  const [dataItems, setDataItems] = useState<any[]>([])
-
-  const [testItems, setTestItems] = useState<any[]>([])
 
   const testData = dataApi.map(data => {
     return {
@@ -24,61 +18,70 @@ export function Modal({ dataApi }) {
     }
   })
 
-  /*
-    useEffect(() => {
-      if (handleItem.name !== '') {
-        const filterItems = dataItems.filter(item => item.name !== handleItem.name)
-  
-        if (!filterItems) {
-          setDataItems([...dataItems, handleItem])
-        } else {
-          setDataItems([...filterItems, handleItem])
-        }
-      }
-    }, [handleItem])
-  
-    useEffect(() => {
-      const test = dataItems.map(item => {
-        return {
-          qtdItems: item.qtd,
-          valueItems: item.qtd * Number(item.price.replace('R$', '').replace(',', '.'))
-        }
-      })
-      setTestItems(test)
-  
-    }, [dataItems])
-  
+  const { isOpen, onOpen, onClose } = useDisclosure()
 
-    const totalItensCount = testItems.reduce((acc, value) => acc + value.qtdItems, 0)
-    const totalItensSum = testItems.reduce((acc, value) => acc + value.valueItems, 0)
-  
-    console.log(dataItems);
-  
-    console.log(totalItensSum);
-  
-  
-    const listaPedidos = dataItems.map((item, index) => {
-      return `${item.name} | ${item.qtd}\n`
-    }).join('')
-  
-    const pedidoFormado = `
-  Olá time, por gentileza me ve ai:
-  
-  ${listaPedidos}
-  
-  Valor total do pedido ${totalItensSum}
-    `
-  */
+  const [dataProducts, setDataProducts] = useState<any[]>([])
+
+  const addProduct = async (productId: number, qtd: number) => {
+
+    try {
+      //criando novo array
+      const dataArray = [...dataProducts]
+
+      //selecionando produto com o mesmo id
+      const findItemSelected = dataArray.find(item => item.id === productId)
+
+      if (findItemSelected) {
+        findItemSelected.qtd = qtd
+      } else {
+        const product = dataApi.find(item => item.id === productId)
+
+        const newProduct = {
+          ...product,
+          qtd
+        }
+
+        dataArray.push(newProduct)
+      }
+
+      setDataProducts(dataArray)
+
+    } catch (e) {
+      console.log('Erro ao adicionar produto: ', e);
+    }
+  }
+
+  console.log('dataProducts: ', dataProducts);
+
+
   //criar array de dados  
   const productsType = dataApi.map(item => item.type)
   const typeProducts = new Set(productsType)
 
-  const totalItensCount = 0
-  const totalItensSum = 0
+  //Criando totais da sacola
+  const test = dataProducts.map(item => {
+    return {
+      qtdItems: item.qtd,
+      valueItems: item.qtd * Number(item.price.replace('R$', '').replace(',', '.'))
+    }
+  })
 
-  //item selecionado
+
+  const totalItensCount = test.reduce((acc, value) => acc + value.qtdItems, 0)
+  const totalItensSum = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(test.reduce((acc, value) => acc + value.valueItems, 0))
 
 
+  //formatar e enviar pedido
+
+  const numberWhats = '5542999945476'
+
+  const listaPedidos = dataProducts.map((item, index) => {
+    return `${item.title} | ${item.qtd}\n`
+  }).join('')
+
+  const text = `Olá time, por gentileza me ve ai:\n\n${listaPedidos}\n\nValor total do pedido ${totalItensSum}`
+
+  const textWhats = !window ? '' : window.encodeURIComponent(text);
 
   return (
     <>
@@ -115,8 +118,8 @@ export function Modal({ dataApi }) {
                     <AccordionPanel pb={4}>
                       <UnorderedList>
                         {
-                          testData.filter(item => item.type === data).map(item => (
-                            <ItemList key={item.id} item={item} requests={{ handleItem, setHandleItem, setDataItems }} dataItems={dataItems} />
+                          dataApi.filter(item => item.type === data).map(item => (
+                            <ItemList key={item.id} item={item} addProduct={addProduct} />
                           ))
                         }
                       </UnorderedList>
@@ -131,18 +134,22 @@ export function Modal({ dataApi }) {
 
             <Flex gap='20px'>
               <Text>
-                Total itens: {totalItensCount}
+                N° de itens: {totalItensCount}
               </Text>
 
               <Text>
-                Total valor: R$ {totalItensSum}
+                Valor Total: {totalItensSum}
               </Text>
             </Flex>
 
           </ModalBody>
           <ModalFooter display={'flex'} gap='16px'>
             <Button onClick={onClose}>Fechar</Button>
-            <Button onClick={onClose} colorScheme='green'>Enviar pedido por WhatsApp</Button>
+            <Link href={` https://api.whatsapp.com/send?phone=${numberWhats}&text=${textWhats}`} target='_blank' _focus={{ border: 'none' }}>
+              <Flex fontSize={16} align='center' gap={2}>
+                <Text>Enviar pedido por WhatsApp</Text>
+              </Flex>
+            </Link>
           </ModalFooter>
         </ModalContent>
       </ModalChakra>

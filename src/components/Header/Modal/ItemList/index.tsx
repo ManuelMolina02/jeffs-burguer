@@ -3,41 +3,21 @@ import { Button, Flex, ListItem, Text } from "@chakra-ui/react";
 import { IoIosAddCircleOutline } from 'react-icons/io'
 import { AiOutlineMinusCircle } from 'react-icons/ai'
 
-export function ItemList({ item, requests, dataItems }) {
+export function ItemList({ item, addProduct }) {
   const [countItem, setCountItem] = useState(0)
 
-  function addItem({ id }) {
+  function addItem(id: number) {
     if (countItem < 10) {
       setCountItem(countItem + 1)
-
-      requests.setHandleItem({
-        id: item.id,
-        qtd: countItem
-      })
+      addProduct(id, countItem + 1)
     }
   }
 
-  function rmItem({ id }) {
+  function rmItem(id: number) {
     if (countItem > 0) {
       setCountItem(countItem - 1)
     }
   }
-
-
-  /*
-      const productsInCart = dataItems.filter(data => data.title !== item.title && data.qtd > 0)
-
-      const newItem = {
-        id: item.id,
-        title: item.title,
-        price: Number(item.price.replace('R$', '').replace(',', '.')),
-        qtd: countItem
-      }
-
-      requests.setDataItems([...productsInCart, newItem])
-
-  */
-
 
   return (
     <>
