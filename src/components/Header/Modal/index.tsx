@@ -65,7 +65,7 @@ export function Modal({ dataApi }) {
 
   const text = `Olá time, por gentileza me ve ai:\n\n${listaPedidos}\n\nValor total do pedido ${totalItensSum}`
 
-  //const textWhats = !window ? '' : window.encodeURIComponent(text);
+  const textWhats = !window ? '' : window.encodeURIComponent(text);
 
   return (
     <>
@@ -129,7 +129,7 @@ export function Modal({ dataApi }) {
           </ModalBody>
           <ModalFooter display={'flex'} gap='16px'>
             <Button onClick={onClose}>Fechar</Button>
-            <Link href={` https://api.whatsapp.com/send?phone=${numberWhats}&text=${'textWhats'}`} target='_blank' _focus={{ border: 'none' }}>
+            <Link href={` https://api.whatsapp.com/send?phone=${numberWhats}&text=${textWhats}`} target='_blank' _focus={{ border: 'none' }}>
               <Flex fontSize={16} align='center' gap={2}>
                 <Text>Enviar pedido por WhatsApp</Text>
               </Flex>
