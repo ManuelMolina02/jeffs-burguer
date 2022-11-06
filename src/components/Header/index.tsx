@@ -1,4 +1,4 @@
-import { Box, Flex, Image } from "@chakra-ui/react";
+import { Flex } from "@chakra-ui/react";
 import { Drawer } from "./Drawer";
 import { Modal } from './Modal'
 

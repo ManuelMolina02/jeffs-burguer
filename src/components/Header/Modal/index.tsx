@@ -73,6 +73,20 @@ export function Modal({ dataApi }) {
   }
 
 
+  const dataTest = dataApi.map(item => {
+
+    const selectedQtd = dataCart.find(data => data.id === item.id)
+
+    return {
+      id: item.id,
+      title: item.title,
+      type: item.type,
+      price: item.price,
+      qtd: selectedQtd && selectedQtd.qtd
+    }
+  })
+
+
   return (
     <>
       <Box className={styles.cartBox}>
@@ -108,7 +122,7 @@ export function Modal({ dataApi }) {
                     <AccordionPanel pb={4}>
                       <UnorderedList>
                         {
-                          dataApi.filter(item => item.type === data).map(item => (
+                          dataTest.filter(item => item.type === data).map(item => (
                             <ItemList key={item.id} item={item} updateProduct={updateCartProduct} />
                           ))
                         }
@@ -120,17 +134,20 @@ export function Modal({ dataApi }) {
 
             </Accordion>
 
-            <Divider />
+            <Flex w='100%' justify={'flex-end'}>
 
-            <Flex gap='20px'>
-              <Text>
-                N° de itens: {totalItensCount}
-              </Text>
+              <Box border='1px solid #b3b5c6' mt='60px' w='200px' borderRadius={'8px'}>
+                <Flex gap={'10px'} h='40px' pl='6px' align={'center'} borderBottom='1px solid #b3b5c6'>
+                  <strong> N° de itens:</strong> {totalItensCount}
+                </Flex>
 
-              <Text>
-                Valor Total: {totalItensSum}
-              </Text>
+                <Flex gap={'10px'} h='40px' align={'center'} pl='6px'>
+                  <strong>Valor Total:</strong> {totalItensSum}
+                </Flex>
+              </Box>
+
             </Flex>
+
 
           </ModalBody>
           <ModalFooter display={'flex'} gap='16px'>

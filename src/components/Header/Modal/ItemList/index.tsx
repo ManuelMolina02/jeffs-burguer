@@ -30,7 +30,7 @@ export function ItemList({ item, updateProduct }) {
         <Flex gap={2} align='center' py='8px'>
 
           <Text fontSize={22} mr='26px'>
-            {countItem}
+            {item.qtd ? item.qtd : countItem}
           </Text>
 
           <Button w='32px' p='0' onClick={() => addItem(item.id)}>
