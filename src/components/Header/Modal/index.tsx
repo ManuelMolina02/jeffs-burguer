@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { Box, Button, Flex, Modal as ModalChakra, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalOverlay, Text, UnorderedList, Accordion, AccordionButton, AccordionIcon, AccordionItem, AccordionPanel, ModalHeader, useDisclosure, Divider, Link } from "@chakra-ui/react";
+import { Box, Button, Flex, Modal as ModalChakra, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalOverlay, Text, UnorderedList, Accordion, AccordionButton, AccordionIcon, AccordionItem, AccordionPanel, ModalHeader, useDisclosure, Divider, Link, AlertIcon, Alert, AlertTitle, AlertDescription } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import { IoMdCart } from 'react-icons/io'
 import { ItemList } from "./ItemList";
@@ -10,6 +10,7 @@ export function Modal({ dataApi }) {
   const { isOpen, onOpen, onClose } = useDisclosure()
 
   const [dataCart, setDataCart] = useState<any[]>([])
+  const [handleAlert, setHandleAlert] = useState(false)
 
   const updateCartProduct = async (productId: number, qtd: number) => {
 
@@ -56,6 +57,18 @@ export function Modal({ dataApi }) {
 
   //formatar e enviar pedido
   function sendMessage() {
+    if (dataCart.length === 0) {
+      setHandleAlert(true)
+
+      setTimeout(() => {
+        setHandleAlert(false)
+
+      }, 5000)
+
+      return
+    }
+
+
     if (!window) {
       return
     } else {
@@ -69,6 +82,9 @@ export function Modal({ dataApi }) {
 
       const text = `Olá time, por gentileza me ve ai:\n\n${listaPedidos}\n\nValor total do pedido ${totalItensSum}`
       window.open(`https://api.whatsapp.com/send?phone=${numberWhats}&text=${window.encodeURIComponent(text)}`)
+
+      setDataCart([])
+      onClose()
     }
   }
 
@@ -89,6 +105,9 @@ export function Modal({ dataApi }) {
 
   return (
     <>
+
+
+
       <Box className={styles.cartBox}>
         <Button className={styles.cartBtn} onClick={onOpen}>
           <IoMdCart />
@@ -102,6 +121,7 @@ export function Modal({ dataApi }) {
       <ModalChakra onClose={onClose} isOpen={isOpen} size='full' isCentered>
         <ModalOverlay />
         <ModalContent>
+
           <ModalHeader>Carrinho</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
@@ -148,6 +168,29 @@ export function Modal({ dataApi }) {
 
             </Flex>
 
+            {
+              handleAlert && (
+                <Alert
+                  status='warning'
+                  variant='subtle'
+                  flexDirection='column'
+                  alignItems='center'
+                  justifyContent='center'
+                  textAlign='center'
+                  height='200px'
+                  borderRadius={'12px'}
+                  mt='60px'
+                >
+                  <AlertIcon boxSize='40px' mr={0} />
+                  <AlertTitle mt={4} mb={1} fontSize='lg'>
+                    Atenção!
+                  </AlertTitle>
+                  <AlertDescription maxWidth='sm'>
+                    Insira pelo menos um produto no carrinho para realizar um pedido!
+                  </AlertDescription>
+                </Alert>
+              )
+            }
 
           </ModalBody>
           <ModalFooter display={'flex'} gap='16px'>
