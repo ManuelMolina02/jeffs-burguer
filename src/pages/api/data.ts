@@ -115,7 +115,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       id: 14,
       name: "Especial Catupiry",
       type: "Hot Dog",
-      src: "hot-dog-tres.webp",
+      src: "especial-catupiry.webp",
       price: 21.99,
       ingredients:
         "Pão de Hot Dog 12cm, 2 Salsichas, Fatias de Calabresa, Catupiry, Bacon, Maionese Artesanal, Batata Palha, Farofa Temperada, Cebola em Cubos, Milho, Tomate, Molho da Casa",
@@ -124,7 +124,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       id: 15,
       name: "Bacon Cheddar",
       type: "Hot Dog",
-      src: "hot-dog-tres.webp",
+      src: "bacon-cheddar.webp",
       price: 16.99,
       ingredients:
         "Pão de Hot Dog 12cm, 2 Salsichas, Cheddar, Bacon, Maionese Artesanal, Batata Palha, Farofa Temperada, Cebola em Cubos, Milho, Tomate, Molho da Casa",
@@ -152,7 +152,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       name: "Frango com Catupiry",
       type: "Hot Dog",
       price: 16.99,
-      src: "hot-dog-um.webp",
+      src: "frango-catupiry.webp",
       ingredients:
         "Pão de Hot Dog 12cm, 2 Salsichas, Batata Palha, Farofa Temperada, Maionese Artesanal, Cebola em Cubos, Milho, Tomate, Molho da Casa",
     },
