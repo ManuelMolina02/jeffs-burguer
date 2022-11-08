@@ -24,7 +24,7 @@ export function Footer() {
 
         <Flex fontSize={20} m='20px 0' borderBottom={'solid 2px #C7C7C7'}>
           <Text pl='16px' pb='16px'>
-            Faça já seu pedido através das nossas redes sociais!
+            Nos contate através das redes sociais!
           </Text>
         </Flex>
 

@@ -1,4 +1,4 @@
-import { Flex, Grid, Image, Text } from "@chakra-ui/react";
+import { Box, Flex, Grid, Image, Text } from "@chakra-ui/react";
 import { CardItem } from "../Card";
 import styles from './Menu.module.scss';
 
@@ -8,6 +8,7 @@ export function Menu({ cards }) {
     <Flex id='menu' bg='#F5E4E4' flexDirection={'column'}>
       <Image src='/mosaico.svg' alt='logo'
         position={'relative'}
+        top='-1px'
         w={'100%'}
         h={'52px'}
         display={'block'}
@@ -34,7 +35,21 @@ export function Menu({ cards }) {
             ))
           }
         </Grid>
+
+        <Text color='black' fontSize={28} w={'700px'} textAlign={'center'} mt='40px'>
+          Aproveite o momento e viva essa experiência culinária!
+          <Text>Faça seu pedido agora!</Text>
+        </Text>
+
+
+
+
       </Flex>
+
+
+      <Box position={'relative'} bottom='-34px'>
+        <Image src="/images/divider.png" display='block' objectFit={'cover'} alt='' mx='0 !important' px='0 !important' />
+      </Box>
     </Flex>
 
   )
