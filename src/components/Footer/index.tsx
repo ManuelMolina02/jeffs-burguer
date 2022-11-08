@@ -35,7 +35,7 @@ export function Footer() {
             </Text>
 
             <Text>
-              Atendimento de Quarta-feira à Domingo das 19:00 às 23:00. Estamos fechados às segundas e terças-feiras.
+              Atendimento de Quinta-feira à Domingo das 19:00 às 23:00. Estamos fechados às segundas e terças-feiras.
             </Text>
           </Box>
 
