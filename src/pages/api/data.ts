@@ -80,7 +80,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       name: "Madame",
       type: "Hambúrguer",
       price: 28.0,
-      src: "quatro-queijos.webp",
+      src: "madame.webp",
       ingredients:
         "Pão Brioche Amanteigado, Hambúrguer Artesanal 150g, Medalhão de Queijo Coalho com Bacon, Queijo Branco, Cebola Caramelizada, Tomate Cereja",
     },
@@ -93,7 +93,6 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       ingredients:
         "Pão Brioche Amanteigado, Hambúrguer Artesanal 150g, Queijo Branco, Alface Americana, Tomate, Maionese Artesanal",
     },
-
     {
       id: 12,
       name: "Smash Júnior",
@@ -112,7 +111,6 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       ingredients:
         "Pão Brioche Amanteigado, Hambúrguer Artesanal 150g, Queijo Branco, Picles, Maionese Artesanal, Mostarda Amarela, Cebola Roxa Fatiada, Tomate, Alface Americana",
     },
-
     {
       id: 14,
       name: "Especial Catupiry",
@@ -122,7 +120,6 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       ingredients:
         "Pão de Hot Dog 12cm, 2 Salsichas, Fatias de Calabresa, Catupiry, Bacon, Maionese Artesanal, Batata Palha, Farofa Temperada, Cebola em Cubos, Milho, Tomate, Molho da Casa",
     },
-
     {
       id: 15,
       name: "Bacon Cheddar",
@@ -132,7 +129,6 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       ingredients:
         "Pão de Hot Dog 12cm, 2 Salsichas, Cheddar, Bacon, Maionese Artesanal, Batata Palha, Farofa Temperada, Cebola em Cubos, Milho, Tomate, Molho da Casa",
     },
-
     {
       id: 16,
       name: "Bacon Catupiry",
