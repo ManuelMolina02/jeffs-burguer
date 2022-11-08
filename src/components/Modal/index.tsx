@@ -78,7 +78,7 @@ export function Modal({ location, handleModal, closeModal, data, conditional }) 
                 <Box mt={4} fontSize='md'>
 
                   <Text>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the.
+                    Smash salada com Bacon é a escolha perfeita pra quem não quer gastar muito e comer bem! Toda simplicidade do Smash Salada com adicional de bacon por apenas R$ 2,00. Todo sabor que você procura em um só lugar 😛
                   </Text>
 
                 </Box>

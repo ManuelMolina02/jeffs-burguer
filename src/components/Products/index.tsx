@@ -18,9 +18,9 @@ export function Products({ data }) {
         />
 
         <Box className={styles.cardsProducts}>
-          <CardSection title={'Hambúrguer'} data={data} description={'Lorem Ipsum is simply dummy text of the typesetting industry Ipsum is simply.'} />
-          <CardSection title={'Smash'} data={data} description={'Lorem Ipsum is simply dummy text of the  typesetting industry Ipsum is simply'} />
-          <CardSection title={'Hot Dog'} data={data} description={'Lorem Ipsum is simply dummy text of the  typesetting industry Ipsum is simply. '} />
+          <CardSection title={'Hambúrguer'} data={data} description={'Hambúrguers especiais são a escolha perfeita para você que está com fome!'} />
+          <CardSection title={'Smash'} data={data} description={'Smashs são uma experiência ideal para quem curte um hambúrguer clássico.'} />
+          <CardSection title={'Hot Dog'} data={data} description={'Pra você que gosta das novidades, temos oito hot dogs prensados deliciosos.'} />
         </Box>
       </Flex>
 
