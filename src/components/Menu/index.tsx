@@ -36,13 +36,12 @@ export function Menu({ cards }) {
           }
         </Grid>
 
-        <Text color='black' fontSize={28} w={'700px'} textAlign={'center'} mt='40px'>
-          Aproveite o momento e viva essa experiência culinária!
+        <Box color='black' fontSize={28} w={'700px'} textAlign={'center'} mt='40px'>
+          <Text>
+            Aproveite o momento e viva essa experiência culinária!
+          </Text>
           <Text>Faça seu pedido agora!</Text>
-        </Text>
-
-
-
+        </Box>
 
       </Flex>
 
