@@ -6,7 +6,7 @@ import styles from './Highlight.module.scss';
 export function Highlight() {
 
   const data = {
-    src: 'lanche_2.webp'
+    src: 'smash-salada.webp'
   }
 
   const [showModal, setShowModal] = useState(false)
@@ -14,7 +14,7 @@ export function Highlight() {
   return (
     <Flex id='highlight' className={styles.highlight} bg='#77212E'>
       <Flex className={styles.boxImages}>
-        <Image src={`/images/${data.src}`} alt='logo' />
+        <Image src={`/lanches/${data.src}`} alt='logo' />
       </Flex>
 
       <Flex className={styles.contentHighlight} w='420px' color={'white'} flexDirection={'column'} justify='center' gap={8}>

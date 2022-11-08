@@ -70,15 +70,12 @@ export function Modal({ location, handleModal, closeModal, data, conditional }) 
 
           <ModalBody py='0' px='0'>
             <Flex className={styles.modalContentHighlight}>
-              <Image src={`/images/${data.src}`} borderRadius={'4px 0 0 4px '} objectFit='cover' w='60%' alt='' />
+              <Image src={`/lanches/${data.src}`} borderRadius={'4px 0 0 4px '} objectFit='cover' w='60%' alt='' />
 
               <Box py='40px' px='40px'>
-                <Heading mt={4} fontSize='2xl'> Provolone | R$ 30,00 </Heading>
+                <Heading mt={4} fontSize='2xl'> Smash Salada Bacon | R$ 30,00 </Heading>
 
                 <Box mt={4} fontSize='md'>
-
-                  <Text>
-                  </Text>
 
                   <Text>
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the.
