@@ -75,7 +75,7 @@ export function Modal({ location, handleModal, closeModal, data, conditional }) 
   const modalBodyHighlight = (data: DataTypes) => {
     return (
 
-      <ModalChakra onClose={closeModal} isOpen={handleModal} motionPreset='slideInBottom' size={'3xl'} isCentered  >
+      <ModalChakra onClose={closeModal} isOpen={handleModal} motionPreset='slideInBottom' size={'4xl'} isCentered  >
         <ModalOverlay />
 
         <ModalContent className={`${styles.modal} ${styles.modalHighlight}`}>
@@ -84,15 +84,19 @@ export function Modal({ location, handleModal, closeModal, data, conditional }) 
 
           <ModalBody py='0' px='0'>
             <Flex className={styles.modalContentHighlight}>
-              <Image src={`/lanches/${data.src}`} borderRadius={'4px 0 0 4px '} objectFit='cover' w='60%' alt='' />
+              <Image src={`/lanches/jack-bacon-2.jpeg`} borderRadius={'4px 0 0 4px '} objectFit='cover' w='60%' alt='' />
 
               <Box py='40px' px='40px'>
-                <Heading mt={4} fontSize='2xl'> Smash Salada Bacon | R$ 30,00 </Heading>
+                <Heading mt={4} fontSize='2xl'> Jack Bacon | R$ 28,00 </Heading>
 
                 <Box mt={4} fontSize='md'>
 
+                  <Text mb='12px'>
+                    {"A sugestão do chef é o Jack Bacon, criado em 2017. Esse foi o primeiro integrante da família Jeff's"}
+                  </Text>
+
                   <Text>
-                    Smash salada com Bacon é a escolha perfeita pra quem não quer gastar muito e comer bem! Toda simplicidade do Smash Salada com adicional de bacon por apenas R$ 2,00. Todo sabor que você procura em um só lugar 😛
+                    Uma combinação de cebola caramelizada, com cheddar cremoso e muito bacon fazem o seu sucesso ser tão grande 😉
                   </Text>
 
                 </Box>
@@ -100,12 +104,12 @@ export function Modal({ location, handleModal, closeModal, data, conditional }) 
                 <Text mt={6} mb={2} fontWeight='bold' fontSize='xl'>Ingredientes:</Text>
 
                 <UnorderedList display={'flex'} flexDirection='column' gap={2}>
-                  <ListItem >Hamburguer Artesanal</ListItem>
-                  <ListItem >Queijo Provolone</ListItem>
-                  <ListItem >Maionese</ListItem>
-                  <ListItem >Ceblo Roxa</ListItem>
-                  <ListItem >Alface</ListItem>
-                  <ListItem >Tomate</ListItem>
+                  <ListItem >Pão Brioche Amanteigado</ListItem>
+                  <ListItem >Hambúrguer Artesanal 150g</ListItem>
+                  <ListItem >Cheddar Cremoso</ListItem>
+                  <ListItem >Bacon</ListItem>
+                  <ListItem >Cebola Caramelizada</ListItem>
+                  <ListItem >Barbecue</ListItem>
                 </UnorderedList>
 
               </Box>
