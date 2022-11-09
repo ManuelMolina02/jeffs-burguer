@@ -26,7 +26,7 @@ export function Products({ data }) {
 
 
 
-      <Image src='/mosaico.svg' alt='logo'
+      <Image src='/images/mosaico.svg' alt='logo'
         position={'relative'}
         w={'100%'}
         h={'52px'}

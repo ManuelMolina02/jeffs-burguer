@@ -6,7 +6,7 @@ export function Menu({ cards }) {
 
   return (
     <Flex id='menu' bg='#F5E4E4' flexDirection={'column'}>
-      <Image src='/mosaico.svg' alt='logo'
+      <Image src='/images/mosaico.svg' alt='logo'
         position={'relative'}
         top='-1px'
         w={'100%'}
@@ -47,7 +47,7 @@ export function Menu({ cards }) {
 
 
       <Box position={'relative'} bottom='-34px'>
-        <Image src="/images/divider.png" display='block' objectFit={'cover'} alt='' mx='0 !important' px='0 !important' />
+        <Image src="/images/divider_footer.png" display='block' objectFit={'cover'} alt='' mx='0 !important' px='0 !important' />
       </Box>
     </Flex>
 

@@ -8,13 +8,13 @@ export function Banner({ data }) {
   return (
 
     <Box className={styles.carousel}>
-      <Carousel cols={1} rows={1} gap={10} loop={true} hideArrow={false} autoplay={3500}>
+      <Carousel cols={1} rows={1} gap={10} loop={true} hideArrow={false} >
         <Carousel.Item>
           <main>
             <Flex
               width='550px'
               className={styles.bannerContent}
-              bgImage={"url('/images/banner.webp')"}
+              bgImage={"url('/images/primary-banner.png')"}
               bgPosition={"center"}
               bgRepeat={"no-repeat"}
               bgSize={"cover"}
@@ -50,7 +50,7 @@ export function Banner({ data }) {
           <Flex
             width='550px'
             className={styles.bannerContent}
-            bgImage={"url('/images/second-banner.png')"}
+            bgImage={"url('/images/secondary-banner.png')"}
             bgPosition={"center"}
             bgRepeat={"no-repeat"}
             bgSize={"cover"}
@@ -65,7 +65,7 @@ export function Banner({ data }) {
 
           >
 
-            <Text fontWeight={'bold'} fontSize='8rem' fontFamily={'Cabin Sketch'}>
+            <Text fontWeight={'bold'} fontSize='8rem' fontFamily={'test'}>
               PROMOÇÃO
             </Text>
 
@@ -84,7 +84,31 @@ export function Banner({ data }) {
         </Carousel.Item>
 
         <Carousel.Item>
-          <Image width="100%" height={'660px'} objectFit='cover' alt='' src="/images/banner-thirty.png" />
+          <Flex
+            width='550px'
+            bgImage={"url('/images/third-banner.png')"}
+            bgPosition={"center"}
+            bgRepeat={"no-repeat"}
+            bgSize={"cover"}
+            w='100%'
+            h={"660px"}
+
+            display='flex'
+            flexDir={'column'}
+            align={'center'}
+            justify='flex-start'
+            color='#ccc'
+          >
+
+
+
+            <Text fontSize='10rem' fontFamily={'test-two'} letterSpacing='10px' position='relative' top={'-26px'} color='#ff8601'>
+              HUMMMMMMM
+            </Text>
+            <Text fontSize='2rem' fontFamily={'test'} letterSpacing='2px' position='relative' top={'-86px'} color='#feeddd'>
+              Deu vontade de Jeff's?
+            </Text>
+          </Flex>
         </Carousel.Item>
 
         {/* ... */}

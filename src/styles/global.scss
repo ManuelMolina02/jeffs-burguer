@@ -1,4 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cabin+Sketch:wght@400;700&family=Fredoka+One&family=Roboto:wght@400;500;700&display=swap');
+@font-face {
+  font-family: 'test';
+  src: url('/fonts/FlameRegular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'test-two';
+  src: url('/fonts/FlameBold.otf') format('opentype');
+}
+
 * {
   box-sizing: border-box !important;
   margin: 0;
