@@ -18,7 +18,7 @@ export function Highlight() {
       </Flex>
 
       <Flex className={styles.contentHighlight} w='420px' color={'white'} flexDirection={'column'} justify='center' gap={8}>
-        <Heading fontSize={'32px'}>Sugestão do Chef</Heading>
+        <Heading fontSize={'32px'}>PROMOÇÃO</Heading>
         <Text fontSize={'22px'}>
           Smash salada com Bacon é a escolha perfeita pra quem não quer gastar muito e comer bem!
           Toda simplicidade do <strong>Smash Salada</strong> com adicional de bacon por apenas R$ 2,00.

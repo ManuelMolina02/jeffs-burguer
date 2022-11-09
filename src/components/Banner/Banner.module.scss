@@ -8,6 +8,22 @@
   margin-bottom: 100px;
 }
 
+.carousel{
+ 
+  div {
+    margin: 0 !important;
+  }
+
+  main {
+ 
+   p {
+    
+     margin-left: 100px;
+   }
+  
+  }
+}
+
 @media (max-width: 650px) {
   .bannerContent {
     width: 60%;

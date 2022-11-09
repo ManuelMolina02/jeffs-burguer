@@ -91,20 +91,16 @@ export function Footer() {
 
           <Box className={styles.footerColumn}>
             <Text fontSize={20} fontWeight='bold'>
-              Teste teste
+              Endereço Jeffs
             </Text>
 
             <Text fontSize={16} >
-              teste 1
+              Rua Helbert Mercer, N° 1410 <br />
+              Tibagi Paraná
             </Text>
 
-            <Text fontSize={16} >
-              teste 2
-            </Text>
 
-            <Text fontSize={16} >
-              teste 3
-            </Text>
+
           </Box>
         </Box>
       </Flex>
