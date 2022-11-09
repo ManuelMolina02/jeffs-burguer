@@ -106,7 +106,7 @@ export function Banner({ data }) {
               HUMMMMMMM
             </Text>
             <Text fontSize='2rem' fontFamily={'test'} letterSpacing='2px' position='relative' top={'-86px'} color='#feeddd'>
-              Deu vontade de Jeff's?
+              {"Deu vontade de Jeff's"}?
             </Text>
           </Flex>
         </Carousel.Item>
