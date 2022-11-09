@@ -1,10 +1,13 @@
 import { useState } from 'react'
-import { Flex, GridItem, Text } from "@chakra-ui/react";
+import { Flex, GridItem, Image, Text } from "@chakra-ui/react";
 import { Modal } from '../Modal';
 import { MdExpandLess } from 'react-icons/md'
 import styles from './CardItem.module.scss'
 
 export function CardItem({ cardData }) {
+
+  console.log(cardData);
+
 
   const [showModal, setShowModal] = useState(false)
   return (
@@ -25,7 +28,22 @@ export function CardItem({ cardData }) {
       onClick={() => setShowModal(true)}
       className={styles.cardItem}
     >
+      {
+        cardData.title === 'Nacho Burger' && <Image src='/images/doritos.png' alt='' position={'absolute'} w='140px' mb='260px' ml='140px' />
+      }
+
+
+      {
+        cardData.title === 'Costela Premium' && <Image src='/images/catupiry.png' alt='' position={'absolute'} w='88px' mb='260px' ml='160px' />
+      }
+
+      {
+        cardData.title === 'Crocante' && <Image src='/images/pringles.png' alt='' position={'absolute'} w='120px' mb='220px' ml='160px' />
+      }
+
       <Flex bg='gray.900' opacity={'.86'} w='100%' height={'60px'} align='center' justify={'space-between'} px='16px' >
+
+
         <Text fontSize={18} color='orange.100' onClick={() => setShowModal(true)}>
           {cardData.title}
         </Text>

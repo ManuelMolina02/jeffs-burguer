@@ -30,6 +30,20 @@ export function Modal({ location, handleModal, closeModal, data, conditional }) 
 
         <ModalContent className={styles.modal}>
 
+          {
+            data.title === 'Nacho Burger' && <Image src='/images/doritos.png' alt='' position={'absolute'} w='200px' mt='20px' ml='330px' />
+          }
+
+
+          {
+            data.title === 'Costela Premium' && <Image src='/images/catupiry.png' alt='' position={'absolute'} w='100px' mt='40px' ml='380px' />
+          }
+
+          {
+            data.title === 'Crocante' && <Image src='/images/pringles.png' alt='' position={'absolute'} w='120px' mt='20px' ml='20px' />
+          }
+
+
           <ModalBody pt='0' px='0'>
             <Image src={`/lanches/${data.src}`} borderRadius={'4px 4px 0 0 '} objectFit='cover' w='100%' h='360px' alt='' />
 
