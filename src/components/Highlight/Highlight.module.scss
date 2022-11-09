@@ -1,20 +1,12 @@
-.highlight {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10rem;
-}
-
+ 
 .boxImages {
   display: flex;
   justify-content: center;
   align-items: center;
 
   img {
-    width: 440px;
-    height: 100%;
+    max-width: 320px !important;
     object-fit: cover;
-  
   }
 }
 

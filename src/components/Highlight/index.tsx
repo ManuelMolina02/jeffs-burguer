@@ -14,22 +14,20 @@ export function Highlight() {
   return (
     <Flex id='highlight' className={styles.highlight} bg='#212121'>
 
-      <Flex className={styles.boxImages}>
-        <Image src={`/images/element_1.png`} alt='logo' />
-      </Flex>
+
+      <Image src={`/images/element_1.png`} alt='logo' w='20%' objectFit={'cover'} />
 
 
-      <Flex className={styles.contentHighlight} w='50%' color={'white'} flexDirection={'column'} justify='center' gap={8}>
-        <Heading fontSize={'100px'} letterSpacing='10px' fontFamily='Cabin Sketch' color='#F4887A'>PROMOÇÃO</Heading>
+
+      <Flex className={styles.contentHighlight} w='50%' color={'white'} flexDirection={'column'} justify='center' gap={8} p='60px'>
+        <Heading fontSize={'100px'} letterSpacing='10px' fontFamily='test-two' color='#feeddd'>Sugestão do Chef</Heading>
         <Box fontSize={'26px'} color='#ccc'>
           <Text mb='12px'>
-            Smash salada com Bacon é a escolha perfeita pra quem não quer gastar muito e comer bem!
+            {"A sugestão do chef é o Jack Bacon, criado em 2017. Esse foi o primeiro integrante da família Jeff's"}
           </Text>
 
           <Text>
-            Toda simplicidade do <strong>Smash Salada</strong> com adicional de bacon por apenas R$ 2,00.
-            Todo sabor que você procura em um só lugar 😛
-
+            Uma combinação de cebola caramelizada, com cheddar cremoso e muito bacon fazem o seu sucesso ser tão grande 😉
           </Text>
         </Box>
         <Button onClick={() => setShowModal(true)} variant={'outline'} fontSize='32px' size='lg' h='80px' _hover={{ color: '#F4887A', bg: 'white' }}>
@@ -37,9 +35,15 @@ export function Highlight() {
         </Button>
       </Flex>
 
-      <Flex className={styles.boxImages}>
-        <Image src={`/images/element_2.png`} alt='logo' />
-      </Flex>
+
+      <Image
+        src={`/images/element_2.png`}
+        alt='logo'
+        w='25%'
+        objectFit={'cover'}
+        ml='80px'
+      />
+
 
       <Modal handleModal={showModal} closeModal={setShowModal} data={data} location='highlight' conditional={''} />
     </Flex>

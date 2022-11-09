@@ -23,20 +23,28 @@ export function Banner({ data }) {
             >
               <Box px={'80px'}>
                 <Flex flexDir='column' align='center' maxW={'50%'}>
-                  <Heading fontSize={'126px'} height='140px'>
+                  <Text fontSize={'146px'} height='180px' fontFamily='Bebas Neue'>
                     TE VER
-                  </Heading>
-                  <Text fontSize={'40px'} letterSpacing='.26em'>
+                  </Text>
+                  <Text fontSize={'40px'} letterSpacing='.26em' fontFamily='Bebas Neue'>
                     E NÃO TE QUERER
                   </Text>
                 </Flex>
 
-                <Flex color='#fcde4a' textShadow={' 3px 9px 9px rgba(0, 0, 0, 0.72)'} flexDir='column' align='flex-start' fontSize='76px' fontWeight={'bold'} >
-                  <Text height='140px' fontSize={'126px'}>
+                <Flex
+                  color='#fcde4a'
+                  textShadow={' 6px 6px 3px rgba(0, 0, 0, 0.65);'}
+                  flexDir='column'
+                  align='flex-start'
+                  fontSize={'86px'}
+                  fontFamily={'test-two'}
+                  pt='60px'
+                >
+                  <Text height={'100px'}>
                     É IMPROVÁVEL
                   </Text>
 
-                  <Text fontSize={'126px'}>
+                  <Text>
                     É IMPOSSÍVEL.
                   </Text>
                 </Flex>
@@ -59,23 +67,25 @@ export function Banner({ data }) {
 
             display='flex'
             align={'end'}
-            pt='90px'
-            pr='3.6rem'
-            color='#F4887A'
+            color='#ff6634'
+            fontFamily={'test-two'}
 
           >
 
-            <Text fontWeight={'bold'} fontSize='8rem' fontFamily={'test'}>
-              PROMOÇÃO
-            </Text>
+            <Box pt='90px' pr='4.6rem'>
+              <Text fontSize='8rem' letterSpacing={'2px'} >
+                PROMOÇÃO
+              </Text>
 
-            <Box fontWeight={'bold'} fontSize='8rem' fontFamily={'Cabin Sketch'} textAlign='end' color='#FCDE4A'>
-              <Text fontSize='4rem' fontFamily={'Cabin Sketch'}>
-                Smash Salada
-              </Text>
-              <Text fontSize='4rem' fontFamily={'Cabin Sketch'} lineHeight='1'>
-                Adicional de <br /> Bacon
-              </Text>
+              <Box pr='12px' fontWeight={'bold'} fontSize='8rem' fontFamily={'test'} textAlign='end' color='#FCDE4A'>
+                <Text fontSize='3.2rem'>
+                  Smash Salada
+                </Text>
+                <Text fontSize='3.2rem' lineHeight='1'>
+                  Adicional de <br /> Bacon
+                </Text>
+              </Box>
+
             </Box>
 
 
@@ -112,8 +122,8 @@ export function Banner({ data }) {
         </Carousel.Item>
 
         {/* ... */}
-      </Carousel>
-    </Box>
+      </Carousel >
+    </Box >
 
 
 
