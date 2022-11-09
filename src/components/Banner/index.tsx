@@ -8,7 +8,7 @@ export function Banner({ data }) {
   return (
 
     <Box className={styles.carousel}>
-      <Carousel cols={1} rows={1} gap={10} loop={true} hideArrow={false} >
+      <Carousel cols={1} rows={1} gap={10} loop={true} hideArrow={false} autoplay={3500} >
         <Carousel.Item>
           <main>
             <Flex
