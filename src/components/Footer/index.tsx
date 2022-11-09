@@ -24,19 +24,24 @@ export function Footer() {
 
         <Flex fontSize={20} m='20px 0' borderBottom={'solid 2px #C7C7C7'}>
           <Text pl='16px' pb='16px'>
-            Nos contate através das redes sociais!
+            Nos acompanhe através das redes sociais!
           </Text>
         </Flex>
 
         <Box className={styles.footerContent} gap={16}  >
           <Box className={styles.footerColumn}>
             <Text fontSize={20} fontWeight='bold'>
-              Horário de Atendimento
+              Atendimento
             </Text>
 
             <Text>
-              Atendimento de Quinta-feira à Domingo das 19:00 às 23:00. Estamos fechados às segundas e terças-feiras.
+              De <strong>quinta-feira à domingo das 19:00 às 23:00</strong>. Estamos fechados às segundas e quartas-feiras.
             </Text>
+
+            <Text fontSize={16} >
+              Rua Helbert Mercer, N° 1410. Tibagi - PR
+            </Text>
+
           </Box>
 
           <Box className={styles.footerColumn}>
@@ -89,19 +94,6 @@ export function Footer() {
 
           </Box>
 
-          <Box className={styles.footerColumn}>
-            <Text fontSize={20} fontWeight='bold'>
-              Endereço Jeffs
-            </Text>
-
-            <Text fontSize={16} >
-              Rua Helbert Mercer, N° 1410 <br />
-              Tibagi Paraná
-            </Text>
-
-
-
-          </Box>
         </Box>
       </Flex>
 
