@@ -29,7 +29,7 @@ export function Footer() {
         </Flex>
 
         <Box className={styles.footerContent} gap={16}  >
-          <Box className={styles.footerColumn}>
+          <Box className={styles.footerColumn} maxW='360px'>
             <Text fontSize={20} fontWeight='bold'>
               Atendimento
             </Text>
@@ -39,7 +39,7 @@ export function Footer() {
             </Text>
 
             <Text fontSize={16} >
-              Rua Helbert Mercer, N° 1410. Tibagi - PR
+              Rua Helbert Mercer, N° 1410. Centro, Tibagi - PR
             </Text>
 
           </Box>
