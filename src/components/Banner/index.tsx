@@ -8,56 +8,57 @@ export function Banner({ data }) {
   return (
 
     <Box className={styles.carousel}>
-      <Carousel cols={1} rows={1} gap={10} loop={true} hideArrow={false} autoplay={3500} >
+      <Carousel cols={1} rows={1} gap={10} loop={true} hideArrow={false}  >
         <Carousel.Item>
-          <main>
-            <Flex
-              width='550px'
-              className={styles.bannerContent}
-              bgImage={"url('/images/primary-banner.png')"}
-              bgPosition={"center"}
-              bgRepeat={"no-repeat"}
-              bgSize={"cover"}
-              w='100%'
-              h={"660px"}
-            >
-              <Box px={'80px'}>
-                <Flex flexDir='column' align='center' maxW={'50%'}>
-                  <Text fontSize={'146px'} height='180px' fontFamily='Bebas Neue'>
-                    TE VER
-                  </Text>
-                  <Text fontSize={'40px'} letterSpacing='.26em' fontFamily='Bebas Neue'>
-                    E NÃO TE QUERER
-                  </Text>
-                </Flex>
 
-                <Flex
-                  color='#fcde4a'
-                  textShadow={' 6px 6px 3px rgba(0, 0, 0, 0.65);'}
-                  flexDir='column'
-                  align='flex-start'
-                  fontSize={'86px'}
-                  fontFamily={'test-two'}
-                  pt='60px'
-                >
-                  <Text height={'100px'}>
-                    É IMPROVÁVEL
-                  </Text>
+          <Flex
 
-                  <Text>
-                    É IMPOSSÍVEL.
-                  </Text>
-                </Flex>
-              </Box>
+            className={`${styles.bannerContent} ${styles.bannerConfigs}`}
+            bgImage={"url('/images/primary-banner.png')"}
+            bgPosition={"center"}
+            bgRepeat={"no-repeat"}
+            bgSize={"cover"}
+            w='100%'
+            h={"660px"}
+          >
+            <Box className={styles.bannerPrimaryContent} >
+              <Flex flexDir='column' align='center'>
+                <Text fontSize={'146px'} height='180px'>
+                  TE VER
+                </Text>
+                <Text fontSize={'40px'} letterSpacing='.26em' fontFamily='Bebas Neue'>
+                  E NÃO TE QUERER
+                </Text>
+              </Flex>
 
-            </Flex>
-          </main>
+              <Flex
+                color='#fcde4a'
+                textShadow={' 6px 6px 3px rgba(0, 0, 0, 0.65);'}
+                flexDir='column'
+                align='flex-start'
+                fontSize={'86px'}
+                fontFamily={'test-two'}
+                pt='60px'
+                pl='6rem'
+              >
+                <Text height={'100px'}>
+                  É IMPROVÁVEL
+                </Text>
+
+                <Text>
+                  É IMPOSSÍVEL.
+                </Text>
+              </Flex>
+            </Box>
+
+          </Flex>
+
         </Carousel.Item>
 
         <Carousel.Item>
           <Flex
-            width='550px'
-            className={styles.bannerContent}
+
+            className={`${styles.bannerContent} ${styles.bannerConfigs}`}
             bgImage={"url('/images/secondary-banner.png')"}
             bgPosition={"center"}
             bgRepeat={"no-repeat"}
@@ -72,8 +73,9 @@ export function Banner({ data }) {
 
           >
 
-            <Box pt='90px' pr='4.6rem'>
-              <Text fontSize='8rem' letterSpacing={'2px'} >
+            <Box pt='90px' pr='4.6rem' textShadow={' -9px 6px 4px rgb(0 0 0 / 78%);'}>
+              <Text fontSize='8rem' letterSpacing={'2px'}
+              >
                 PROMOÇÃO
               </Text>
 
@@ -95,13 +97,14 @@ export function Banner({ data }) {
 
         <Carousel.Item>
           <Flex
-            width='550px'
+
             bgImage={"url('/images/third-banner.png')"}
             bgPosition={"center"}
             bgRepeat={"no-repeat"}
             bgSize={"cover"}
             w='100%'
             h={"660px"}
+            className={` ${styles.bannerConfigs}`}
 
             display='flex'
             flexDir={'column'}

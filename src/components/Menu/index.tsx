@@ -24,11 +24,11 @@ export function Menu({ cards }) {
 
         className={styles.menuContent}
       >
-        <Text color='black' fontSize={28} w={{ sm: '320px', md: '480px', lg: '620px' }} textAlign={'center'} mb='40px'>
-          Veja as opções do nosso cardápio completo com deliciosos lanches e hamburgueres artesanais. Você vai se surpreender!
+        <Text className={styles.descriptionMenu} mb='40px'>
+          Veja as opções do nosso cardápio completo com deliciosos lanches e hamburgueres artesanais.  <br />Você vai se surpreender!
         </Text>
 
-        <Grid className={styles.gridStyles} gap={16} >
+        <Grid className={styles.gridMenu} gap={16} >
           {
             cards.map(item => (
               <CardItem key={item.id} cardData={item} />
@@ -36,18 +36,20 @@ export function Menu({ cards }) {
           }
         </Grid>
 
-        <Box color='black' fontSize={28} w={'700px'} textAlign={'center'} mt='40px'>
+        <Box className={styles.descriptionMenu} mt='40px'>
           <Text>
-            Aproveite o momento e viva essa experiência culinária!
+            Aproveite o momento e viva essa experiência culinária.
+            <br />
+            Faça seu pedido agora!
           </Text>
-          <Text>Faça seu pedido agora!</Text>
+
         </Box>
 
       </Flex>
 
 
       <Box position={'relative'} bottom='-34px'>
-        <Image src="/images/divider_footer.png" display='block' objectFit={'cover'} alt='' mx='0 !important' px='0 !important' />
+        <Image src="/images/divider_footer.png" w='100%' objectFit={'cover'} alt='' />
       </Box>
     </Flex>
 

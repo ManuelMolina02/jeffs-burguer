@@ -8,6 +8,28 @@
   margin-bottom: 100px;
 }
 
+
+.bannerConfigs {
+ img {
+  width: 550px;
+ }
+}
+
+.bannerPrimaryContent{
+ 
+
+  &:first-child {
+    > div {
+      display: flex;
+      flex-direction: column;
+    }
+
+    max-width: 50%;
+    font-family: 'Bebas Neue';
+  }  
+}
+
+
 .carousel{
  
   div {
@@ -24,11 +46,53 @@
   }
 }
 
+
+@media (max-width: 1450px) {
+  .bannerPrimaryContent{
+ 
+    &:first-child {
+      max-width: 80%;
+      margin: 0 auto !important;
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .bannerPrimaryContent{
+ 
+    &:first-child {
+      max-width: 80%;
+      margin: 0 auto !important;
+    }
+  }
+}
+
 @media (max-width: 650px) {
+ 
+
   .bannerContent {
     width: 60%;
     gap: 40px;
     text-align: center;
     margin: 0 auto 60px auto;
+    
   }
+
+  .bannerConfigs {
+    p{
+      font-size: 3rem !important;
+    }
+  }
+
+  .bannerPrimaryContent{
+ 
+
+    &:first-child {
+      max-width: 80%;
+      margin: 0 auto !important;
+ 
+    }
+  }
+
+  
 }

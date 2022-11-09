@@ -13,14 +13,10 @@ export function Highlight() {
 
   return (
     <Flex id='highlight' className={styles.highlight} bg='#212121'>
-
-
       <Image src={`/images/element_1.png`} alt='logo' w='20%' objectFit={'cover'} />
 
-
-
-      <Flex className={styles.contentHighlight} w='50%' color={'white'} flexDirection={'column'} justify='center' gap={8} p='60px'>
-        <Heading fontSize={'100px'} letterSpacing='10px' fontFamily='test-two' color='#feeddd'>Sugestão do Chef</Heading>
+      <Flex className={styles.contentHighlight}>
+        <Heading color=''>Sugestão do Chef</Heading>
         <Box fontSize={'26px'} color='#ccc'>
           <Text mb='12px'>
             {"A sugestão do chef é o Jack Bacon, criado em 2017. Esse foi o primeiro integrante da família Jeff's"}
@@ -30,7 +26,7 @@ export function Highlight() {
             Uma combinação de cebola caramelizada, com cheddar cremoso e muito bacon fazem o seu sucesso ser tão grande 😉
           </Text>
         </Box>
-        <Button onClick={() => setShowModal(true)} variant={'outline'} fontSize='32px' size='lg' h='80px' _hover={{ color: '#F4887A', bg: 'white' }}>
+        <Button onClick={() => setShowModal(true)} variant={'outline'} fontSize='4xl' size='lg' h='80px' _hover={{ color: '#df5427', bg: '#feeddd' }}>
           ver mais
         </Button>
       </Flex>
