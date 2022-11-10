@@ -221,11 +221,36 @@
     }
   }
 
+  .secondBanner {
+    p:first-child {
+      font-size: 4rem;
+    }
+  }
+
+  .secondBannerBottomContent{
+
+    p {
+      font-size: 2.8rem !important;
+    }
+  }
+
   .thirdBanner {
     p:first-child {
       top: 60px;
       font-size: 3.8em;
       letter-spacing: 2px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .thirdBanner {
+    p:first-child {
+      font-size: 3.4em;
+    }
+
+    p:last-child {
+      font-size: 1.8em;
     }
   }
 }
