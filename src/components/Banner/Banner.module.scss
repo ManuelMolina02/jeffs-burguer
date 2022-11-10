@@ -32,6 +32,7 @@
     align-items: flex-start;
     font-size: 96px;
     font-family: 'test-two';
+    color: #fcde4a;
   
      p:first-child {
       height:120px;
@@ -42,8 +43,6 @@
     }
   }
 }
-
-
 
 
 .thirdBanner {
@@ -96,7 +95,7 @@
 }
 
 @media (max-width: 1050px) {
-  .bannerContent {
+  .bannerPrimaryContent {
 
     .bannerTopContent {
       max-width: 100%;
@@ -133,7 +132,7 @@
     }
   }
 
-  .bannerContent {
+  .bannerPrimaryContent {
     text-shadow: 6px 6px 5px rgba(0, 0, 0, 0.925) !important; 
   }
 
@@ -148,6 +147,11 @@
 
 @media (max-width: 650px) {
   .bannerContent {
+    padding-top: 0 !important;
+    padding-right:0 !important
+  }
+
+  .bannerPrimaryContent {
     text-shadow: 6px 6px 4px black !important;
 
     .bannerTopContent {
@@ -166,10 +170,39 @@
       height: 100px;        
     }
   }
+
+  .secondBanner{
+    width: 100%;
+    display: flex;
+    align-items: center !important;
+    justify-content: center;
+    text-align: center;
+    text-shadow: -9px 6px 4px rgb(0 0 0 / 78%);
+
+    > div {
+      display: flex;
+      flex-direction: column;
+    }
+
+    > div p:last-child {
+      width: 280px;
+    }
+
+    .secondBannerBottomContent{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      text-align: center;
+      p {
+        font-size: 3.4rem;
+      }
+    }
+  }
 }
 
 @media (max-width: 510px) {
-  .bannerContent {
+  .bannerPrimaryContent {
     .bannerTopContent {
       
       p:first-child {
@@ -185,6 +218,14 @@
     
     .bannerBottomContent {
       font-size: 56px;
+    }
+  }
+
+  .thirdBanner {
+    p:first-child {
+      top: 60px;
+      font-size: 3.8em;
+      letter-spacing: 2px;
     }
   }
 }

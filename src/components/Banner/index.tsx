@@ -52,24 +52,24 @@ export function Banner({ data }) {
             align={'end'}
             color='#ff6634'
             fontFamily={'test-two'}
+            pt='90px'
+            pr='4.6rem'
           >
 
-            <Box pt='90px' pr='4.6rem' textShadow={' -9px 6px 4px rgb(0 0 0 / 78%);'}>
-              <Text fontSize='8rem' letterSpacing={'2px'}
-              >
-                PROMOÇÃO
+
+            <Text fontSize='8rem' letterSpacing={'2px'} >
+              PROMOÇÃO
+            </Text>
+
+            <Box className={styles.secondBannerBottomContent} pr='12px' fontWeight={'bold'} fontSize='8rem' fontFamily={'test'} textAlign='end' color='#FCDE4A'>
+              <Text>
+                Smash Salada
               </Text>
-
-              <Box pr='12px' fontWeight={'bold'} fontSize='8rem' fontFamily={'test'} textAlign='end' color='#FCDE4A'>
-                <Text fontSize='3.2rem'>
-                  Smash Salada
-                </Text>
-                <Text fontSize='3.2rem' lineHeight='1'>
-                  Adicional de <br /> Bacon
-                </Text>
-              </Box>
-
+              <Text fontSize='3.2rem' lineHeight='1'>
+                Adicional de Bacon
+              </Text>
             </Box>
+
 
 
 
