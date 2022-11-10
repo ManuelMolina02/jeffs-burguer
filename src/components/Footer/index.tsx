@@ -18,7 +18,18 @@ export function Footer() {
   return (
     <>
       <Flex className={styles.footer} bg='white' flexDirection='column' pb={12}>
-        <Flex fontSize={20} m='20px 0' borderBottom={'solid 2px #C7C7C7'}>
+        <Box height={'80px'} display='flex' alignItems={'center'} justifyContent='center' flexDir={'column'}>
+
+          <Image src="/images/divider_footer.png" w='100%' objectFit={'cover'} alt='' position={'absolute'} mt='-6px' maxW='1580px' />
+
+          <Box w='100%' h='50%' bg='#F5E4E4' border={'none'}>
+
+          </Box>
+          <Box w='100%' h='50%' bg='#ffffff' border={'none'}>
+          </Box>
+
+        </Box>
+        <Flex fontSize={20} borderBottom={'solid 2px #C7C7C7'}>
           <Text pl='16px' pb='16px'>
             Nos acompanhe através das redes sociais!
           </Text>

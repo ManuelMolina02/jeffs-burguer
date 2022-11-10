@@ -3,6 +3,7 @@ import { GetServerSideProps } from 'next';
 import { Box } from '@chakra-ui/react'
 import { api } from '../services/api';
 import { Header, Banner, Products, Highlight, Menu, Footer } from '../components';
+import { About } from '../components/About';
 
 export default function Home({ dataCards }) {
   return (
@@ -15,6 +16,7 @@ export default function Home({ dataCards }) {
         <Header data={dataCards} />
         <Banner data={dataCards} />
         <Products data={dataCards} />
+        <About />
         <Highlight />
         <Menu cards={dataCards} />
         <Footer />

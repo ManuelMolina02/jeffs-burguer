@@ -6,15 +6,19 @@ export function Menu({ cards }) {
 
   return (
     <Flex id='menu' bg='#F5E4E4' flexDirection={'column'}>
-      <Image src='/images/mosaico.svg' alt='logo'
-        position={'relative'}
-        top='-1px'
-        w={'100%'}
-        h={'52px'}
-        display={'block'}
-        objectFit={'cover'}
-      />
-
+      {
+        /*
+        
+              <Image src='/images/mosaico.svg' alt='logo'
+              position={'relative'}
+              top='-1px'
+              w={'100%'}
+              h={'52px'}
+              display={'block'}
+              objectFit={'cover'}
+            />
+      */
+      }
       <Flex
         flexDirection={'column'}
         justify={'center'}
@@ -48,9 +52,8 @@ export function Menu({ cards }) {
       </Flex>
 
 
-      <Box position={'relative'} bottom='-34px'>
-        <Image src="/images/divider_footer.png" w='100%' objectFit={'cover'} alt='' />
-      </Box>
+
+
     </Flex>
 
   )

@@ -5,10 +5,6 @@ import { MdExpandLess } from 'react-icons/md'
 import styles from './CardItem.module.scss'
 
 export function CardItem({ cardData }) {
-
-  console.log(cardData);
-
-
   const [showModal, setShowModal] = useState(false)
   return (
     <GridItem

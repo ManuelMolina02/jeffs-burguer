@@ -1,98 +1,190 @@
 .bannerContent {
-  width: 380px;
   color: #fff;
   display: flex;
   flex-direction: column;
-  gap: 32px;
-  margin-left: 100px;
-  margin-bottom: 100px;
-}
+  width: 100%;
+  height: 660px;
+  text-shadow: 6px 6px 6px #000000b8 !important;
 
-
-.bannerConfigs {
- img {
-  width: 550px;
- }
-}
-
-.bannerPrimaryContent{
- 
-
-  &:first-child {
-    > div {
-      display: flex;
-      flex-direction: column;
-    }
-
-    max-width: 50%;
+  .bannerTopContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 60%;
+   
     font-family: 'Bebas Neue';
-  }  
+  
+    p:first-child {
+      font-size: 146px;
+      height: 180px;
+    }
+  
+    p:last-child {
+      font-size: 40px;        
+      height: 100px;
+      letter-spacing: .26em;
+    }
+  }
+  
+  .bannerBottomContent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 96px;
+    font-family: 'test-two';
+  
+     p:first-child {
+      height:120px;
+    }
+  
+    p {
+      margin-left: 6rem;
+    }
+  }
 }
 
 
-.carousel{
- 
+
+
+.thirdBanner {
+  p:first-child {
+    position: relative;
+    font-size: 10em;
+    font-family: 'test-two';
+    letter-spacing: 10px;
+    color: #ff8601;
+    height: 158px;
+    top: -18px;
+  }
+
+  p+p {
+    position: relative;
+
+    font-size: 2em;
+    font-family: 'test';
+    letter-spacing: 2px;
+    color: #feeddd
+  }
+}
+
+.carousel {
   div {
     margin: 0 !important;
   }
 
-  main {
- 
-   p {
+  span {
+    margin: 0 20px
+  }
+}
+
+
+@media (max-width: 1250px) {
+
+  .secondBanner {
+    p:first-child {
+      font-size: 5rem;
+    }
+  }
+
+  .thirdBanner {
+    p:first-child {
+      font-size: 8em;
+      letter-spacing: 10px;
+      height: 128px;
+    }
+  }
+}
+
+@media (max-width: 1050px) {
+  .bannerContent {
+
+    .bannerTopContent {
+      max-width: 100%;
+    }
     
-     margin-left: 100px;
-   }
+    .bannerBottomContent {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 76px;
+      color: #fcde4a;
+      
+      p{
+        margin: 0 !important;
+      }
+    }
+  }
+
   
-  }
-}
-
-
-@media (max-width: 1450px) {
-  .bannerPrimaryContent{
- 
-    &:first-child {
-      max-width: 80%;
-      margin: 0 auto !important;
+  .thirdBanner {
+    p:first-child {
+      font-size: 6rem;
+      letter-spacing: 8px;
+      height: 128px;
+      top: 10px
     }
   }
 }
 
-@media (max-width: 850px) {
-  .bannerPrimaryContent{
- 
-    &:first-child {
-      max-width: 80%;
-      margin: 0 auto !important;
+@media (max-width: 800px) {
+  .carousel{
+    > div div {
+      grid-template-columns: repeat(3,100%);
     }
   }
-}
-
-@media (max-width: 650px) {
- 
 
   .bannerContent {
-    width: 60%;
-    gap: 40px;
-    text-align: center;
-    margin: 0 auto 60px auto;
+    text-shadow: 6px 6px 5px rgba(0, 0, 0, 0.925) !important; 
+  }
+
+  .thirdBanner {
+    p:first-child {
+      top: 60px;
+      font-size: 4em;
+    }
+  }
+}
+
+
+@media (max-width: 650px) {
+  .bannerContent {
+    text-shadow: 6px 6px 4px black !important;
+
+    .bannerTopContent {
+      p:first-child {
+        font-size: 146px;
+      }
     
-  }
-
-  .bannerConfigs {
-    p{
-      font-size: 3rem !important;
+      p:last-child {
+        font-size: 40px;
+      }
+    }
+    
+    .bannerBottomContent {
+      padding-top: 40px;
+      font-size: 66px;
+      height: 100px;        
     }
   }
+}
 
-  .bannerPrimaryContent{
- 
+@media (max-width: 510px) {
+  .bannerContent {
+    .bannerTopContent {
+      
+      p:first-child {
+        font-size: 126px;
+      }
+    
+      p:last-child {
+        font-size: 30px;
+        margin-top: -20px;
 
-    &:first-child {
-      max-width: 80%;
-      margin: 0 auto !important;
- 
+      }
+    }
+    
+    .bannerBottomContent {
+      font-size: 56px;
     }
   }
-
-  
 }

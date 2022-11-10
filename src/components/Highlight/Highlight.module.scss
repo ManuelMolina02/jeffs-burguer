@@ -37,6 +37,17 @@
     gap: 2.6rem;
     align-items: center;
     text-align: center;
+    padding: 80px;
+
+    h2 {
+      font-size: 4.6rem;
+      word-break: break-word;
+    }
+
+    img {
+      display: none;
+    }
+
   }
 
   .contentHighlight {
@@ -57,13 +68,18 @@
 
     .contentHighlight{
       h2 {
-        font-size: 4rem;
+        font-size: 3.2rem;
         letter-spacing: 2px;
       }
+      p {
+        font-size: 1.4rem;
+       }
+
+       button {
+        font-size: 1.4rem;
+       }
     }
 
-    img {
-      display: none;
-    }
+
   }
 }
