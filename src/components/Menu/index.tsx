@@ -6,26 +6,12 @@ export function Menu({ cards }) {
 
   return (
     <Flex id='menu' bg='#F5E4E4' flexDirection={'column'}>
-      {
-        /*
-        
-              <Image src='/images/mosaico.svg' alt='logo'
-              position={'relative'}
-              top='-1px'
-              w={'100%'}
-              h={'52px'}
-              display={'block'}
-              objectFit={'cover'}
-            />
-      */
-      }
       <Flex
         flexDirection={'column'}
         justify={'center'}
         align={'center'}
         m='60px auto'
         gap={12}
-
         className={styles.menuContent}
       >
         <Text className={styles.descriptionMenu} mb='40px'>
@@ -46,15 +32,8 @@ export function Menu({ cards }) {
             <br />
             Faça seu pedido agora!
           </Text>
-
         </Box>
-
       </Flex>
-
-
-
-
     </Flex>
-
   )
 }

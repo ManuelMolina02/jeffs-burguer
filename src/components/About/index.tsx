@@ -71,7 +71,7 @@ export function About() {
               return (
                 <Box key={item.id} className={styles.historyItem}>
                   <Box display={'flex'} textAlign='start' alignItems={'flex-end'} gap={2} >
-                    <Heading fontSize={'6xl'} color='#ffaa00' textShadow={'2px 2px 8px #ffffffbd'} mb='-12px' fontFamily='test-two'>
+                    <Heading fontSize={'6xl'} color='#ffaa00' textShadow={'2px 2px 8px #ffffffbd'} mb='-12px' fontFamily='test'>
                       {item.time}
                     </Heading>
                     <Heading fontSize={'xl'} maxW='146px' color='#502314' fontFamily='test' fontWeight={'normal'}>
