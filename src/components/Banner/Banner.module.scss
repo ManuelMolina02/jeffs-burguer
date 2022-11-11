@@ -129,6 +129,7 @@
   .carousel{
     > div div {
       grid-template-columns: repeat(3,100%);
+      margin-right: -6px !important
     }
   }
 
