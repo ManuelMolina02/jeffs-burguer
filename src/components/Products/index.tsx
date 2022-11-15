@@ -10,7 +10,7 @@ export function Products({ data }) {
     <Box id='products' className={styles.products} bg='#F6F2E9'>
 
       <Flex align={'center'}>
-        <Image src='/background.svg' alt='logo'
+        <Image src='/background.webp' alt='logo'
           className={styles.bgImage}
           w={'420px'}
           h='500px'

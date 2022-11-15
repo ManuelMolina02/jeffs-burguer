@@ -6,8 +6,7 @@ import { AiFillInstagram } from 'react-icons/ai'
 import { IoLogoWhatsapp } from 'react-icons/io'
 
 export function Drawer() {
-  const numberWhats = '5542999945476'
-  const textWhats = 'Olá, gostaria de fazer um pedido!'
+  const numberWhats = process.env.NUMBER_WHATS
   const { isOpen, onOpen, onClose } = useDisclosure()
 
   return (
