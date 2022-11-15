@@ -54,12 +54,13 @@ export function About() {
         <Box display={'flex'} justifyContent='flex-end' mr='60px'>
           <Image src='/images/jeff.webp' alt='logo'
             w={'360px'}
-            h={'500px'}
+            h={'540px'}
             objectFit={'cover'}
             borderRadius='12px'
             position={'sticky'}
             top='40px'
             mb='40px'
+            mt='16px'
             boxShadow={'4px 4px 9px #00000078;'}
           />
         </Box>

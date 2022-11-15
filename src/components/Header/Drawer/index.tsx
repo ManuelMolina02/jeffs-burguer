@@ -30,7 +30,7 @@ export function Drawer() {
                 </Flex>
               </Link>
 
-              <Link href={`#`} _focus={{ border: 'none' }} onClick={onClose}>
+              <Link href={`#about`} _focus={{ border: 'none' }} onClick={onClose}>
                 <Flex fontSize={20} align='center' gap={2}>
                   <Text>{"Sobre Jeff's"}</Text>
                 </Flex>
