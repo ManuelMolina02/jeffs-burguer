@@ -16,7 +16,7 @@ export function Footer() {
       <Flex className={styles.footer} bg='white' flexDirection='column' pb={12}>
         <Box height={'80px'} display='flex' alignItems={'center'} justifyContent='center' flexDir={'column'}>
 
-          <Image src="/images/divider-footer.webp" w='100%' objectFit={'cover'} alt='' position={'absolute'} mt='-6px' maxW='1580px' />
+          <Image src="/images/divider-footer.webp" w='100%' objectFit={'cover'} alt='' position={'absolute'} mt='-6px' maxW='1580px' maxH='85px' />
 
           <Box w='100%' h='50%' bg='#F5E4E4' border={'none'}>
 
@@ -90,7 +90,7 @@ export function Footer() {
 
             <Link href={`#`} _focus={{ border: 'none' }} >
               <Flex fontSize={16} align='center' gap={2}>
-                <Image src="/aiboo1.png" boxSize={18} alt='' ml='2px' />
+                <Image src="/aiboo1.svg" boxSize={18} alt='' ml='2px' />
                 <Text>Aiboo</Text>
               </Flex>
             </Link>

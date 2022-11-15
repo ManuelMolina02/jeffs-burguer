@@ -70,7 +70,7 @@ export function Drawer() {
 
               <Link href={`#`} _focus={{ border: 'none' }} >
                 <Flex fontSize={16} align='center' gap={2}>
-                  <Image src="/aiboo1.png" boxSize={18} alt='' ml='2px' />
+                  <Image src="/aiboo1.svg" boxSize={18} alt='' ml='2px' />
                   <Text>Aiboo</Text>
                 </Flex>
               </Link>
