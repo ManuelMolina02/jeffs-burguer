@@ -26,7 +26,7 @@ export function CardSection({ title, description, data }) {
             {title}
           </Heading>
 
-          <Image src='/images/divider_products.svg' w={32} alt='logo' />
+          <Image src='/images/divider_products.svg' w={'128px'} h='18px' alt='logo' />
         </Box>
 
         <Text

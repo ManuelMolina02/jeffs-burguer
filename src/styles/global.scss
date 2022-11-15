@@ -2,11 +2,13 @@
 @font-face {
   font-family: 'test';
   src: url('/fonts/FlameRegular.otf') format('opentype');
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'test-two';
   src: url('/fonts/FlameBold.otf') format('opentype');
+  font-display: swap;
 }
 
 * {

@@ -16,7 +16,7 @@ export function Footer() {
       <Flex className={styles.footer} bg='white' flexDirection='column' pb={12}>
         <Box height={'80px'} display='flex' alignItems={'center'} justifyContent='center' flexDir={'column'}>
 
-          <Image src="/images/divider_footer.png" w='100%' objectFit={'cover'} alt='' position={'absolute'} mt='-6px' maxW='1580px' />
+          <Image src="/images/divider_footer.webp" w='100%' h='auto' objectFit={'cover'} alt='' position={'absolute'} mt='-6px' maxW='1580px' />
 
           <Box w='100%' h='50%' bg='#F5E4E4' border={'none'}>
 

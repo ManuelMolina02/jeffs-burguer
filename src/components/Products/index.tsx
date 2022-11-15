@@ -13,6 +13,7 @@ export function Products({ data }) {
         <Image src='/background.svg' alt='logo'
           className={styles.bgImage}
           w={'420px'}
+          h='500px'
           objectFit={'cover'}
           flexDirection={'column'}
         />

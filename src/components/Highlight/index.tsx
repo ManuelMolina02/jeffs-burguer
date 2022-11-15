@@ -13,7 +13,7 @@ export function Highlight() {
 
   return (
     <Flex id='highlight' className={styles.highlight} bg='#212121'>
-      <Image src={`/images/element_1.png`} alt='logo' w='20%' objectFit={'cover'} />
+      <Image src={`/images/element-1.webp`} alt='logo' w='20%' h='720px' objectFit={'cover'} />
 
       <Flex className={styles.contentHighlight}>
         <Heading color=''>Sugestão do Chef</Heading>
@@ -33,9 +33,10 @@ export function Highlight() {
 
 
       <Image
-        src={`/images/element_2.png`}
+        src={`/images/element-2.webp`}
         alt='logo'
         w='25%'
+        h='720px'
         objectFit={'cover'}
         ml='80px'
       />
