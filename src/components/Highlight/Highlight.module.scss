@@ -29,6 +29,20 @@
   }
 }
 
+@media (max-width: 1475px) {
+  .contentHighlight {
+    padding: 60px 40px !important;
+    
+    h2 {
+      font-size: 4rem !important;
+    }
+
+    p {
+      font-size: 22px !important;
+    }
+  }
+}
+
  
 @media (max-width: 1000px) {
   .highlight {

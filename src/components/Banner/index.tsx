@@ -1,10 +1,8 @@
-import { Box, Flex, Heading, Image, Text } from "@chakra-ui/react";
+import { Box, Flex, Text } from "@chakra-ui/react";
 import styles from './Banner.module.scss';
-
 import Carousel from 'better-react-carousel'
 
 export function Banner({ data }) {
-
   return (
 
     <Box className={styles.carousel}>
@@ -15,7 +13,7 @@ export function Banner({ data }) {
             bgSize={"cover"}
             bgPosition={"center"}
             bgRepeat={"no-repeat"}
-            bgImage={"url('/images/primary-banner.png')"}
+            bgImage={"url('/images/primary-banner.webp')"}
           >
             <Flex className={styles.bannerTopContent}>
               <Text>
@@ -40,13 +38,12 @@ export function Banner({ data }) {
         </Carousel.Item>
 
         <Carousel.Item>
-
           <Flex
             className={`${styles.bannerContent}  ${styles.secondBanner}`}
             bgSize={"cover"}
             bgPosition={"center"}
             bgRepeat={"no-repeat"}
-            bgImage={"url('/images/secondary-banner.png')"}
+            bgImage={"url('/images/secondary-banner.webp')"}
 
             display='flex'
             align={'end'}
@@ -70,9 +67,6 @@ export function Banner({ data }) {
               </Text>
             </Box>
 
-
-
-
           </Flex>
         </Carousel.Item>
 
@@ -83,7 +77,7 @@ export function Banner({ data }) {
             bgSize={"cover"}
             bgPosition={"center"}
             bgRepeat={"no-repeat"}
-            bgImage={"url('/images/third-banner.png')"}
+            bgImage={"url('/images/third-banner.webp')"}
 
             display='flex'
             flexDir={'column'}
@@ -98,12 +92,7 @@ export function Banner({ data }) {
             </Text>
           </Flex>
         </Carousel.Item>
-
-        {/* ... */}
-      </Carousel >
-    </Box >
-
-
-
+      </Carousel>
+    </Box>
   )
 }

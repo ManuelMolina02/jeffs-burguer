@@ -4,8 +4,12 @@ import { Box } from '@chakra-ui/react'
 import { api } from '../services/api';
 import { Header, Banner, Products, Highlight, Menu, Footer } from '../components';
 import { About } from '../components/About';
+import { useState } from 'react'
 
 export default function Home({ dataCards }) {
+
+  const [array, seyArray] = useState([])
+
   return (
     <Box maxW={'1580px'} m='0 auto'>
       <Head>
@@ -38,6 +42,8 @@ export const getServerSideProps: GetServerSideProps = async () => {
       ingredientsList: item.ingredients.split(','),
     }
   })
+
+
 
   return {
     props: {

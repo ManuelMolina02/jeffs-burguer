@@ -1,6 +1,9 @@
-import { Button, Drawer as DrawerChakra, DrawerBody, DrawerCloseButton, DrawerContent, DrawerHeader, DrawerOverlay, Flex, Link, Text, useDisclosure } from "@chakra-ui/react"
+import { Box, Button, Drawer as DrawerChakra, DrawerBody, DrawerCloseButton, DrawerContent, DrawerHeader, DrawerOverlay, Flex, Heading, Image, Link, Text, useDisclosure } from "@chakra-ui/react"
 import { GiHamburgerMenu } from 'react-icons/gi'
 import styles from './Drawer.module.scss'
+import { FaMoneyBillAlt, FaMoneyCheckAlt } from 'react-icons/fa'
+import { AiFillInstagram } from 'react-icons/ai'
+import { IoLogoWhatsapp } from 'react-icons/io'
 
 export function Drawer() {
   const numberWhats = '5542999945476'
@@ -19,43 +22,60 @@ export function Drawer() {
           <DrawerHeader borderBottomWidth='1px'>Menu de Acessos</DrawerHeader>
           <DrawerCloseButton mt='6px' />
 
-          <DrawerBody display={'flex'} flexDirection='column' gap='26px' mt='30px'>
+          <DrawerBody display={'flex'} flexDirection='column' justifyContent={'space-between'} my='30px'>
 
-            <Link href={`#`} _focus={{ border: 'none' }} onClick={onClose}>
-              <Flex fontSize={16} align='center' gap={2}>
-                <Text>Quem Somos</Text>
-              </Flex>
-            </Link>
+            <Flex flexDir={'column'} gap='12px'>
+              <Link href={`#products`} _focus={{ border: 'none' }} onClick={onClose}>
+                <Flex fontSize={20} align='center' gap={2}>
+                  <Text>Produtos</Text>
+                </Flex>
+              </Link>
 
-            <Link href={`#products`} _focus={{ border: 'none' }} onClick={onClose}>
-              <Flex fontSize={16} align='center' gap={2}>
-                <Text>Produtos</Text>
-              </Flex>
-            </Link>
+              <Link href={`#`} _focus={{ border: 'none' }} onClick={onClose}>
+                <Flex fontSize={20} align='center' gap={2}>
+                  <Text>{"Sobre Jeff's"}</Text>
+                </Flex>
+              </Link>
 
-            <Link href={`#highlight`} _focus={{ border: 'none' }} onClick={onClose}>
-              <Flex fontSize={16} align='center' gap={2}>
-                <Text>Sugestão do Chef</Text>
-              </Flex>
-            </Link>
+              <Link href={`#highlight`} _focus={{ border: 'none' }} onClick={onClose}>
+                <Flex fontSize={20} align='center' gap={2}>
+                  <Text>Sugestão do Chef</Text>
+                </Flex>
+              </Link>
 
-            <Link href={`#menu`} _focus={{ border: 'none' }} onClick={onClose}>
-              <Flex fontSize={16} align='center' gap={2}>
-                <Text>Cardápio Completo</Text>
-              </Flex>
-            </Link>
+              <Link href={`#menu`} _focus={{ border: 'none' }} onClick={onClose}>
+                <Flex fontSize={20} align='center' gap={2}>
+                  <Text>Cardápio Completo</Text>
+                </Flex>
+              </Link>
 
-            <Link href={` https://api.whatsapp.com/send?phone=${numberWhats}&text=${textWhats}`} target='_blank' _focus={{ border: 'none' }}>
-              <Flex fontSize={16} align='center' gap={2}>
-                <Text>Fazer pedido via WhatsApp</Text>
-              </Flex>
-            </Link>
+            </Flex>
 
-            <Link href={`#`} target='_blank' _focus={{ border: 'none' }} >
-              <Flex fontSize={16} align='center' gap={2}>
-                <Text>Fazer pedido via Aiboo</Text>
-              </Flex>
-            </Link>
+            <Flex flexDir={'column'} gap='12px'>
+              <Text fontWeight='bold'>
+                Nos contate através das redes sociais
+              </Text>
+              <Link href={` https://api.whatsapp.com/send?phone=${numberWhats}`} target='_blank' _focus={{ border: 'none' }}>
+                <Flex fontSize={16} align='center' gap={2}>
+                  <IoLogoWhatsapp size={22} />
+                  <Text>WhatsApp</Text>
+                </Flex>
+              </Link>
+
+              <Link href={`#`} target='_blank' _focus={{ border: 'none' }}>
+                <Flex fontSize={16} align='center' gap={2}>
+                  <AiFillInstagram size={22} />
+                  <Text>Instagram</Text>
+                </Flex>
+              </Link>
+
+              <Link href={`#`} _focus={{ border: 'none' }} >
+                <Flex fontSize={16} align='center' gap={2}>
+                  <Image src="/aiboo1.png" boxSize={18} alt='' ml='2px' />
+                  <Text>Aiboo</Text>
+                </Flex>
+              </Link>
+            </Flex>
 
           </DrawerBody>
         </DrawerContent>

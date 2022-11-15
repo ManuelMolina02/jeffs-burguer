@@ -72,7 +72,7 @@ export function Modal({ dataApi }) {
     if (!window) {
       return
     } else {
-      const numberWhats = '5542999945476'
+      const numberWhats = process.env.NUMBER_WHATS
 
       const selectItensCart = dataCart.filter(item => item.qtd > 0)
 

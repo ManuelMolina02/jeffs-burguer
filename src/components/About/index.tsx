@@ -52,7 +52,7 @@ export function About() {
 
       <Box className={styles.aboutContent}>
         <Box display={'flex'} justifyContent='flex-end' mr='60px'>
-          <Image src='/images/jeff.png' alt='logo'
+          <Image src='/images/jeff.webp' alt='logo'
             w={'360px'}
             h={'500px'}
             objectFit={'cover'}

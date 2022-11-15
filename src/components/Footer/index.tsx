@@ -8,11 +8,7 @@ import styles from './Footer.module.scss'
 import { Modal } from "../Modal";
 
 export function Footer() {
-  const numberWhats = '5542999945476'
-  const text = `Olá time, por gentileza me ve ai:\n\nJack Bacon | 1\nJack Rodeio | 2\n\nValor total do pedido R$ 75,00`
-
-  const textWhats = () => { !window ? '' : window.encodeURIComponent(text) };
-
+  const numberWhats = process.env.NUMBER_WHATS
 
   const [showModal, setShowModal] = useState(false)
   return (
@@ -78,7 +74,7 @@ export function Footer() {
               Redes Sociais
             </Text>
 
-            <Link href={` https://api.whatsapp.com/send?phone=${numberWhats}&text=${textWhats}`} target='_blank' _focus={{ border: 'none' }}>
+            <Link href={` https://api.whatsapp.com/send?phone=${numberWhats}`} target='_blank' _focus={{ border: 'none' }}>
               <Flex fontSize={16} align='center' gap={2}>
                 <IoLogoWhatsapp size={22} />
                 <Text>WhatsApp</Text>

@@ -31,16 +31,16 @@ export function Modal({ location, handleModal, closeModal, data, conditional }) 
         <ModalContent className={styles.modal}>
 
           {
-            data.title === 'Nacho Burger' && <Image src='/images/doritos.png' alt='' position={'absolute'} w='200px' mt='20px' ml='330px' />
+            data.title === 'Nacho Burger' && <Image src='/images/doritos.webp' alt='' position={'absolute'} w='200px' mt='20px' ml='330px' />
           }
 
 
           {
-            data.title === 'Costela Premium' && <Image src='/images/catupiry.png' alt='' position={'absolute'} w='100px' mt='40px' ml='380px' />
+            data.title === 'Costela Premium' && <Image src='/images/catupiry.webp' alt='' position={'absolute'} w='100px' mt='40px' ml='380px' />
           }
 
           {
-            data.title === 'Crocante' && <Image src='/images/pringles.png' alt='' position={'absolute'} w='120px' mt='20px' ml='20px' />
+            data.title === 'Crocante' && <Image src='/images/pringles.webp' alt='' position={'absolute'} w='120px' mt='20px' ml='20px' />
           }
 
 
@@ -84,7 +84,7 @@ export function Modal({ location, handleModal, closeModal, data, conditional }) 
 
           <ModalBody py='0' px='0'>
             <Flex className={styles.modalContentHighlight}>
-              <Image src={`/lanches/jack-bacon-2.jpeg`} borderRadius={'4px 0 0 4px '} objectFit='cover' w='60%' alt='' />
+              <Image src={`/lanches/jack-bacon-2.webp`} borderRadius={'4px 0 0 4px '} objectFit='cover' w='60%' alt='' />
 
               <Box py='40px' px='40px'>
                 <Heading mt={4} fontSize='2xl'> Jack Bacon | R$ 28,00 </Heading>
