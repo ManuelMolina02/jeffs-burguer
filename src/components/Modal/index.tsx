@@ -31,16 +31,16 @@ export function Modal({ location, handleModal, closeModal, data, conditional }) 
         <ModalContent className={styles.modal}>
 
           {
-            data.title === 'Nacho Burger' && <Image src='/images/doritos.webp' alt='' position={'absolute'} w='200px' h='auto' mt='20px' ml='330px' />
+            data.title === 'Nacho Burger' && <Image src='/images/doritos.webp' alt='' position={'absolute'} w='200px' mt='20px' ml='330px' />
           }
 
 
           {
-            data.title === 'Costela Premium' && <Image src='/images/catupiry.webp' alt='' position={'absolute'} w='100px' h='auto' mt='40px' ml='380px' />
+            data.title === 'Costela Premium' && <Image src='/images/catupiry.webp' alt='' position={'absolute'} w='100px' mt='40px' ml='380px' />
           }
 
           {
-            data.title === 'Crocante' && <Image src='/images/pringles.webp' alt='' position={'absolute'} w='120px' h='auto' mt='20px' ml='20px' />
+            data.title === 'Crocante' && <Image src='/images/pringles.webp' alt='' position={'absolute'} w='120px' mt='20px' ml='20px' />
           }
 
 
