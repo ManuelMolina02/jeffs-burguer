@@ -36,7 +36,7 @@ export function Highlight() {
         src={`/images/element-2.webp`}
         alt='logo'
         w='25%'
-        maxH='720px'
+        h='720px'
         objectFit={'cover'}
         ml='80px'
       />
