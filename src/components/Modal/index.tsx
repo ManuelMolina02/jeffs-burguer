@@ -87,7 +87,7 @@ export function Modal({ location, handleModal, closeModal, data, conditional }) 
               <Image src={`/lanches/jack-bacon-2.webp`} borderRadius={'4px 0 0 4px '} objectFit='cover' w='60%' h='auto' alt='' />
 
               <Box py='40px' px='40px'>
-                <Heading mt={4} fontSize='2xl'> Jack Bacon | R$ 28,00 </Heading>
+                <Heading mt={4} fontSize='2xl'> Jack Bacon | R$ 25,00 </Heading>
 
                 <Box mt={4} fontSize='md'>
 

@@ -64,7 +64,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       src: "provolone.webp",
       price: 30.0,
       ingredients:
-        "Pão Brioche Amanteigado, Hambúrguer Artesanal 150g, Tomate Cereja, Alface Americana",
+        "Pão Brioche Amanteigado, Hambúrguer Artesanal 150g, Provolone Empanado,Bacon, Maionese Artesanal, Tomate, Alface Americana",
     },
     {
       id: 8,
@@ -83,6 +83,15 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       src: "madame.webp",
       ingredients:
         "Pão Brioche Amanteigado, Hambúrguer Artesanal 150g, Medalhão de Queijo Coalho com Bacon, Queijo Branco, Cebola Caramelizada, Tomate Cereja",
+    },
+    {
+      id: 23,
+      name: "Promoção",
+      type: "Smash",
+      price: 20.0,
+      src: "smash-salada.webp",
+      ingredients:
+        "Pão Brioche Amanteigado, Hambúrguer Artesanal 150g, Bacon, Queijo Branco, Alface Americana, Tomate, Maionese Artesanal",
     },
     {
       id: 11,

@@ -4,6 +4,8 @@ import styles from './Menu.module.scss';
 
 export function Menu({ cards }) {
 
+  const foodsFiltered = cards.filter(item => item.title !== 'Promoção')
+
   return (
     <Flex id='menu' bg='#F5E4E4' flexDirection={'column'}>
       <Flex
@@ -20,7 +22,7 @@ export function Menu({ cards }) {
 
         <Grid className={styles.gridMenu} gap={16} >
           {
-            cards.map(item => (
+            foodsFiltered.map(item => (
               <CardItem key={item.id} cardData={item} />
             ))
           }

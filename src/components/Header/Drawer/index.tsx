@@ -61,14 +61,14 @@ export function Drawer() {
                 </Flex>
               </Link>
 
-              <Link href={`#`} target='_blank' _focus={{ border: 'none' }}>
+              <Link href={`https://www.instagram.com/jeffshamburguer/`} target='_blank' _focus={{ border: 'none' }}>
                 <Flex fontSize={16} align='center' gap={2}>
                   <AiFillInstagram size={22} />
                   <Text>Instagram</Text>
                 </Flex>
               </Link>
 
-              <Link href={`#`} _focus={{ border: 'none' }} >
+              <Link href={`https://play.google.com/store/apps/details?id=com.aiboo.food&hl=pt_BR&gl=US`} target='_blank' _focus={{ border: 'none' }} >
                 <Flex fontSize={16} align='center' gap={2}>
                   <Image src="/aiboo1.svg" boxSize={18} alt='' ml='2px' />
                   <Text>Aiboo</Text>
