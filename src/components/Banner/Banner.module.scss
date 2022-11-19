@@ -11,58 +11,61 @@
     flex-direction: column;
     align-items: center;
     max-width: 60%;
-   
-    font-family: 'Bebas Neue';
-  
+
+    font-family: "Bebas Neue";
+
     p:first-child {
       font-size: 146px;
       height: 180px;
     }
-  
+
     p:last-child {
-      font-size: 40px;        
+      font-size: 40px;
       height: 100px;
-      letter-spacing: .26em;
+      letter-spacing: 0.26em;
     }
   }
-  
+
   .bannerBottomContent {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     font-size: 96px;
-    font-family: 'test-two';
+    font-family: "test-two";
     color: #fcde4a;
-  
-     p:first-child {
-      height:120px;
+
+    p:first-child {
+      height: 120px;
     }
-  
+
     p {
       margin-left: 6rem;
     }
   }
 }
 
+.secondBanner {
+  text-shadow: -9px 6px 4px rgb(0 0 0 / 78%) !important;
+}
 
 .thirdBanner {
   p:first-child {
     position: relative;
     font-size: 10em;
-    font-family: 'test-two';
+    font-family: "test-two";
     letter-spacing: 10px;
     color: #ff8601;
     height: 158px;
     top: -18px;
   }
 
-  p+p {
+  p + p {
     position: relative;
 
     font-size: 2em;
-    font-family: 'test';
+    font-family: "test";
     letter-spacing: 2px;
-    color: #feeddd
+    color: #feeddd;
   }
 }
 
@@ -72,16 +75,18 @@
   }
 
   span {
-    margin: 0 20px
+    margin: 0 20px;
   }
 }
 
-
 @media (max-width: 1250px) {
-
   .secondBanner {
     p:first-child {
       font-size: 5rem;
+    }
+
+    div {
+      flex-direction: column-reverse !important;
     }
   }
 
@@ -96,45 +101,43 @@
 
 @media (max-width: 1050px) {
   .bannerPrimaryContent {
-
     .bannerTopContent {
       max-width: 100%;
     }
-    
+
     .bannerBottomContent {
       display: flex;
       flex-direction: column;
       align-items: center;
       font-size: 76px;
       color: #fcde4a;
-      
-      p{
+
+      p {
         margin: 0 !important;
       }
     }
   }
 
-  
   .thirdBanner {
     p:first-child {
       font-size: 6rem;
       letter-spacing: 8px;
       height: 128px;
-      top: 10px
+      top: 10px;
     }
   }
 }
 
 @media (max-width: 800px) {
-  .carousel{
+  .carousel {
     > div div {
-      grid-template-columns: repeat(3,100%);
-      margin-right: -6px !important
+      grid-template-columns: repeat(3, 100%);
+      margin-right: -6px !important;
     }
   }
 
   .bannerPrimaryContent {
-    text-shadow: 6px 6px 5px rgba(0, 0, 0, 0.925) !important; 
+    text-shadow: 6px 6px 5px rgba(0, 0, 0, 0.925) !important;
   }
 
   .thirdBanner {
@@ -145,11 +148,10 @@
   }
 }
 
-
 @media (max-width: 650px) {
   .bannerContent {
     padding-top: 0 !important;
-    padding-right:0 !important
+    padding-right: 0 !important;
   }
 
   .bannerPrimaryContent {
@@ -159,45 +161,30 @@
       p:first-child {
         font-size: 146px;
       }
-    
+
       p:last-child {
         font-size: 40px;
       }
     }
-    
+
     .bannerBottomContent {
       padding-top: 40px;
       font-size: 66px;
-      height: 100px;        
+      height: 100px;
     }
   }
 
-  .secondBanner{
-    width: 100%;
-    display: flex;
+  .secondBanner {
+    width: 100% !important;
+    display: flex !important;
     align-items: center !important;
-    justify-content: center;
-    text-align: center;
-    text-shadow: -9px 6px 4px rgb(0 0 0 / 78%);
+    justify-content: center !important;
+    text-align: center !important;
 
-    > div {
-      display: flex;
-      flex-direction: column;
-    }
-
-    > div p:last-child {
-      width: 280px;
-    }
-
-    .secondBannerBottomContent{
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      text-align: center;
-      p {
-        font-size: 3.4rem;
-      }
+    .secondBannerBottomContent {
+      align-items: center !important;
+      justify-content: center !important;
+      text-align: center !important;
     }
   }
 }
@@ -205,18 +192,16 @@
 @media (max-width: 510px) {
   .bannerPrimaryContent {
     .bannerTopContent {
-      
       p:first-child {
         font-size: 126px;
       }
-    
+
       p:last-child {
         font-size: 30px;
         margin-top: -20px;
-
       }
     }
-    
+
     .bannerBottomContent {
       font-size: 56px;
     }
@@ -228,8 +213,7 @@
     }
   }
 
-  .secondBannerBottomContent{
-
+  .secondBannerBottomContent {
     p {
       font-size: 2.8rem !important;
     }
