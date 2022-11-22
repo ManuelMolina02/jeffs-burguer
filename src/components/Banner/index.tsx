@@ -1,6 +1,7 @@
 import { Box, Flex, Text } from "@chakra-ui/react";
 import styles from './Banner.module.scss';
 import Carousel from 'better-react-carousel'
+import Fade from 'react-reveal/Fade';
 
 export function Banner({ data }) {
   return (
@@ -15,24 +16,32 @@ export function Banner({ data }) {
             bgRepeat={"no-repeat"}
             bgImage={"url('/images/primary-banner.webp')"}
           >
-            <Flex className={styles.bannerTopContent}>
-              <Text>
-                TE VER
-              </Text>
-              <Text>
-                E NÃO TE QUERER
-              </Text>
-            </Flex>
+            <Fade left>
 
-            <Flex className={styles.bannerBottomContent}>
-              <Text>
-                É IMPROVÁVEL
-              </Text>
+              <Flex className={styles.bannerTopContent}>
+                <Text>
+                  TE VER
+                </Text>
 
-              <Text>
-                É IMPOSSÍVEL.
-              </Text>
-            </Flex>
+                <Text>
+                  E NÃO TE QUERER
+                </Text>
+              </Flex>
+            </Fade>
+            <Fade left delay={500}>
+
+
+
+              <Flex className={styles.bannerBottomContent}>
+                <Text>
+                  É IMPROVÁVEL
+                </Text>
+
+                <Text>
+                  É IMPOSSÍVEL.
+                </Text>
+              </Flex>
+            </Fade>
           </Flex>
 
         </Carousel.Item>

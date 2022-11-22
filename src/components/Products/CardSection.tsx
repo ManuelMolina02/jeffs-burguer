@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Box, Button, Heading, Image, Text, VStack } from "@chakra-ui/react";
 import { Modal } from '../Modal';
+import Slide from 'react-reveal/Slide';
 
 export function CardSection({ title, description, data }) {
 
@@ -15,19 +16,19 @@ export function CardSection({ title, description, data }) {
         justify={'center'}
         onClick={() => setShowModal(true)}
       >
-
-        <Box
-          color={'#E95B2D'}
-          display='flex'
-          flexDirection={'column'}
-          alignItems={'center'}
-        >
-          <Heading fontSize={40}>
-            {title}
-          </Heading>
-
-          <Image src='/images/divider_products.svg' w={'128px'} h='18px' alt='logo' />
-        </Box>
+        <Slide bottom>
+          <Box
+            color={'#E95B2D'}
+            display='flex'
+            flexDirection={'column'}
+            alignItems={'center'}
+          >
+            <Heading fontSize={40}>
+              {title}
+            </Heading>
+            <Image src='/images/divider_products.svg' w={'128px'} h='18px' alt='logo' />
+          </Box>
+        </Slide>
 
         <Text
           color={'#616161'}
