@@ -16,7 +16,7 @@ export default function Home({ dataCards }) {
   useEffect(() => {
     setTimeout(() => {
       setShowOverlay(false)
-    }, 7000)
+    }, 17000)
   }, [])
 
   return (
@@ -31,6 +31,7 @@ export default function Home({ dataCards }) {
             position='absolute'
             zIndex='1000'
             top='0'
+            left={'0'}
             className={`${styles.homeOverlay}`}
           >
 
