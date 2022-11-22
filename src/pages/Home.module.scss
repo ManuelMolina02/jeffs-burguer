@@ -1,11 +1,16 @@
 .homeOverlay{
-  width: 100vw;
+  width: 102vw;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: black;
   overflow: hidden;
+
+  position: absolute;
+  z-index: 1000;
+  top: 0;
+  left: -4px;
 
   animation: opacity-overlay 2s forwards;
   animation-delay: 2s;
@@ -15,7 +20,7 @@
 
 .imgOverlay{
   animation: img-overlay 2s forwards;
-  animation-delay: 1.75s;
+  animation-delay: 1s;
 }
 
  
@@ -26,12 +31,12 @@
     opacity: 1;
   }
   50%{
-    transform: scale(1.2);
+    transform: scale(.8);
     opacity: 1;
 
    }
    100%{
-    transform: scale(1);
+    transform: scale(1.2);
     opacity: 0;
 
    }

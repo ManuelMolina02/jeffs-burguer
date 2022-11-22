@@ -28,9 +28,7 @@ export default function Home({ dataCards }) {
       {
         showOverlay && (
           <Box
-            position='absolute'
-            zIndex='1000'
-            top='0'
+
             className={`${styles.homeOverlay}`}
           >
 
