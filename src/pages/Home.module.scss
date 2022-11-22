@@ -1,11 +1,11 @@
 .homeOverlay{
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: black;
-
+  overflow: hidden;
 
   animation: opacity-overlay 2s forwards;
   animation-delay: 2s;

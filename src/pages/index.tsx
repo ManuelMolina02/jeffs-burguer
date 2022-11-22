@@ -31,7 +31,6 @@ export default function Home({ dataCards }) {
             position='absolute'
             zIndex='1000'
             top='0'
-            left={'-4px'}
             className={`${styles.homeOverlay}`}
           >
 
