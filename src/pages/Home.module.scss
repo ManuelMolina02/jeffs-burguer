@@ -1,0 +1,50 @@
+.homeOverlay{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+
+
+  animation: opacity-overlay 2s forwards;
+  animation-delay: 2s;
+
+ 
+}
+
+.imgOverlay{
+  animation: img-overlay 2s forwards;
+  animation-delay: 1.75s;
+}
+
+ 
+
+@keyframes img-overlay {
+  0%{
+    transform: scale(1);
+    opacity: 1;
+  }
+  50%{
+    transform: scale(1.2);
+    opacity: 1;
+
+   }
+   100%{
+    transform: scale(1);
+    opacity: 0;
+
+   }
+
+}
+
+@keyframes opacity-overlay {
+  0%{
+    background-color: #000000;
+  }
+ 
+   100%{
+    background-color: #00000000;
+   }
+
+}

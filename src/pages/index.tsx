@@ -1,20 +1,45 @@
 import Head from 'next/head';
 import { GetServerSideProps } from 'next';
-import { Box } from '@chakra-ui/react'
+import { Box, Image } from '@chakra-ui/react'
 import { api } from '../services/api';
 import { Header, Banner, Products, Highlight, Menu, Footer } from '../components';
 import { About } from '../components/About';
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import Pulse from 'react-reveal/Pulse';
+import styles from './Home.module.scss'
 
 export default function Home({ dataCards }) {
 
   const [array, seyArray] = useState([])
+  const [showOverlay, setShowOverlay] = useState(true)
+
+  useEffect(() => {
+    setTimeout(() => {
+      setShowOverlay(false)
+    }, 7000)
+  }, [])
 
   return (
     <Box maxW={'1580px'} m='0 auto'>
       <Head>
         <title>home | Jeffs Burguer</title>
       </Head>
+
+      {
+        showOverlay && (
+          <Box
+            position='absolute'
+            zIndex='1000'
+            top='0'
+            className={`${styles.homeOverlay}`}
+          >
+
+
+            <Image src='logo.png' objectFit={'cover'} alt='' className={`${styles.imgOverlay}`} />
+
+          </Box>
+        )
+      }
 
       <>
         <Header data={dataCards} />
@@ -25,6 +50,7 @@ export default function Home({ dataCards }) {
         <Menu cards={dataCards} />
         <Footer />
       </>
+
     </Box>
   )
 }
