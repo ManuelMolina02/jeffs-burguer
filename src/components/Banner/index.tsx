@@ -1,11 +1,9 @@
 import { Box, Flex, Text } from "@chakra-ui/react";
 import styles from './Banner.module.scss';
 import Carousel from 'better-react-carousel'
-import Fade from 'react-reveal/Fade';
 
-export function Banner({ data }) {
+export function Banner() {
   return (
-
     <Box className={styles.carousel}>
       <Carousel cols={1} rows={1} gap={10} loop={true} hideArrow={false}  >
         <Carousel.Item>
@@ -16,32 +14,30 @@ export function Banner({ data }) {
             bgRepeat={"no-repeat"}
             bgImage={"url('/images/primary-banner.webp')"}
           >
-            <Fade left>
+            <Flex className={styles.bannerTopContent}>
+              <Text>
+                TE VER
+              </Text>
 
-              <Flex className={styles.bannerTopContent}>
-                <Text>
-                  TE VER
-                </Text>
-
-                <Text>
-                  E NÃO TE QUERER
-                </Text>
-              </Flex>
-            </Fade>
-            <Fade left delay={500}>
+              <Text>
+                E NÃO TE QUERER
+              </Text>
+            </Flex>
 
 
 
-              <Flex className={styles.bannerBottomContent}>
-                <Text>
-                  É IMPROVÁVEL
-                </Text>
 
-                <Text>
-                  É IMPOSSÍVEL.
-                </Text>
-              </Flex>
-            </Fade>
+
+            <Flex className={styles.bannerBottomContent}>
+              <Text>
+                É IMPROVÁVEL
+              </Text>
+
+              <Text>
+                É IMPOSSÍVEL.
+              </Text>
+            </Flex>
+
           </Flex>
 
         </Carousel.Item>
@@ -60,8 +56,6 @@ export function Banner({ data }) {
             pt='90px'
             pr='4.6rem'
           >
-
-
             <Text fontSize='8rem' letterSpacing={'2px'} color={'#ee5a2a'} textShadow='-12px 6px 13px rgb(0 0 0 / 90%) !important'>
               PROMOÇÃO
             </Text>
@@ -86,7 +80,6 @@ export function Banner({ data }) {
         </Carousel.Item>
 
         <Carousel.Item>
-
           <Flex
             className={`${styles.bannerContent} ${styles.thirdBanner}`}
             bgSize={"cover"}

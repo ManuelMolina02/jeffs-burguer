@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Box, Button, Flex, Heading, Image, Text } from "@chakra-ui/react";
 import { Modal } from "../Modal";
-import Fade from 'react-reveal/Fade';
 
 import styles from "./Highlight.module.scss";
 
@@ -23,35 +22,34 @@ export function Highlight() {
       />
 
       <Flex className={styles.contentHighlight}>
-        <Fade bottom delay={175}>
 
-          <Heading color="">Sugestão do Chef</Heading>
+        <Heading color="">Sugestão do Chef</Heading>
 
-          <Box fontSize={"26px"} color="#ccc">
-            <Text mb="12px">
-              {
-                "A sugestão do chef é o Jack Bacon, criado em 2017. Esse foi o primeiro integrante da família Jeff's"
-              }
-            </Text>
+        <Box fontSize={"26px"} color="#ccc">
+          <Text mb="12px">
+            {
+              "A sugestão do chef é o Jack Bacon, criado em 2017. Esse foi o primeiro integrante da família Jeff's"
+            }
+          </Text>
 
-            <Text>
-              Uma combinação de cebola caramelizada, com cheddar cremoso e muito
-              bacon fazem o seu sucesso ser tão grande 😉
-            </Text>
-          </Box>
+          <Text>
+            Uma combinação de cebola caramelizada, com cheddar cremoso e muito
+            bacon fazem o seu sucesso ser tão grande 😉
+          </Text>
+        </Box>
 
-          <Button
-            onClick={() => setShowModal(true)}
-            variant={"outline"}
-            fontSize="4xl"
-            size="lg"
-            w='100%'
-            h="80px"
-            _hover={{ color: "#df5427", bg: "#feeddd" }}
-          >
-            ver mais
-          </Button>
-        </Fade>
+        <Button
+          onClick={() => setShowModal(true)}
+          variant={"outline"}
+          fontSize="4xl"
+          size="lg"
+          w='100%'
+          h="80px"
+          _hover={{ color: "#df5427", bg: "#feeddd" }}
+        >
+          ver mais
+        </Button>
+
 
       </Flex>
 

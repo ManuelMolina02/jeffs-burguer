@@ -5,12 +5,9 @@ import { api } from '../services/api';
 import { Header, Banner, Products, Highlight, Menu, Footer } from '../components';
 import { About } from '../components/About';
 import { useEffect, useState } from 'react'
-import Pulse from 'react-reveal/Pulse';
 import styles from './Home.module.scss'
 
 export default function Home({ dataCards }) {
-
-  const [array, seyArray] = useState([])
   const [showOverlay, setShowOverlay] = useState(true)
 
   useEffect(() => {
@@ -27,12 +24,7 @@ export default function Home({ dataCards }) {
 
       {
         showOverlay && (
-          <Box
-
-            className={`${styles.homeOverlay}`}
-          >
-
-
+          <Box className={`${styles.homeOverlay}`}>
             <Image src='logo.png' objectFit={'cover'} alt='' className={`${styles.imgOverlay}`} />
 
           </Box>
@@ -41,7 +33,7 @@ export default function Home({ dataCards }) {
 
       <>
         <Header data={dataCards} />
-        <Banner data={dataCards} />
+        <Banner />
         <Products data={dataCards} />
         <About />
         <Highlight />

@@ -8,7 +8,6 @@ export function Products({ data }) {
 
   return (
     <Box id='products' className={styles.products} bg='#F6F2E9'>
-
       <Flex align={'center'}>
         <Image src='/background.webp' alt='logo'
           className={styles.bgImage}
@@ -29,7 +28,7 @@ export function Products({ data }) {
 
       <Image src='/images/mosaico.svg' alt='logo'
         position={'relative'}
-        bottom='-2px'
+        mt='-52px'
         w={'100%'}
         h={'52px'}
         display={'block'}
