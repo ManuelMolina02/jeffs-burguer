@@ -1,3 +1,13 @@
+.boxFlex {
+  display: flex;
+  flex-direction: column;
+}
+
+.boxGrid {
+  display: flex;
+  gap: 52px;
+}
+
 @media (max-width: 810px) {
   .modalHighlight {
     margin-top: 40px;
@@ -28,3 +38,4 @@
     margin: auto 26px;
   }
 }
+

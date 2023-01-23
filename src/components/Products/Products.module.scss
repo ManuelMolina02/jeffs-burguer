@@ -1,7 +1,9 @@
 .cardsProducts {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   position: relative;
+  gap: 30px;
+  margin-left: 16vh;
 }
 
 @media (max-width: 1350px) {

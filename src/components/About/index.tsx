@@ -28,12 +28,13 @@ export function About() {
       title: 'hamburguers especiais',
       description: 'Com a maionese "The best" de alho com limão ciciliano, seus hambúrguers tem uma variação divertida de texturas utilizando doritos, batata pringles, medalhão de queijo, requeijão com alho frito, entre outras delicias.'
     },
+    /*
     {
       id: 5,
       time: '+4',
       title: 'molhos artesanais',
       description: 'Conheça mais sobre a trajetória de Jefferson Oliveira, o chef por trás dessas maravilhas culinárias Conheça mais sobre a trajetória de Jefferson Oliveira'
-    },
+    },*/
   ]
 
   return (

@@ -49,17 +49,33 @@ export function Modal({ location, handleModal, closeModal, data, conditional }) 
 
             <Box px='40px'>
               <Text mt={4} fontWeight='bold' fontSize='2xl'>{data.title} | {data.price}</Text>
-              <Text mt={4} fontWeight='bold' fontSize='xl'>Ingredientes:</Text>
+              <Box className={data.title !== 'American Chicken' ? styles.boxFlex : styles.boxGrid}>
+                <Box>
+                  <Text mt={4} fontWeight='bold' fontSize='xl'>Ingredientes:</Text>
 
-              <UnorderedList>
+                  <UnorderedList>
+                    {
+                      data.ingredientsList?.map((item, index) => {
+                        return (
+                          <ListItem key={index}>{item}</ListItem>
+                        )
+                      })
+                    }
+                  </UnorderedList>
+                </Box>
+
                 {
-                  data.ingredientsList?.map((item, index) => {
-                    return (
-                      <ListItem key={index}>{item}</ListItem>
-                    )
-                  })
+                  data.title === 'American Chicken' && (
+                    <Box>
+                      <Text mt={4} fontWeight='bold' fontSize='xl'>Acompanhamentos:</Text>
+
+                      <UnorderedList>
+                        <ListItem>Molho de Mostarda com Mel</ListItem>
+                      </UnorderedList>
+                    </Box>
+                  )
                 }
-              </UnorderedList>
+              </Box>
 
             </Box>
           </ModalBody>

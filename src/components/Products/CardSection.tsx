@@ -27,28 +27,32 @@ export function CardSection({ title, description, data }) {
           <Image src='/images/divider_products.svg' w={'128px'} h='18px' alt='logo' />
         </Box>
 
-        <Text
-          color={'#616161'}
-          fontSize={22}>
-          {description}
-        </Text>
+        <Box w={80} display='flex' flexDir={'column'} gap={5}>
+          <Text
+            color={'#616161'}
+            fontSize={22}>
+            {description}
+          </Text>
 
-        <Button
-          color={'#616161'}
-          borderColor={'#616161'}
-          variant='outline'
-          _hover={{
-            bg: '#E95B2D',
-            color: '#fff',
-            border: '#fff'
-          }}
+          <Button
+            color={'#616161'}
+            borderColor={'#616161'}
+            variant='outline'
+            w='160px'
+            margin={'0 auto'}
+            _hover={{
+              bg: '#E95B2D',
+              color: '#fff',
+              border: '#fff'
+            }}
 
-          onClick={
-            () => setShowModal(title)
-          }
-        >
-          ver mais
-        </Button>
+            onClick={
+              () => setShowModal(title)
+            }
+          >
+            ver mais
+          </Button>
+        </Box>
       </VStack>
 
       <Modal handleModal={showModal} closeModal={setShowModal} data={data} location='products' conditional={title} />

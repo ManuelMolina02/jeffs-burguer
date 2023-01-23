@@ -111,6 +111,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       ingredients:
         "Pão Brioche Amanteigado, Hambúrguer Artesanal 150g, Queijo Branco, Maionese Artesanal",
     },
+    /*
     {
       id: 13,
       name: "Smash do Chef",
@@ -121,77 +122,87 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
         "Pão Brioche Amanteigado, Hambúrguer Artesanal 150g, Queijo Branco, Picles, Maionese Artesanal, Mostarda Amarela, Cebola Roxa Fatiada, Tomate, Alface Americana",
     },
     {
-      id: 14,
-      name: "Especial Catupiry",
-      type: "Hot Dog",
-      src: "especial-catupiry.webp",
-      price: 21.99,
-      ingredients:
-        "Pão de Hot Dog 12cm, 2 Salsichas, Fatias de Calabresa, Catupiry, Bacon, Maionese Artesanal, Batata Palha, Farofa Temperada, Cebola em Cubos, Milho, Tomate, Molho da Casa",
-    },
+    id: 14,
+    name: "Especial Catupiry",
+    type: "Hot Dog",
+    src: "especial-catupiry.webp",
+    price: 21.99,
+    ingredients:
+      "Pão de Hot Dog 12cm, 2 Salsichas, Fatias de Calabresa, Catupiry, Bacon, Maionese Artesanal, Batata Palha, Farofa Temperada, Cebola em Cubos, Milho, Tomate, Molho da Casa",
+  },
+  {
+    id: 15,
+    name: "Bacon Cheddar",
+    type: "Hot Dog",
+    src: "bacon-cheddar.webp",
+    price: 16.99,
+    ingredients:
+      "Pão de Hot Dog 12cm, 2 Salsichas, Cheddar, Bacon, Maionese Artesanal, Batata Palha, Farofa Temperada, Cebola em Cubos, Milho, Tomate, Molho da Casa",
+  },
+  {
+    id: 16,
+    name: "Bacon Catupiry",
+    type: "Hot Dog",
+    src: "bacon-catupiry.webp",
+    price: 16.99,
+    ingredients:
+      "Pão de Hot Dog 12cm, 2 Salsichas, Catupiry, Bacon, Maionese Artesanal, Batata Palha, Farofa Temperada, Cebola em Cubos, Milho, Tomate, Molho da Casa",
+  },
+  {
+    id: 17,
+    name: "Bacon Cheddar",
+    type: "Hot Dog",
+    src: "bacon-cheddar.webp",
+    price: 16.99,
+    ingredients:
+      "Pão de Hot Dog 12cm, 2 Salsichas, Calabresa em Tiras, Cheddar, Bacon, Maionese Artesanal, Batata Palha, Farofa Temperada, Cebola em Cubos, Milho, Tomate, Molho da Casa",
+  },
+  {
+    id: 18,
+    name: "Frango com Catupiry",
+    type: "Hot Dog",
+    price: 16.99,
+    src: "frango-catupiry.webp",
+    ingredients:
+      "Pão de Hot Dog 12cm, 2 Salsichas, Batata Palha, Farofa Temperada, Maionese Artesanal, Cebola em Cubos, Milho, Tomate, Molho da Casa",
+  },
+  {
+    id: 19,
+    name: "Frango com Cream Cheese",
+    type: "Hot Dog",
+    price: 19.99,
+    src: "frango-cream-chess.webp",
+    ingredients:
+      "Pão de Hot Dog 12cm, 2 Salsichas, Filé de Frango, Cream Cheese, Batata Palha, Cebola em Cubos, Milho, Tomate, Molho da Casa",
+  },
+  {
+    id: 20,
+    name: "Especial Cheddar",
+    type: "Hot Dog",
+    src: "especial-cheddar.webp",
+    price: 21.99,
+    ingredients:
+      "Pão de Hot Dog 12cm, 2 Salsichas, Fatias de Calabresa, Cheddar, Bacon, Maionese Artesanal, Batata Palha, Farofa Temperada, Cebola em Cubos, Milho, Tomate, Molho da Casa",
+  },
+  {
+    id: 21,
+    name: "Bacon Calabresa Cheddar",
+    type: "Hot Dog",
+    src: "bacon-calebresa.webp",
+    price: 18.99,
+    ingredients:
+      "Pão de Hot Dog 12cm, 2 Salsichas, Fatias de Calabresa, Cheddar, Bacon, Maionese Artesanal, Batata Palha, Farofa Temperada, Cebola em Cubos, Milho, Tomate, Molho da Casa",
+  },
+*/
     {
-      id: 15,
-      name: "Bacon Cheddar",
-      type: "Hot Dog",
-      src: "bacon-cheddar.webp",
-      price: 16.99,
+      id: 30,
+      name: "American Chicken",
+      type: "Hambúrguer",
+      src: "american-chicken.webp",
+      price: 26.0,
       ingredients:
-        "Pão de Hot Dog 12cm, 2 Salsichas, Cheddar, Bacon, Maionese Artesanal, Batata Palha, Farofa Temperada, Cebola em Cubos, Milho, Tomate, Molho da Casa",
-    },
-    {
-      id: 16,
-      name: "Bacon Catupiry",
-      type: "Hot Dog",
-      src: "bacon-catupiry.webp",
-      price: 16.99,
-      ingredients:
-        "Pão de Hot Dog 12cm, 2 Salsichas, Catupiry, Bacon, Maionese Artesanal, Batata Palha, Farofa Temperada, Cebola em Cubos, Milho, Tomate, Molho da Casa",
-    },
-    {
-      id: 17,
-      name: "Bacon Cheddar",
-      type: "Hot Dog",
-      src: "bacon-cheddar.webp",
-      price: 16.99,
-      ingredients:
-        "Pão de Hot Dog 12cm, 2 Salsichas, Calabresa em Tiras, Cheddar, Bacon, Maionese Artesanal, Batata Palha, Farofa Temperada, Cebola em Cubos, Milho, Tomate, Molho da Casa",
-    },
-    {
-      id: 18,
-      name: "Frango com Catupiry",
-      type: "Hot Dog",
-      price: 16.99,
-      src: "frango-catupiry.webp",
-      ingredients:
-        "Pão de Hot Dog 12cm, 2 Salsichas, Batata Palha, Farofa Temperada, Maionese Artesanal, Cebola em Cubos, Milho, Tomate, Molho da Casa",
-    },
-    {
-      id: 19,
-      name: "Frango com Cream Cheese",
-      type: "Hot Dog",
-      price: 19.99,
-      src: "frango-cream-chess.webp",
-      ingredients:
-        "Pão de Hot Dog 12cm, 2 Salsichas, Filé de Frango, Cream Cheese, Batata Palha, Cebola em Cubos, Milho, Tomate, Molho da Casa",
-    },
-    {
-      id: 20,
-      name: "Especial Cheddar",
-      type: "Hot Dog",
-      src: "especial-cheddar.webp",
-      price: 21.99,
-      ingredients:
-        "Pão de Hot Dog 12cm, 2 Salsichas, Fatias de Calabresa, Cheddar, Bacon, Maionese Artesanal, Batata Palha, Farofa Temperada, Cebola em Cubos, Milho, Tomate, Molho da Casa",
-    },
-    {
-      id: 21,
-      name: "Bacon Calabresa Cheddar",
-      type: "Hot Dog",
-      src: "bacon-calebresa.webp",
-      price: 18.99,
-      ingredients:
-        "Pão de Hot Dog 12cm, 2 Salsichas, Fatias de Calabresa, Cheddar, Bacon, Maionese Artesanal, Batata Palha, Farofa Temperada, Cebola em Cubos, Milho, Tomate, Molho da Casa",
-    },
+        "Pão Brioche Amanteigado, Peito de Frango Empanado, Cream Cheese, Bacon, Alface Americana, Tomate, Maionese Artesanal",
+    }
   ];
 
   res.status(200).json(data);

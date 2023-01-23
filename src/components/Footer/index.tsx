@@ -31,7 +31,7 @@ export function Footer() {
           </Text>
         </Flex>
 
-        <Box className={styles.footerContent} gap={16}  >
+        <Box className={styles.footerContent} gap={16} mt={5}>
           <Box className={styles.footerColumn} maxW='360px'>
             <Text fontSize={20} fontWeight='bold'>
               Atendimento
