@@ -8,7 +8,7 @@ import styles from './Footer.module.scss'
 import { Modal } from "../Modal";
 
 export function Footer() {
-  const numberWhats = process.env.NUMBER_WHATS
+  const numberWhats = '5542999945476'
 
   const [showModal, setShowModal] = useState(false)
   return (
