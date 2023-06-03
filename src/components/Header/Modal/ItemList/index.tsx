@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Button, Flex, ListItem, Text } from "@chakra-ui/react";
+import { Box, Button, Flex, ListItem, Text } from "@chakra-ui/react";
 import { IoIosAddCircleOutline } from 'react-icons/io'
 import { AiOutlineMinusCircle } from 'react-icons/ai'
 
@@ -22,10 +22,15 @@ export function ItemList({ item, updateProduct }) {
 
   return (
     <>
-      <ListItem display={'flex'} alignItems='center' justifyContent={'space-between'} gap='16px' borderBottom={'solid 1px #e4e4e4'}>
-        <Text fontSize={18}>
-          {item.title} | {item.price}
-        </Text>
+      <ListItem display={'flex'} pt='10px' mb='10px' alignItems='center' justifyContent={'space-between'} gap='16px' borderBottom={`solid 1px ${countItem > 0 ? "#dd6b20" : "#e4e4e4"}`}>
+        <Box>
+          <Text fontSize={22} color={countItem > 0 ? 'orange.500' : ''}>
+            {item.title} | {item.price}
+          </Text>
+          <Text fontSize={16} color='gray.400'>
+            {item.ingredients}
+          </Text>
+        </Box>
 
         <Flex gap={2} align='center' py='8px'>
 

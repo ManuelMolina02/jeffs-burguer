@@ -97,7 +97,8 @@ export function Modal({ dataApi }) {
       title: item.title,
       type: item.type,
       price: item.price,
-      qtd: selectedQtd && selectedQtd.qtd
+      qtd: selectedQtd && selectedQtd.qtd,
+      ingredients: item.ingredients
     }
   })
 
