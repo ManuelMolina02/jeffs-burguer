@@ -13,7 +13,7 @@ export default function Home({ dataCards }) {
   useEffect(() => {
     setTimeout(() => {
       setShowOverlay(false)
-    }, 7000)
+    }, 3000)
   }, [])
 
   return (
@@ -56,6 +56,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
       src: item.src,
       price: Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(item.price),
       ingredientsList: item.ingredients.split(','),
+      ingredients: item.ingredients,
     }
   })
 
