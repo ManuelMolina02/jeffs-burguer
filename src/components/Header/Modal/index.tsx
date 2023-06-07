@@ -125,7 +125,7 @@ export function Modal({ dataApi }) {
           <ModalHeader>Carrinho</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
-            <Accordion allowToggle>
+            <Accordion allowToggle h='500px' overflowY={'auto'} border='1px solid #d7d7d7' borderRadius='12px' >
               {
                 Array.from<any>(typeProducts).map((data, index) => (
                   <AccordionItem key={index}>
