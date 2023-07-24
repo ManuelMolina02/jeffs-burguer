@@ -34,15 +34,21 @@ export function ItemList({ item, updateProduct }) {
 
         <Flex gap={2} align='center' py='8px'>
 
-          <Text fontSize={22} mr='26px'>
+
+          <Button w='42px' p='0' onClick={() => rmItem(item.id)} bg='white' _hover={{
+            bg: '#e0e0e0'
+          }}>
+            <AiOutlineMinusCircle size='28px' />
+          </Button>
+
+          <Text fontSize={28} mx='14px'>
             {item.qtd ? item.qtd : countItem}
           </Text>
 
-          <Button w='32px' p='0' onClick={() => addItem(item.id)}>
-            <IoIosAddCircleOutline size='28px' />
-          </Button>
-          <Button w='32px' p='0' onClick={() => rmItem(item.id)}>
-            <AiOutlineMinusCircle size='28px' />
+          <Button w='42px' p='0' onClick={() => addItem(item.id)} bg='white' _hover={{
+            bg: '#e0e0e0'
+          }}>
+            <IoIosAddCircleOutline size='36px' />
           </Button>
         </Flex>
       </ListItem>
